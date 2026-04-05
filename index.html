@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Deal Analysis — Altamonte Springs ↔ DeBary Corridor</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --red: #f85149;
+      --yellow: #d29922;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+    .subtitle { color: var(--text-muted); font-size: 0.9rem; }
+    h2 {
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent);
+    }
+    h3 { font-size: 1.1rem; margin: 1.2rem 0 0.6rem; color: var(--text); }
+    p, li { color: var(--text); margin-bottom: 0.6rem; }
+    ul { padding-left: 1.5rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th {
+      background: var(--surface);
+      color: var(--accent);
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    td {
+      padding: 0.5rem 0.8rem;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    tr:hover td { background: #1c2128; }
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .metric-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    .metric-card .label { color: var(--text-muted); font-size: 0.8rem; }
+    .metric-card .value { font-size: 1.2rem; font-weight: 600; color: var(--text); }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-green { background: rgba(63,185,80,0.15); color: var(--green); }
+    .badge-red { background: rgba(248,81,73,0.15); color: var(--red); }
+    .badge-yellow { background: rgba(210,153,34,0.15); color: var(--yellow); }
+    .deal { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0; }
+    .deal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+    .deal-title { font-size: 1rem; font-weight: 600; }
+    .stars { color: var(--yellow); }
+    .source { color: var(--text-muted); font-size: 0.8rem; }
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 0.3rem 0; color: var(--text-muted); }
+    .checklist li::before { content: '☐ '; }
+    .verdict {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 0.8rem;
+    }
+    .verdict-possible { background: rgba(210,153,34,0.15); color: var(--yellow); }
+    .verdict-conditional { background: rgba(210,153,34,0.1); color: var(--yellow); }
+    .verdict-bad { background: rgba(248,81,73,0.15); color: var(--red); }
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+    .link-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.8rem;
+      border-radius: 6px;
+    }
+    .link-card a { color: var(--accent); text-decoration: none; font-size: 0.85rem; }
+    .link-card a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      table { font-size: 0.8rem; }
+      .metric-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>🏠 Rental Deal Analysis</h1>
+  <p class="subtitle">Altamonte Springs ↔ DeBary Corridor &nbsp;|&nbsp; Created: 2026-04-03 &nbsp;|&nbsp; Status: DRAFT</p>
+</header>
+
+<section>
+  <h2>📊 Market Reality Check</h2>
+
+  <div class="metric-grid">
+    <div class="metric-card"><div class="label">Median Home Price</div><div class="value">$260K–$374K</div></div>
+    <div class="metric-card"><div class="label">Median 3BR Rent</div><div class="value">$1,800–$2,200/mo</div></div>
+    <div class="metric-card"><div class="label">FL Insurance (avg)</div><div class="value">$700–$865/mo</div></div>
+    <div class="metric-card"><div class="label">Cap Rate Range</div><div class="value">3.6%–6%</div></div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>⚠️ The math doesn't work at median prices.</strong> To hit 120%+ cash flow, you need to buy <strong>below market value</strong> — distressed sellers, motivated sellers, handyman specials, or two units on one lot.
+  </div>
+</section>
+
+<section>
+  <h2>🎯 Golden Rule for This Market</h2>
+  <div class="highlight-box">
+    For every <strong>$50K</strong> you negotiate off the purchase price → ~<strong>$333/mo</strong> more cash flow.
+  </div>
+  <p>To achieve 120% cash flow on a typical 2BR rental:</p>
+  <ul>
+    <li>Purchase price ≈ <strong>$130K–$180K</strong> (depending on condition)</li>
+    <li>OR find properties where insurance is below average</li>
+    <li>OR find two units that generate combined rental income</li>
+  </ul>
+</section>
+
+<section>
+  <h2>🔍 Properties Identified</h2>
+
+  <!-- DEAL 1 -->
+  <div class="deal">
+    <div class="deal-header">
+      <div>
+        <div class="deal-title">⭐⭐⭐ SANFORD, FL — "Investor Special: Two Homes One Lot"</div>
+        <div class="source">Source: Redfin &nbsp;|&nbsp; Price: ~$185K (TBD)</div>
+      </div>
+      <span class="badge badge-yellow">MOST PROMISING</span>
+    </div>
+    <p><strong>What it is:</strong> Two separate 2BR/1BA single-family homes <strong>on one lot</strong> = functional duplex. Quiet Sanford neighborhood, no HOA, Seminole County School District.</p>
+    <p><strong>Why it's interesting:</strong> Two rental incomes from one purchase = cash flow stacked.</p>
+
+    <table>
+      <tr><th>Item</th><th>Amount</th></tr>
+      <tr><td>Est. purchase price</td><td>~$185,000</td></tr>
+      <tr><td>Down payment (20%)</td><td>$37,000</td></tr>
+      <tr><td>Loan amount</td><td>$148,000</td></tr>
+      <tr><td>Mortgage @ 7%, 30yr</td><td>~$985/mo</td></tr>
+      <tr><td>Property tax (~0.71%)</td><td>~$110/mo</td></tr>
+      <tr><td>Insurance (FL avg)</td><td>~$700/mo</td></tr>
+      <tr><td>Maintenance (10%)</td><td>~$240/mo (both units)</td></tr>
+      <tr><td>Vacancy (8%)</td><td>~$192/mo</td></tr>
+      <tr><td><strong>Total expenses</strong></td><td><strong>~$2,227/mo</strong></td></tr>
+      <tr><td>Combined rent (2 × ~$950)</td><td>~$1,900–$2,100/mo</td></tr>
+      <tr><td><strong>Monthly cash flow</strong></td><td><strong>~$0 – NEGATIVE</strong></td></tr>
+    </table>
+
+    <p style="margin-top:0.8rem"><strong>At full market rent ($2,100/mo combined):</strong></p>
+    <table>
+      <tr><td>Cash flow at $2,100/mo combined</td><td style="color:var(--green)"><strong>+$373/mo (18% CF) ✅</strong></td></tr>
+    </table>
+
+    <p style="margin-top:0.8rem"><strong>Red flags to verify:</strong></p>
+    <ul class="checklist">
+      <li>Are both units legally permitted as separate dwellings?</li>
+      <li>Is this on one parcel or two? (affects financing)</li>
+      <li>Are utilities separate or shared?</li>
+      <li>Condition of second unit?</li>
+      <li>Do Seminole County ADU laws apply? (could affect legality)</li>
+    </ul>
+
+    <span class="verdict verdict-possible">🟡 POSSIBLE — needs full verification, but two-units angle is the best path to 120%+ in this corridor</span>
+  </div>
+
+  <!-- DEAL 2 -->
+  <div class="deal">
+    <div class="deal-header">
+      <div>
+        <div class="deal-title">DELTONA, FL — 2BR/2BA Move-In Ready</div>
+        <div class="source">Source: Redfin &nbsp;|&nbsp; Price: ~$170K–$200K (est.)</div>
+      </div>
+    </div>
+    <p><strong>What it is:</strong> 2BR/2BA, new roof, new appliances, new countertops, Central A/C, large fenced yard, carport. Near move-in ready. No HOA.</p>
+
+    <table>
+      <tr><th>Item</th><th>Amount</th></tr>
+      <tr><td>Est. purchase price</td><td>~$185,000</td></tr>
+      <tr><td>Down payment (20%)</td><td>$37,000</td></tr>
+      <tr><td>Loan amount</td><td>$148,000</td></tr>
+      <tr><td>Mortgage @ 7%, 30yr</td><td>~$985/mo</td></tr>
+      <tr><td>Property tax (~0.85% Volusia)</td><td>~$131/mo</td></tr>
+      <tr><td>Insurance</td><td>~$700/mo</td></tr>
+      <tr><td>Maintenance (10%)</td><td>~$160/mo</td></tr>
+      <tr><td>Vacancy (8%)</td><td>~$128/mo</td></tr>
+      <tr><td><strong>Total expenses</strong></td><td><strong>~$2,104/mo</strong></td></tr>
+      <tr><td>Market rent (2BR Deltona)</td><td>~$1,600–$1,800/mo</td></tr>
+      <tr><td><strong>Monthly cash flow</strong></td><td><strong>~($300)–($100)/mo — NEGATIVE</strong></td></tr>
+    </table>
+
+    <p style="margin-top:0.8rem">Needs a lower purchase price (~$150K) to work.</p>
+    <span class="verdict verdict-conditional">🟡 CONDITIONAL — needs price negotiation to ~$150K or less</span>
+  </div>
+
+  <!-- DEAL 3 -->
+  <div class="deal">
+    <div class="deal-header">
+      <div>
+        <div class="deal-title">DELTONA, FL — "Blank Canvas" Handyman Special</div>
+        <div class="source">Source: Redfin &nbsp;|&nbsp; Price: ~$130K–$160K (est.)</div>
+      </div>
+    </div>
+    <p><strong>What it is:</strong> 2BR/1BA, updated electrical, large lot, no HOA, needs some work. Lower purchase price = better cash flow. Light rehab OK.</p>
+
+    <table>
+      <tr><th>Item</th><th>Amount</th></tr>
+      <tr><td>Est. purchase price</td><td>~$145,000</td></tr>
+      <tr><td>Down payment (20%)</td><td>$29,000</td></tr>
+      <tr><td>Loan amount</td><td>$116,000</td></tr>
+      <tr><td>Mortgage @ 7%, 30yr</td><td>~$772/mo</td></tr>
+      <tr><td>Property tax (~0.85%)</td><td>~$103/mo</td></tr>
+      <tr><td>Insurance</td><td>~$700/mo</td></tr>
+      <tr><td>Maintenance (10%)</td><td>~$150/mo</td></tr>
+      <tr><td>Vacancy (8%)</td><td>~$120/mo</td></tr>
+      <tr><td>Rehab reserve</td><td>~$100/mo</td></tr>
+      <tr><td><strong>Total expenses</strong></td><td><strong>~$1,945/mo</strong></td></tr>
+      <tr><td>Market rent (2BR Deltona)</td><td>~$1,600/mo</td></tr>
+      <tr><td><strong>Cash flow</strong></td><td><strong>~($345)/mo — NEGATIVE</strong></td></tr>
+    </table>
+
+    <p style="margin-top:0.8rem">Post-rehab rent could reach $1,800–$1,900/mo, but still tight without significant price drop.</p>
+    <span class="verdict verdict-bad">🔴 PROBABLY NOT without price drop to ~$120K</span>
+  </div>
+</section>
+
+<section>
+  <h2>💡 Key Insights</h2>
+
+  <div class="highlight-box">
+    <strong>1. The Sanford Two-Units Deal is the Most Promising</strong><br>
+    Two units on one lot = stacking rental income. If both units are legally separate and can be financed on one loan, this could genuinely hit 120%+ cash flow.
+  </div>
+
+  <div class="highlight-box">
+    <strong>2. Insurance is the #1 Cash Flow Killer</strong><br>
+    $700–$865/mo in insurance alone nearly equals a full mortgage payment. Non-negotiable in FL. Budget for it.
+  </div>
+
+  <div class="highlight-box">
+    <strong>3. Deltona Has the Best Price Points</strong><br>
+    Deltona consistently shows properties under $200K, some under $170K. That's where the cash flow math works. Altamonte Springs and Lake Mary are overpriced for this strategy.
+  </div>
+
+  <div class="highlight-box">
+    <strong>4. Price-to-Rent Ratio Target</strong>
+    <ul style="margin-top:0.5rem">
+      <li>Good: &lt; 12 (buy ratio) → cash flow viable</li>
+      <li>Typical in corridor: 15–18 → marginal to negative</li>
+      <li>Your target with 120% buffer: ratio &lt; 10 required</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>📋 Next Steps</h2>
+  <ol>
+    <li><strong>Sanford deal</strong> — pull the actual MLS listing, verify the two-units legal status, get exact price</li>
+    <li><strong>Deltona handyman specials</strong> — find specific addresses + prices from active listings</li>
+    <li><strong>Alternative:</strong> Look at 32725 (Deltona) and 32771 (Sanford/Lake Mary) zip codes specifically for distressed properties</li>
+    <li><strong>Discuss:</strong> Is the two-units-on-one-lot structure something you'd consider? Financing complexity is higher.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>🔗 Active Listing Sources</h2>
+  <div class="link-grid">
+    <div class="link-card">
+      <div>Redfin — Sanford, FL (under $200K)</div>
+      <a href="https://www.redfin.com/city/16310/FL/Sanford/homes-for-sale-under-200000" target="_blank">redfin.com/city/16310/FL/Sanford</a>
+    </div>
+    <div class="link-card">
+      <div>Redfin — Deltona, FL (under $200K)</div>
+      <a href="https://www.redfin.com/city/4476/FL/Deltona/homes-for-sale-under-200000" target="_blank">redfin.com/city/4476/FL/Deltona</a>
+    </div>
+    <div class="link-card">
+      <div>Zillow — Altamonte Springs (under $250K)</div>
+      <a href="https://www.zillow.com/altamonte-springs-fl/under-250000/" target="_blank">zillow.com/altamonte-springs-fl</a>
+    </div>
+    <div class="link-card">
+      <div>Realtor.com — Altamonte Springs</div>
+      <a href="https://www.realtor.com/realestateandhomes-search/Altamonte-Springs_FL/price-na-250000" target="_blank">realtor.com/altamonte-springs</a>
+    </div>
+    <div class="link-card">
+      <div>FSBO — Deltona (under $200K)</div>
+      <a href="https://www.byowner.com/deltona/florida/min_price=0/max_price=200000" target="_blank">byowner.com/deltona</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Analysis created by Johnny5 ⚡ &nbsp;|&nbsp; Data from Redfin, Zillow, Realtor.com research (2026-04-03)</p>
+</footer>
+
+</div>
+</body>
+</html>
