@@ -1,365 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Rental Deal Analyzer — Altamonte Springs / DeBary Corridor</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922}
+:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922;--purple:#bc8cff}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:2rem}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:1.5rem}
 .container{max-width:1200px;margin:0 auto}
-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
-h1{font-size:1.8rem;color:var(--accent)}.updated{color:var(--muted);font-size:0.8rem}
-section{margin-bottom:3.5rem}
-h2{font-size:1.3rem;color:var(--accent);margin:0 0 1.5rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(520px,1fr));gap:1.2rem}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.3rem;transition:border-color .2s}
+header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:1.5rem;margin-bottom:2rem;flex-wrap:wrap;gap:0.8rem}
+h1{font-size:1.6rem;color:var(--accent)}
+.updated{color:var(--muted);font-size:0.8rem}
+.lead{color:var(--muted);font-size:0.88rem;margin-bottom:1.5rem}
+.tabs{display:flex;gap:0;margin-bottom:0;border-bottom:2px solid var(--border);flex-wrap:wrap}
+.tab-btn{
+  background:none;border:none;padding:0.7rem 1.2rem;font-size:0.9rem;font-weight:600;
+  color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;
+  transition:color .2s,border-color .2s;border-radius:6px 6px 0 0;white-space:nowrap
+}
+.tab-btn:hover{color:var(--text)}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:1.2rem}
+section{margin-bottom:3rem}
+h2{font-size:1.2rem;color:var(--accent);margin:0 0 1.2rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1rem;margin:1.5rem 0 0.8rem;color:var(--text)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.2rem;transition:border-color .2s}
 .card:hover{border-color:var(--accent)}
-.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.8rem;gap:0.5rem}
-.card-title{font-size:1rem;font-weight:600;line-height:1.3;flex:1}
-.card-sub{color:var(--muted);font-size:0.8rem;margin-top:0.2rem}
-.price-row{display:flex;align-items:baseline;gap:1rem;margin:0.4rem 0;flex-wrap:wrap}
-.price-big{font-size:1.4rem;font-weight:700;color:var(--accent)}
-.beds-baths{color:var(--muted);font-size:0.85rem}
-.card-badges{display:flex;gap:0.4rem;margin:0.5rem 0;flex-wrap:wrap}
-.badge{display:inline-block;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.72rem;font-weight:600}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.7rem;gap:0.5rem}
+.card-title{font-size:0.98rem;font-weight:600;line-height:1.3;flex:1}
+.card-sub{color:var(--muted);font-size:0.78rem;margin-top:0.2rem}
+.price-row{display:flex;align-items:baseline;gap:0.8rem;margin:0.4rem 0;flex-wrap:wrap}
+.price-big{font-size:1.35rem;font-weight:700;color:var(--accent)}
+.beds-baths{color:var(--muted);font-size:0.82rem}
+.card-badges{display:flex;gap:0.35rem;margin:0.5rem 0;flex-wrap:wrap}
+.badge{display:inline-block;padding:0.18rem 0.55rem;border-radius:12px;font-size:0.7rem;font-weight:600}
 .bg-green{background:rgba(63,185,80,.18);color:var(--green)}
 .bg-yellow{background:rgba(210,153,34,.18);color:var(--yellow)}
 .bg-red{background:rgba(248,81,73,.18);color:var(--red)}
 .bg-muted{background:rgba(139,148,158,.15);color:var(--muted)}
-.score-bar{background:var(--border);border-radius:4px;height:6px;margin:0.6rem 0;overflow:hidden}
+.bg-purple{background:rgba(188,140,255,.18);color:var(--purple)}
+.score-bar{background:var(--border);border-radius:4px;height:5px;margin:0.6rem 0;overflow:hidden}
 .score-fill{height:100%;border-radius:4px;transition:width .4s}
 .score-fill.high{background:var(--green)}.score-fill.mid{background:var(--yellow)}.score-fill.low{background:var(--red)}
-.cf-block{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.8rem 0}
-.cf-col-header{font-size:0.75rem;font-weight:700;color:var(--accent);margin-bottom:0.4rem;padding-bottom:0.3rem;border-bottom:1px solid var(--border)}
-.cf-table{width:100%;border-collapse:collapse;font-size:0.76rem}
-.cf-table td{padding:0.28rem 0.5rem;border:1px solid var(--border)}
+.cf-block{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin:0.8rem 0}
+.cf-col-header{font-size:0.74rem;font-weight:700;color:var(--accent);margin-bottom:0.4rem;padding-bottom:0.25rem;border-bottom:1px solid var(--border)}
+.cf-table{width:100%;border-collapse:collapse;font-size:0.75rem}
+.cf-table td{padding:0.25rem 0.45rem;border:1px solid var(--border)}
 .cf-table td:last-child{text-align:right;font-weight:600}
-.cf-total td{border-top:2px solid var(--border);font-weight:700;font-size:0.82rem}
+.cf-total td{border-top:2px solid var(--border);font-weight:700;font-size:0.8rem}
 .cf-pos{color:var(--green)}.cf-neg{color:var(--red)}
-.reqdp-box{font-size:0.76rem;font-weight:600;padding:0.5rem;border-radius:6px;margin-bottom:0.4rem;line-height:1.5}
-.reqdp-ok{color:var(--green);background:rgba(63,185,80,.12);border:1px solid rgba(63,185,80,.3);display:block;border-radius:6px;padding:0.5rem}
-.reqdp-gap{color:var(--yellow);background:rgba(210,153,34,.12);border:1px solid rgba(210,153,34,.3);display:block;border-radius:6px;padding:0.5rem}
-.reqdp-na{color:var(--red);background:rgba(248,81,73,.12);border:1px solid rgba(248,81,73,.3);display:block;border-radius:6px;padding:0.5rem}
-.breakdown-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.8rem 0}
-.breakdown-header{font-size:0.78rem;font-weight:700;margin-bottom:0.4rem}
-.breakdown-list{padding-left:1.2rem;font-size:0.78rem;color:var(--muted);line-height:1.5}
-.breakdown-list li{margin-bottom:0.2rem}
-.verdict-banner{padding:0.7rem 1rem;border-radius:6px;margin:0.8rem 0 0.5rem;font-weight:600;font-size:0.82rem;line-height:1.4}
+.reqdp-box{font-size:0.74rem;font-weight:600;padding:0.45rem 0.6rem;border-radius:6px;margin-bottom:0.4rem;line-height:1.5}
+.reqdp-ok{color:var(--green);background:rgba(63,185,80,.12);border:1px solid rgba(63,185,80,.3);display:block;border-radius:6px;padding:0.45rem 0.6rem}
+.reqdp-gap{color:var(--yellow);background:rgba(210,153,34,.12);border:1px solid rgba(210,153,34,.3);display:block;border-radius:6px;padding:0.45rem 0.6rem}
+.reqdp-na{color:var(--red);background:rgba(248,81,73,.12);border:1px solid rgba(248,81,73,.3);display:block;border-radius:6px;padding:0.45rem 0.6rem}
+.breakdown-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin:0.7rem 0}
+.breakdown-header{font-size:0.76rem;font-weight:700;margin-bottom:0.35rem}
+.breakdown-list{padding-left:1.2rem;font-size:0.76rem;color:var(--muted);line-height:1.5}
+.breakdown-list li{margin-bottom:0.15rem}
+.verdict-banner{padding:0.6rem 0.9rem;border-radius:6px;margin:0.7rem 0 0.4rem;font-weight:600;font-size:0.8rem;line-height:1.4}
 .v-buy{background:rgba(63,185,80,.12);border:1px solid var(--green);color:var(--green)}
 .v-cond{background:rgba(210,153,34,.12);border:1px solid var(--yellow);color:var(--yellow)}
 .v-skip{background:rgba(248,81,73,.12);border:1px solid var(--red);color:var(--red)}
-.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:0.6rem;gap:0.5rem}
-.card-footer a{display:inline-block;background:var(--accent);color:var(--bg);padding:0.35rem 0.9rem;border-radius:6px;text-decoration:none;font-size:0.78rem;font-weight:600}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem;gap:0.5rem}
+.card-footer a{display:inline-block;background:var(--accent);color:var(--bg);padding:0.3rem 0.8rem;border-radius:6px;text-decoration:none;font-size:0.76rem;font-weight:600}
 .card-footer a:hover{opacity:0.85}
 .date{color:var(--muted);font-size:0.72rem}
-.empty{color:var(--muted);font-style:italic;padding:2.5rem;text-align:center;background:var(--surface);border:1px dashed var(--border);border-radius:8px}
-footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.8rem;text-align:center}
+.empty{color:var(--muted);font-style:italic;padding:2.5rem;text-align:center;background:var(--surface);border:1px dashed var(--border);border-radius:8px;font-size:0.9rem}
+.how-to{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.5rem;margin-top:1rem}
+.how-to h3{color:var(--accent);margin-top:0}
+.how-to p{color:var(--muted);font-size:0.88rem}
+.how-to code{background:var(--bg);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.82rem;color:var(--accent)}
+footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.78rem;text-align:center}
 footer p{margin-bottom:0.3rem}
-@media(max-width:600px){body{padding:1rem}.cards{grid-template-columns:1fr}.cf-block{grid-template-columns:1fr}.breakdown-grid{grid-template-columns:1fr}}</style></head>
+.notice{background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:0.8rem 1rem;font-size:0.82rem;color:var(--muted);margin-bottom:1.5rem}
+
+/* ─── Mobile ─────────────────────────────────────────────── */
+@media(max-width:600px){
+  body{padding:0.8rem}
+  h1{font-size:1.3rem}
+  header{flex-direction:column;align-items:flex-start;gap:0.5rem}
+  .tabs{gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab-btn{padding:0.6rem 0.9rem;font-size:0.85rem}
+  .cards{grid-template-columns:1fr}
+  .cf-block{grid-template-columns:1fr}
+  .breakdown-grid{grid-template-columns:1fr}
+  .price-big{font-size:1.2rem}
+}</style>
+</head>
 <body>
 <div class="container">
-<header><h1>🏠 Rental Deal Analyzer</h1><span class="updated">Updated: 2026-04-05 09:43  &nbsp;|&nbsp; Auto-updated from email</span></header>
-<section><h2>⭐ Top Opportunities — Ranked by Cash Flow at $150K Down</h2>
-<div class="cards"><div class="card">
-  <div class="card-header">
-    <div><div class="card-title">Sanford, FL — Two Homes One Lot</div><div class="card-sub">Sanford · Duplex / Two-Unit</div></div>
-    <span class="badge bg-yellow">CONDITIONAL</span>
-  </div>
-  <div class="price-row">
-    <span class="price-big">$185,000</span>
-    <span class="beds-baths">4BR / 2BA</span>
-  </div>
-  <div class="card-badges">
-    <span class="badge bg-yellow">Score: 50.4</span>
-    <span class="badge bg-green">$597/mo CF</span>
-    <span class="badge bg-yellow">CoC: 4.8%</span>
-    <span class="badge bg-muted">$150,000 down</span>
-    <span class="badge bg-muted">Fair</span>
-  </div>
-  <div class="score-bar"><div class="score-fill low" style="width:50.4%"></div></div>
-  <div class="cf-block">
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
-      <table class="cf-table">
-        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
-        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$110</td></tr>
-        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
-        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$200</td></tr>
-        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$160</td></tr>
-        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$597/mo</td></tr>
-      </table>
-    </div>
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
-      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $25,100 — you're covered at $150,000 down</span></div>
-      <table class="cf-table">
-        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,270</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,270/mo</td></tr>
-      </table>
-    </div>
-  </div>
-  <div class="breakdown-grid">
-    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>4BR/$2,100/mo — strong family rental demand</li><li>No HOA — keeps monthly costs predictable</li><li>Seminole County school district</li><li>Positive CF of $597/mo at $150K down</li><li>Already above required DP ($150K vs $25K min)</li></ul></div>
-    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>Rent estimate ($2,100 combined) may not be achievable</li><li>Legal/permit status of second unit unverified</li><li>Financing complexity for two-units-one-lot</li></ul></div>
-  </div>
-  <div class="verdict-banner v-cond">CONDITIONAL — Two-units is the path to CF — needs permit verification but math is more viable than single-family at $150K.</div>
-  <div class="card-footer">
-    <a href="https://www.redfin.com/FL/Sanford/property/1" target="_blank">VIEW &#x2197;</a>
-    
-  </div>
+<header>
+  <h1>🏠 Rental Deal Analyzer</h1>
+  <span class="updated">Updated: 2026-04-05 14:47 UTC</span>
+</header>
+
+<div class="notice">
+  Analysis defaults to <strong>$150,000 down payment</strong> &nbsp;|&nbsp; Target: <strong>20% cash flow</strong> over all monthly expenses &nbsp;|&nbsp; FL market estimates — verify independently.
 </div>
-<div class="card">
-  <div class="card-header">
-    <div><div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div><div class="card-sub">Deltona · Single-Family Home</div></div>
-    <span class="badge bg-red">SKIP</span>
-  </div>
-  <div class="price-row">
-    <span class="price-big">$145,000</span>
-    <span class="beds-baths">2BR / 1BA</span>
-  </div>
-  <div class="card-badges">
-    <span class="badge bg-yellow">Score: 22.6</span>
-    <span class="badge bg-green">$245/mo CF</span>
-    <span class="badge bg-yellow">CoC: 2.0%</span>
-    <span class="badge bg-muted">$150,000 down</span>
-    <span class="badge bg-muted">Poor / Needs Rehab</span>
-  </div>
-  <div class="score-bar"><div class="score-fill low" style="width:22.6%"></div></div>
-  <div class="cf-block">
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
-      <table class="cf-table">
-        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$0</td></tr>
-        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$103</td></tr>
-        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
-        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$140</td></tr>
-        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$112</td></tr>
-        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$245/mo</td></tr>
-      </table>
-    </div>
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
-      <div class="reqdp-box"><span class="reqdp-na">&#x26F0; Not achievable — price too high for corridor</span></div>
-      <table class="cf-table">
-        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,155</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,160/mo</td></tr>
-      </table>
-    </div>
-  </div>
-  <div class="breakdown-grid">
-    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>$145K purchase price — lowest entry in corridor</li><li>No mortgage at $150K down = more CF</li><li>Large lot — future value add potential</li><li>Updated electrical already addressed</li></ul></div>
-    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>20% CF target not achievable — price too high for rent ceiling</li><li>Needs cosmetic rehab — timeline to rent + overage risk</li><li>1BR/1BA limits tenant pool</li><li>Post-rehab rent ceiling ~$1,600 still thin</li></ul></div>
-  </div>
-  <div class="verdict-banner v-skip">SKIP — Positive CF only because $150K down eliminates mortgage. Still can't hit 20% CF target — price too high relative to achievable rents.</div>
-  <div class="card-footer">
-    <a href="https://www.redfin.com/FL/Deltona/property/3" target="_blank">VIEW &#x2197;</a>
-    
-  </div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="tab-top">⭐ Top Opportunities</button>
+  <button class="tab-btn" data-tab="tab-rec">📋 Recent Analyses</button>
+  <button class="tab-btn" data-tab="tab-com">🏢 Commercial </button>
 </div>
-<div class="card">
-  <div class="card-header">
-    <div><div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div><div class="card-sub">Deltona · Single-Family Home</div></div>
-    <span class="badge bg-yellow">CONDITIONAL</span>
-  </div>
-  <div class="price-row">
-    <span class="price-big">$185,000</span>
-    <span class="beds-baths">2BR / 2BA</span>
-  </div>
-  <div class="card-badges">
-    <span class="badge bg-yellow">Score: 29.3</span>
-    <span class="badge bg-green">$148/mo CF</span>
-    <span class="badge bg-yellow">CoC: 1.2%</span>
-    <span class="badge bg-muted">$150,000 down</span>
-    <span class="badge bg-muted">Excellent</span>
-  </div>
-  <div class="score-bar"><div class="score-fill low" style="width:29.3%"></div></div>
-  <div class="cf-block">
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
-      <table class="cf-table">
-        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
-        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$131</td></tr>
-        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
-        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$160</td></tr>
-        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$128</td></tr>
-        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$148/mo</td></tr>
-      </table>
-    </div>
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
-      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $107,900 — you're covered at $150,000 down</span></div>
-      <table class="cf-table">
-        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,219</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,220/mo</td></tr>
-      </table>
-    </div>
-  </div>
-  <div class="breakdown-grid">
-    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>Move-in ready — no rehab costs, rents immediately</li><li>New roof, appliances, countertops — reduced near-term maintenance</li><li>Fenced yard + carport — desirable FL features</li><li>No HOA</li><li>Positive CF of $148/mo at $150K down</li></ul></div>
-    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>CoC return only 1.2% — very thin margin</li><li>Need ~$108K more to hit 20% CF target</li><li>Deltona rents max out ~$1,800 for 2BR even with upgrades</li><li>Insurance ($700/mo) is the biggest expense line</li></ul></div>
-  </div>
-  <div class="verdict-banner v-cond">CONDITIONAL — Positive CF at $150K down but razor-thin. Needs price negotiation or additional income to be a real deal.</div>
-  <div class="card-footer">
-    <a href="https://www.redfin.com/FL/Deltona/property/2" target="_blank">VIEW &#x2197;</a>
-    
-  </div>
-</div></div></section>
-<section><h2>📋 Recent Analyses</h2>
-<div class="cards"><div class="card">
-  <div class="card-header">
-    <div><div class="card-title">Sanford, FL — Two Homes One Lot</div><div class="card-sub">Sanford · Duplex / Two-Unit</div></div>
-    <span class="badge bg-yellow">CONDITIONAL</span>
-  </div>
-  <div class="price-row">
-    <span class="price-big">$185,000</span>
-    <span class="beds-baths">4BR / 2BA</span>
-  </div>
-  <div class="card-badges">
-    <span class="badge bg-yellow">Score: 50.4</span>
-    <span class="badge bg-green">$597/mo CF</span>
-    <span class="badge bg-yellow">CoC: 4.8%</span>
-    <span class="badge bg-muted">$150,000 down</span>
-    <span class="badge bg-muted">Fair</span>
-  </div>
-  <div class="score-bar"><div class="score-fill low" style="width:50.4%"></div></div>
-  <div class="cf-block">
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
-      <table class="cf-table">
-        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
-        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$110</td></tr>
-        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
-        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$200</td></tr>
-        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$160</td></tr>
-        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$597/mo</td></tr>
-      </table>
-    </div>
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
-      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $25,100 — you're covered at $150,000 down</span></div>
-      <table class="cf-table">
-        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,270</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,270/mo</td></tr>
-      </table>
-    </div>
-  </div>
-  <div class="breakdown-grid">
-    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>4BR/$2,100/mo — strong family rental demand</li><li>No HOA — keeps monthly costs predictable</li><li>Seminole County school district</li><li>Positive CF of $597/mo at $150K down</li><li>Already above required DP ($150K vs $25K min)</li></ul></div>
-    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>Rent estimate ($2,100 combined) may not be achievable</li><li>Legal/permit status of second unit unverified</li><li>Financing complexity for two-units-one-lot</li></ul></div>
-  </div>
-  <div class="verdict-banner v-cond">CONDITIONAL — Two-units is the path to CF — needs permit verification but math is more viable than single-family at $150K.</div>
-  <div class="card-footer">
-    <a href="https://www.redfin.com/FL/Sanford/property/1" target="_blank">VIEW &#x2197;</a>
-    <span class="date">2026-04-03 00:00 UTC</span>
-  </div>
+
+<div id="tab-top" class="tab-panel active">
+  <div class="cards"><div class="empty">No residential properties yet — send a listing link to get started!</div></div>
+  <div class="how-to">
+<h3>📧 How to Submit a Property</h3>
+<p>Email <strong>devillebot@gmail.com</strong> with any listing link (Zillow, Redfin, Realtor, LoopNet, etc.) — no format needed, just include the link. Commercial links (LoopNet) are automatically grouped in the Commercial tab.</p>
 </div>
-<div class="card">
-  <div class="card-header">
-    <div><div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div><div class="card-sub">Deltona · Single-Family Home</div></div>
-    <span class="badge bg-yellow">CONDITIONAL</span>
-  </div>
-  <div class="price-row">
-    <span class="price-big">$185,000</span>
-    <span class="beds-baths">2BR / 2BA</span>
-  </div>
-  <div class="card-badges">
-    <span class="badge bg-yellow">Score: 29.3</span>
-    <span class="badge bg-green">$148/mo CF</span>
-    <span class="badge bg-yellow">CoC: 1.2%</span>
-    <span class="badge bg-muted">$150,000 down</span>
-    <span class="badge bg-muted">Excellent</span>
-  </div>
-  <div class="score-bar"><div class="score-fill low" style="width:29.3%"></div></div>
-  <div class="cf-block">
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
-      <table class="cf-table">
-        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
-        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$131</td></tr>
-        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
-        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$160</td></tr>
-        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$128</td></tr>
-        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$148/mo</td></tr>
-      </table>
-    </div>
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
-      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $107,900 — you're covered at $150,000 down</span></div>
-      <table class="cf-table">
-        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,219</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,220/mo</td></tr>
-      </table>
-    </div>
-  </div>
-  <div class="breakdown-grid">
-    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>Move-in ready — no rehab costs, rents immediately</li><li>New roof, appliances, countertops — reduced near-term maintenance</li><li>Fenced yard + carport — desirable FL features</li><li>No HOA</li><li>Positive CF of $148/mo at $150K down</li></ul></div>
-    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>CoC return only 1.2% — very thin margin</li><li>Need ~$108K more to hit 20% CF target</li><li>Deltona rents max out ~$1,800 for 2BR even with upgrades</li><li>Insurance ($700/mo) is the biggest expense line</li></ul></div>
-  </div>
-  <div class="verdict-banner v-cond">CONDITIONAL — Positive CF at $150K down but razor-thin. Needs price negotiation or additional income to be a real deal.</div>
-  <div class="card-footer">
-    <a href="https://www.redfin.com/FL/Deltona/property/2" target="_blank">VIEW &#x2197;</a>
-    <span class="date">2026-04-03 00:00 UTC</span>
-  </div>
 </div>
-<div class="card">
-  <div class="card-header">
-    <div><div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div><div class="card-sub">Deltona · Single-Family Home</div></div>
-    <span class="badge bg-red">SKIP</span>
-  </div>
-  <div class="price-row">
-    <span class="price-big">$145,000</span>
-    <span class="beds-baths">2BR / 1BA</span>
-  </div>
-  <div class="card-badges">
-    <span class="badge bg-yellow">Score: 22.6</span>
-    <span class="badge bg-green">$245/mo CF</span>
-    <span class="badge bg-yellow">CoC: 2.0%</span>
-    <span class="badge bg-muted">$150,000 down</span>
-    <span class="badge bg-muted">Poor / Needs Rehab</span>
-  </div>
-  <div class="score-bar"><div class="score-fill low" style="width:22.6%"></div></div>
-  <div class="cf-block">
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
-      <table class="cf-table">
-        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$0</td></tr>
-        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$103</td></tr>
-        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
-        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$140</td></tr>
-        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$112</td></tr>
-        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$245/mo</td></tr>
-      </table>
-    </div>
-    <div class="cf-col">
-      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
-      <div class="reqdp-box"><span class="reqdp-na">&#x26F0; Not achievable — price too high for corridor</span></div>
-      <table class="cf-table">
-        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
-        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,155</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,160/mo</td></tr>
-      </table>
-    </div>
-  </div>
-  <div class="breakdown-grid">
-    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>$145K purchase price — lowest entry in corridor</li><li>No mortgage at $150K down = more CF</li><li>Large lot — future value add potential</li><li>Updated electrical already addressed</li></ul></div>
-    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>20% CF target not achievable — price too high for rent ceiling</li><li>Needs cosmetic rehab — timeline to rent + overage risk</li><li>1BR/1BA limits tenant pool</li><li>Post-rehab rent ceiling ~$1,600 still thin</li></ul></div>
-  </div>
-  <div class="verdict-banner v-skip">SKIP — Positive CF only because $150K down eliminates mortgage. Still can't hit 20% CF target — price too high relative to achievable rents.</div>
-  <div class="card-footer">
-    <a href="https://www.redfin.com/FL/Deltona/property/3" target="_blank">VIEW &#x2197;</a>
-    <span class="date">2026-04-03 00:00 UTC</span>
-  </div>
-</div></div></section>
-<footer><p>⚡ Johnny5 &nbsp;|&nbsp; Default: $150,000 down payment &nbsp;|&nbsp; Target: 20% cash flow over expenses &nbsp;|&nbsp; Not financial advice.</p></footer>
-</div></body></html>
+
+<div id="tab-rec" class="tab-panel">
+  <div class="cards"><div class="empty">No analyses yet.</div></div>
+</div>
+
+<div id="tab-com" class="tab-panel">
+  <div class="cards"><div class="empty">No commercial properties yet. Send a LoopNet link to add one.</div></div>
+</div>
+
+<footer>
+  <p>⚡ Powered by Johnny5 &nbsp;|&nbsp; Not financial advice — always verify independently.</p>
+</footer>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){
+  var tabs=document.querySelectorAll('.tab-btn');
+  var panels=document.querySelectorAll('.tab-panel');
+  tabs.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var id=btn.getAttribute('data-tab');
+      tabs.forEach(function(t){t.classList.remove('active')});
+      panels.forEach(function(p){p.classList.remove('active')});
+      btn.classList.add('active');
+      document.getElementById(id).classList.add('active');
+    });
+  });
+});</script>
+</body>
+</html>
