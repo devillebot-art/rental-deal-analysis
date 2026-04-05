@@ -18,7 +18,7 @@ INTEREST_RATE        = 0.07     # 7% annual
 LOAN_TERM_MONTHS    = 360       # 30-year
 VACANCY_RATE        = 0.08      # 8% vacancy allowance
 MAINTENANCE_RATE    = 0.10      # 10% maintenance allowance
-TARGET_CF_PCT       = 0.20      # target: 20% over expenses (CF = 20% of rent)
+TARGET_CF_PCT       = 0.20      # target: CF = 20% of total monthly expenses (rent must be 1.2x expenses)
 
 USER_AGENTS = [
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -456,10 +456,10 @@ def calc_cash_flow(prop, down_payment=None):
     monthly_cf = monthly_rent - total_expenses
 
     # Required down payment to hit 20% CF over expenses
-    # Target: CF = TARGET_CF_PCT * monthly_rent
-    # => mortgage = monthly_rent - (1 + TARGET_CF_PCT) * (monthly_tax + monthly_ins + monthly_vacancy + monthly_maint)
+    # Target: CF = TARGET_CF_PCT * total_expenses  =>  rent = 1.20 * total_expenses
+    # => mortgage = 1.20 * (mortgage + non_mort) - non_mort  =  0.20 * non_mort
     non_mort = monthly_tax + monthly_ins + monthly_vacancy + monthly_maint
-    target_cf = round(monthly_rent * TARGET_CF_PCT, -1)
+    target_cf = round(total_expenses * TARGET_CF_PCT, -1)
     target_mortgage = monthly_rent - non_mort - target_cf
 
     required_dp = None
