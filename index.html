@@ -4,157 +4,329 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rental Deal Analyzer — Altamonte Springs / DeBary Corridor</title>
-<style>
-:root { --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --red: #f85149; --yellow: #d29922; }
+<style>:root { --bg: #0d1117; --surface: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --red: #f85149; --yellow: #d29922; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; }
-.container { max-width: 960px; margin: 0 auto; }
-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
 h1 { font-size: 1.8rem; color: var(--accent); }
-.badge { display: inline-block; padding: 0.25rem 0.7rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
-.bg-green { background: rgba(63,185,80,.15); color: var(--green); }
-.bg-yellow { background: rgba(210,153,34,.15); color: var(--yellow); }
-.bg-red { background: rgba(248,81,73,.15); color: var(--red); }
 .updated { color: var(--muted); font-size: 0.8rem; }
-section { margin-bottom: 3rem; }
-h2 { font-size: 1.3rem; color: var(--accent); margin: 0 0 1.2rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem; transition: border-color .2s; }
+section { margin-bottom: 3.5rem; }
+h2 { font-size: 1.3rem; color: var(--accent); margin: 0 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); gap: 1.2rem; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem; transition: border-color .2s; }
 .card:hover { border-color: var(--accent); }
-.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; }
-.card-title { font-size: 0.95rem; font-weight: 600; line-height: 1.3; }
-.card-price { font-size: 1.05rem; font-weight: 700; color: var(--accent); margin: 0.3rem 0; }
-.card-badges { display: flex; gap: 0.4rem; margin: 0.4rem 0; flex-wrap: wrap; }
-.score-bar { background: var(--border); border-radius: 4px; height: 6px; margin: 0.5rem 0; overflow: hidden; }
-.score-fill { height: 100%; border-radius: 4px; transition: width .3s; }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.8rem; gap: 0.5rem; }
+.card-title { font-size: 1rem; font-weight: 600; line-height: 1.3; flex: 1; }
+.card-sub { color: var(--muted); font-size: 0.8rem; margin-top: 0.2rem; }
+.price-row { display: flex; align-items: baseline; gap: 1rem; margin: 0.4rem 0; flex-wrap: wrap; }
+.price-big { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+.beds-baths { color: var(--muted); font-size: 0.85rem; }
+.card-badges { display: flex; gap: 0.4rem; margin: 0.5rem 0; flex-wrap: wrap; }
+.badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.72rem; font-weight: 600; }
+.bg-green { background: rgba(63,185,80,.18); color: var(--green); }
+.bg-yellow { background: rgba(210,153,34,.18); color: var(--yellow); }
+.bg-red { background: rgba(248,81,73,.18); color: var(--red); }
+.bg-muted { background: rgba(139,148,158,.15); color: var(--muted); }
+.score-bar { background: var(--border); border-radius: 4px; height: 6px; margin: 0.6rem 0; overflow: hidden; }
+.score-fill { height: 100%; border-radius: 4px; transition: width .4s; }
 .score-fill.high { background: var(--green); } .score-fill.mid { background: var(--yellow); } .score-fill.low { background: var(--red); }
-.verdict-banner { padding: 0.7rem 1rem; border-radius: 6px; margin: 0.6rem 0; font-weight: 600; font-size: 0.85rem; }
+.cf-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.78rem; }
+.cf-table th { background: var(--bg); color: var(--accent); padding: 0.4rem 0.6rem; text-align: left; border: 1px solid var(--border); font-size: 0.75rem; }
+.cf-table td { padding: 0.3rem 0.6rem; border: 1px solid var(--border); }
+.cf-table td:last-child { text-align: right; font-weight: 600; }
+.cf-total td { border-top: 2px solid var(--border); font-weight: 700; font-size: 0.85rem; }
+.cf-pos { color: var(--green); } .cf-neg { color: var(--red); }
+.breakdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.8rem 0; }
+.breakdown-header { font-size: 0.78rem; font-weight: 700; margin-bottom: 0.4rem; }
+.breakdown-list { padding-left: 1.2rem; font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+.breakdown-list li { margin-bottom: 0.2rem; }
+.verdict-banner { padding: 0.7rem 1rem; border-radius: 6px; margin: 0.8rem 0 0.5rem; font-weight: 600; font-size: 0.82rem; line-height: 1.4; }
 .v-buy { background: rgba(63,185,80,.12); border: 1px solid var(--green); color: var(--green); }
 .v-cond { background: rgba(210,153,34,.12); border: 1px solid var(--yellow); color: var(--yellow); }
 .v-skip { background: rgba(248,81,73,.12); border: 1px solid var(--red); color: var(--red); }
-.reason { color: var(--muted); font-size: 0.8rem; margin-top: 0.4rem; }
-.action { margin-top: 0.8rem; }
-.action a { display: inline-block; background: var(--accent); color: var(--bg); padding: 0.4rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.8rem; font-weight: 600; }
-.action a:hover { opacity: 0.85; }
-.empty { color: var(--muted); font-style: italic; padding: 2rem; text-align: center; background: var(--surface); border: 1px dashed var(--border); border-radius: 8px; }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; text-align: center; }
-@media (max-width: 600px) { body { padding: 1rem; } .cards { grid-template-columns: 1fr; } }
-</style>
+.card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.6rem; gap: 0.5rem; }
+.card-footer a { display: inline-block; background: var(--accent); color: var(--bg); padding: 0.35rem 0.9rem; border-radius: 6px; text-decoration: none; font-size: 0.78rem; font-weight: 600; }
+.card-footer a:hover { opacity: 0.85; }
+.date { color: var(--muted); font-size: 0.72rem; }
+.empty { color: var(--muted); font-style: italic; padding: 2.5rem; text-align: center; background: var(--surface); border: 1px dashed var(--border); border-radius: 8px; }
+footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; text-align: center; }
+footer p { margin-bottom: 0.3rem; }
+@media (max-width: 600px) { body { padding: 1rem; } .cards { grid-template-columns: 1fr; } .breakdown-grid { grid-template-columns: 1fr; } }</style>
 </head>
 <body>
 <div class="container">
 <header>
   <h1>🏠 Rental Deal Analyzer</h1>
-  <span class="updated">Last updated: 2026-04-05 09:08 </span>
+  <span class="updated">Last updated: 2026-04-05 09:25  &nbsp;|&nbsp; Auto-updated from email submissions</span>
 </header>
-
 <section>
   <h2>⭐ Top Opportunities</h2>
-  <div class="cards">
-    <div class="card">
+  <div class="cards"><div class="card">
   <div class="card-header">
-    <div class="card-title">Sanford, FL — Two Homes One Lot</div>
+    <div>
+      <div class="card-title">Sanford, FL — Two Homes One Lot</div>
+      <div class="card-sub"></div>
+    </div>
     <span class="badge bg-yellow">CONDITIONAL</span>
   </div>
-  <div class="card-price">$185,000 · 4BR / 2BA</div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">4BR / 2BA</span>
+  </div>
   <div class="card-badges">
     <span class="badge bg-yellow">Score: 45</span>
-    <span class="badge bg-red">CF: $-127/mo</span>
+    <span class="badge bg-red">$-127/mo CF</span>
     <span class="badge bg-yellow">CoC: -4.1%</span>
+    
   </div>
   <div class="score-bar"><div class="score-fill low" style="width:45%"></div></div>
-  <div class="verdict-banner v-cond">CONDITIONAL — Two-units angle is the best path to 120%+ cash flow in this corridor, but needs full legal/permit ve</div>
-  <div class="reason">2100/mo rent · $2,227/mo expenses</div>
-  <div class="action"><a href="https://www.redfin.com/FL/Sanford/investor-special/property/1" target="_blank">View Listing ↗</a></div>
-</div><div class="card">
+  <table class="cf-table">
+    <tr><th colspan="2">Monthly Cash Flow</th></tr>
+    <tr><td>Rent</td><td class="cf-pos">+$2,100</td></tr>
+    <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr>
+    <tr><td>Property Tax</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Insurance</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Maintenance (10%)</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Vacancy (8%)</td><td class="cf-neg">−$0</td></tr>
+    <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-127/mo</td></tr>
+  </table>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">✅ Positives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+    <div><div class="breakdown-header cf-neg">⚠️ Negatives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+  </div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Two-units angle is the best path to 120%+ cash flow in this corridor, but needs full legal/permit verification.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Sanford/investor-special/property/1" target="_blank">VIEW ↗</a>
+    
+  </div>
+</div>
+<div class="card">
   <div class="card-header">
-    <div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div>
+    <div>
+      <div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div>
+      <div class="card-sub"></div>
+    </div>
     <span class="badge bg-red">SKIP</span>
   </div>
-  <div class="card-price">$185,000 · 2BR / 2BA</div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">2BR / 2BA</span>
+  </div>
   <div class="card-badges">
     <span class="badge bg-yellow">Score: 10</span>
-    <span class="badge bg-red">CF: $-504/mo</span>
+    <span class="badge bg-red">$-504/mo CF</span>
     <span class="badge bg-yellow">CoC: -16.4%</span>
+    
   </div>
   <div class="score-bar"><div class="score-fill low" style="width:10%"></div></div>
+  <table class="cf-table">
+    <tr><th colspan="2">Monthly Cash Flow</th></tr>
+    <tr><td>Rent</td><td class="cf-pos">+$1,600</td></tr>
+    <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr>
+    <tr><td>Property Tax</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Insurance</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Maintenance (10%)</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Vacancy (8%)</td><td class="cf-neg">−$0</td></tr>
+    <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-504/mo</td></tr>
+  </table>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">✅ Positives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+    <div><div class="breakdown-header cf-neg">⚠️ Negatives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+  </div>
   <div class="verdict-banner v-skip">SKIP — At $185K this is deep negative cash flow. Needs ~$150K purchase price to be viable.</div>
-  <div class="reason">1600/mo rent · $2,104/mo expenses</div>
-  <div class="action"><a href="https://www.redfin.com/FL/Deltona/123-Oak-Ln/property/2" target="_blank">View Listing ↗</a></div>
-</div><div class="card">
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/123-Oak-Ln/property/2" target="_blank">VIEW ↗</a>
+    
+  </div>
+</div>
+<div class="card">
   <div class="card-header">
-    <div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div>
+    <div>
+      <div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div>
+      <div class="card-sub"></div>
+    </div>
     <span class="badge bg-red">SKIP</span>
   </div>
-  <div class="card-price">$145,000 · 2BR / 1BA</div>
+  <div class="price-row">
+    <span class="price-big">$145,000</span>
+    <span class="beds-baths">2BR / 1BA</span>
+  </div>
   <div class="card-badges">
     <span class="badge bg-yellow">Score: 8</span>
-    <span class="badge bg-red">CF: $-263/mo</span>
+    <span class="badge bg-red">$-263/mo CF</span>
     <span class="badge bg-yellow">CoC: -10.9%</span>
+    
   </div>
   <div class="score-bar"><div class="score-fill low" style="width:8%"></div></div>
-  <div class="verdict-banner v-skip">SKIP — Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or lower.</div>
-  <div class="reason">1600/mo rent · $1,863/mo expenses</div>
-  <div class="action"><a href="https://www.redfin.com/FL/Deltona/456-Pine-St/property/3" target="_blank">View Listing ↗</a></div>
-</div>
+  <table class="cf-table">
+    <tr><th colspan="2">Monthly Cash Flow</th></tr>
+    <tr><td>Rent</td><td class="cf-pos">+$1,600</td></tr>
+    <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$772</td></tr>
+    <tr><td>Property Tax</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Insurance</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Maintenance (10%)</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Vacancy (8%)</td><td class="cf-neg">−$0</td></tr>
+    <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-263/mo</td></tr>
+  </table>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">✅ Positives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+    <div><div class="breakdown-header cf-neg">⚠️ Negatives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
   </div>
+  <div class="verdict-banner v-skip">SKIP — Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or lower.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/456-Pine-St/property/3" target="_blank">VIEW ↗</a>
+    
+  </div>
+</div></div>
 </section>
-
 <section>
   <h2>📋 Recent Analyses</h2>
-  <div class="cards">
-    <div class="card">
+  <div class="cards"><div class="card">
   <div class="card-header">
-    <div class="card-title">Sanford, FL — Two Homes One Lot</div>
+    <div>
+      <div class="card-title">Sanford, FL — Two Homes One Lot</div>
+      <div class="card-sub"></div>
+    </div>
     <span class="badge bg-yellow">CONDITIONAL</span>
   </div>
-  <div class="card-price">$185,000 · 4BR / 2BA</div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">4BR / 2BA</span>
+  </div>
   <div class="card-badges">
     <span class="badge bg-yellow">Score: 45</span>
-    <span class="badge bg-red">CF: $-127/mo</span>
+    <span class="badge bg-red">$-127/mo CF</span>
     <span class="badge bg-yellow">CoC: -4.1%</span>
+    
   </div>
   <div class="score-bar"><div class="score-fill low" style="width:45%"></div></div>
-  <div class="verdict-banner v-cond">CONDITIONAL — Two-units angle is the best path to 120%+ cash flow in this corridor, but needs full legal/permit ve</div>
-  <div class="reason">2026-04-03 00:00 · 2100/mo rent · $2,227/mo expenses</div>
-  <div class="action"><a href="https://www.redfin.com/FL/Sanford/investor-special/property/1" target="_blank">View Listing ↗</a></div>
-</div><div class="card">
+  <table class="cf-table">
+    <tr><th colspan="2">Monthly Cash Flow</th></tr>
+    <tr><td>Rent</td><td class="cf-pos">+$2,100</td></tr>
+    <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr>
+    <tr><td>Property Tax</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Insurance</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Maintenance (10%)</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Vacancy (8%)</td><td class="cf-neg">−$0</td></tr>
+    <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-127/mo</td></tr>
+  </table>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">✅ Positives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+    <div><div class="breakdown-header cf-neg">⚠️ Negatives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+  </div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Two-units angle is the best path to 120%+ cash flow in this corridor, but needs full legal/permit verification.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Sanford/investor-special/property/1" target="_blank">VIEW ↗</a>
+    <span class="date">2026-04-03 00:00 UTC</span>
+  </div>
+</div>
+<div class="card">
   <div class="card-header">
-    <div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div>
+    <div>
+      <div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div>
+      <div class="card-sub"></div>
+    </div>
     <span class="badge bg-red">SKIP</span>
   </div>
-  <div class="card-price">$185,000 · 2BR / 2BA</div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">2BR / 2BA</span>
+  </div>
   <div class="card-badges">
     <span class="badge bg-yellow">Score: 10</span>
-    <span class="badge bg-red">CF: $-504/mo</span>
+    <span class="badge bg-red">$-504/mo CF</span>
     <span class="badge bg-yellow">CoC: -16.4%</span>
+    
   </div>
   <div class="score-bar"><div class="score-fill low" style="width:10%"></div></div>
+  <table class="cf-table">
+    <tr><th colspan="2">Monthly Cash Flow</th></tr>
+    <tr><td>Rent</td><td class="cf-pos">+$1,600</td></tr>
+    <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr>
+    <tr><td>Property Tax</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Insurance</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Maintenance (10%)</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Vacancy (8%)</td><td class="cf-neg">−$0</td></tr>
+    <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-504/mo</td></tr>
+  </table>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">✅ Positives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+    <div><div class="breakdown-header cf-neg">⚠️ Negatives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+  </div>
   <div class="verdict-banner v-skip">SKIP — At $185K this is deep negative cash flow. Needs ~$150K purchase price to be viable.</div>
-  <div class="reason">2026-04-03 00:00 · 1600/mo rent · $2,104/mo expenses</div>
-  <div class="action"><a href="https://www.redfin.com/FL/Deltona/123-Oak-Ln/property/2" target="_blank">View Listing ↗</a></div>
-</div><div class="card">
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/123-Oak-Ln/property/2" target="_blank">VIEW ↗</a>
+    <span class="date">2026-04-03 00:00 UTC</span>
+  </div>
+</div>
+<div class="card">
   <div class="card-header">
-    <div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div>
+    <div>
+      <div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div>
+      <div class="card-sub"></div>
+    </div>
     <span class="badge bg-red">SKIP</span>
   </div>
-  <div class="card-price">$145,000 · 2BR / 1BA</div>
+  <div class="price-row">
+    <span class="price-big">$145,000</span>
+    <span class="beds-baths">2BR / 1BA</span>
+  </div>
   <div class="card-badges">
     <span class="badge bg-yellow">Score: 8</span>
-    <span class="badge bg-red">CF: $-263/mo</span>
+    <span class="badge bg-red">$-263/mo CF</span>
     <span class="badge bg-yellow">CoC: -10.9%</span>
+    
   </div>
   <div class="score-bar"><div class="score-fill low" style="width:8%"></div></div>
-  <div class="verdict-banner v-skip">SKIP — Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or lower.</div>
-  <div class="reason">2026-04-03 00:00 · 1600/mo rent · $1,863/mo expenses</div>
-  <div class="action"><a href="https://www.redfin.com/FL/Deltona/456-Pine-St/property/3" target="_blank">View Listing ↗</a></div>
-</div>
+  <table class="cf-table">
+    <tr><th colspan="2">Monthly Cash Flow</th></tr>
+    <tr><td>Rent</td><td class="cf-pos">+$1,600</td></tr>
+    <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$772</td></tr>
+    <tr><td>Property Tax</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Insurance</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Maintenance (10%)</td><td class="cf-neg">−$0</td></tr>
+    <tr><td>Vacancy (8%)</td><td class="cf-neg">−$0</td></tr>
+    <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-263/mo</td></tr>
+  </table>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">✅ Positives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
+    <div><div class="breakdown-header cf-neg">⚠️ Negatives</div>
+      <ul class="breakdown-list"><li>None identified</li></ul>
+    </div>
   </div>
+  <div class="verdict-banner v-skip">SKIP — Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or lower.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/456-Pine-St/property/3" target="_blank">VIEW ↗</a>
+    <span class="date">2026-04-03 00:00 UTC</span>
+  </div>
+</div></div>
 </section>
-
 <footer>
-  <p>⚡ Powered by Johnny5 · Auto-updated from email submissions</p>
-  <p>For analysis only — verify all numbers independently. Not financial advice.</p>
+  <p>⚡ Powered by Johnny5 &nbsp;|&nbsp; Estimates based on FL market data — verify independently</p>
+  <p>Not financial advice. For rental analysis only.</p>
 </footer>
 </div>
 </body>
