@@ -6,12 +6,12 @@
 :root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:2rem}
-.container{max-width:1100px;margin:0 auto}
+.container{max-width:1200px;margin:0 auto}
 header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
 h1{font-size:1.8rem;color:var(--accent)}.updated{color:var(--muted);font-size:0.8rem}
 section{margin-bottom:3.5rem}
 h2{font-size:1.3rem;color:var(--accent);margin:0 0 1.5rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(460px,1fr));gap:1.2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(520px,1fr));gap:1.2rem}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.3rem;transition:border-color .2s}
 .card:hover{border-color:var(--accent)}
 .card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.8rem;gap:0.5rem}
@@ -29,12 +29,17 @@ h2{font-size:1.3rem;color:var(--accent);margin:0 0 1.5rem;padding-bottom:0.5rem;
 .score-bar{background:var(--border);border-radius:4px;height:6px;margin:0.6rem 0;overflow:hidden}
 .score-fill{height:100%;border-radius:4px;transition:width .4s}
 .score-fill.high{background:var(--green)}.score-fill.mid{background:var(--yellow)}.score-fill.low{background:var(--red)}
-.cf-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.78rem}
-.cf-table th{background:var(--bg);color:var(--accent);padding:0.4rem 0.6rem;text-align:left;border:1px solid var(--border);font-size:0.75rem}
-.cf-table td{padding:0.3rem 0.6rem;border:1px solid var(--border)}
+.cf-block{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.8rem 0}
+.cf-col-header{font-size:0.75rem;font-weight:700;color:var(--accent);margin-bottom:0.4rem;padding-bottom:0.3rem;border-bottom:1px solid var(--border)}
+.cf-table{width:100%;border-collapse:collapse;font-size:0.76rem}
+.cf-table td{padding:0.28rem 0.5rem;border:1px solid var(--border)}
 .cf-table td:last-child{text-align:right;font-weight:600}
-.cf-total td{border-top:2px solid var(--border);font-weight:700;font-size:0.85rem}
+.cf-total td{border-top:2px solid var(--border);font-weight:700;font-size:0.82rem}
 .cf-pos{color:var(--green)}.cf-neg{color:var(--red)}
+.reqdp-box{font-size:0.76rem;font-weight:600;padding:0.5rem;border-radius:6px;margin-bottom:0.4rem;line-height:1.5}
+.reqdp-ok{color:var(--green);background:rgba(63,185,80,.12);border:1px solid rgba(63,185,80,.3);display:block;border-radius:6px;padding:0.5rem}
+.reqdp-gap{color:var(--yellow);background:rgba(210,153,34,.12);border:1px solid rgba(210,153,34,.3);display:block;border-radius:6px;padding:0.5rem}
+.reqdp-na{color:var(--red);background:rgba(248,81,73,.12);border:1px solid rgba(248,81,73,.3);display:block;border-radius:6px;padding:0.5rem}
 .breakdown-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin:0.8rem 0}
 .breakdown-header{font-size:0.78rem;font-weight:700;margin-bottom:0.4rem}
 .breakdown-list{padding-left:1.2rem;font-size:0.78rem;color:var(--muted);line-height:1.5}
@@ -50,15 +55,311 @@ h2{font-size:1.3rem;color:var(--accent);margin:0 0 1.5rem;padding-bottom:0.5rem;
 .empty{color:var(--muted);font-style:italic;padding:2.5rem;text-align:center;background:var(--surface);border:1px dashed var(--border);border-radius:8px}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.8rem;text-align:center}
 footer p{margin-bottom:0.3rem}
-@media(max-width:600px){body{padding:1rem}.cards{grid-template-columns:1fr}.breakdown-grid{grid-template-columns:1fr}}</style></head>
+@media(max-width:600px){body{padding:1rem}.cards{grid-template-columns:1fr}.cf-block{grid-template-columns:1fr}.breakdown-grid{grid-template-columns:1fr}}</style></head>
 <body>
 <div class="container">
-<header><h1>🏠 Rental Deal Analyzer</h1><span class="updated">Updated: 2026-04-05 09:29  &nbsp;|&nbsp; Auto-updated from email</span></header>
-<section><h2>⭐ Top Opportunities</h2><div class="cards"><div class="card"><div class="card-header"><div><div class="card-title">Sanford, FL — Two Homes One Lot</div><div class="card-sub">Sanford · Duplex / Two-Unit</div></div><span class="badge bg-yellow">CONDITIONAL</span></div><div class="price-row"><span class="price-big">$185,000</span><span class="beds-baths">4BR / 2BA</span></div><div class="card-badges"><span class="badge bg-yellow">Score: 45</span><span class="badge bg-red">$-55/mo CF</span><span class="badge bg-yellow">CoC: -1.8%</span><span class="badge bg-muted">Fair</span></div><div class="score-bar"><div class="score-fill low" style="width:45%"></div></div><table class="cf-table"><tr><th colspan="2">Monthly Cash Flow</th></tr><tr><td>Rent</td><td class="cf-pos">+$0</td></tr><tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr><tr><td>Property Tax</td><td class="cf-neg">−$110</td></tr><tr><td>Insurance</td><td class="cf-neg">−$700</td></tr><tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr><tr><td>Vacancy (8%)</td><td class="cf-neg">−$160</td></tr><tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-55/mo</td></tr></table><div class="breakdown-grid"><div><div class="breakdown-header cf-pos">✅ Positives</div><ul class="breakdown-list"><li>2 units on 1 lot — stacked rental income potential</li><li>No HOA — keeps costs predictable</li><li>Seminole County school district</li><li>At full market rent ($2,100/mo): +$373/mo CF possible</li><li>Purchase price $185K — workable for the FL corridor</li></ul></div><div><div class="breakdown-header cf-neg">⚠️ Negatives</div><ul class="breakdown-list"><li>Current rent estimate ($2,100 combined) may not be achievable</li><li>Legal/permit status of second unit unverified</li><li>Utilities may be shared</li><li>Financing complexity higher for two-units-one-lot</li></ul></div></div><div class="verdict-banner v-cond">CONDITIONAL — Two-units angle is the best path to 120%+ CF but legal/permit verification is critical before committing.</div><div class="card-footer"><a href="https://www.redfin.com/FL/Sanford/investor-special/property/1" target="_blank">VIEW ↗</a></div></div>
-<div class="card"><div class="card-header"><div><div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div><div class="card-sub">Deltona · Single-Family Home</div></div><span class="badge bg-red">SKIP</span></div><div class="price-row"><span class="price-big">$185,000</span><span class="beds-baths">2BR / 2BA</span></div><div class="card-badges"><span class="badge bg-yellow">Score: 10</span><span class="badge bg-red">$-504/mo CF</span><span class="badge bg-yellow">CoC: -16.4%</span><span class="badge bg-muted">Excellent</span></div><div class="score-bar"><div class="score-fill low" style="width:10%"></div></div><table class="cf-table"><tr><th colspan="2">Monthly Cash Flow</th></tr><tr><td>Rent</td><td class="cf-pos">+$0</td></tr><tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr><tr><td>Property Tax</td><td class="cf-neg">−$131</td></tr><tr><td>Insurance</td><td class="cf-neg">−$700</td></tr><tr><td>Maintenance (10%)</td><td class="cf-neg">−$160</td></tr><tr><td>Vacancy (8%)</td><td class="cf-neg">−$128</td></tr><tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-504/mo</td></tr></table><div class="breakdown-grid"><div><div class="breakdown-header cf-pos">✅ Positives</div><ul class="breakdown-list"><li>Move-in ready — no rehab costs, rents immediately</li><li>New roof, appliances, countertops — reduced near-term maintenance</li><li>Fenced yard + carport — desirable FL features</li><li>No HOA — no additional monthly fees</li></ul></div><div><div class="breakdown-header cf-neg">⚠️ Negatives</div><ul class="breakdown-list"><li>At $185K: deeply negative CF of $504/mo</li><li>Insurance ($700/mo) + Mortgage ($985/mo) = $1,685/mo before taxes</li><li>Needs ~$150K purchase price to hit break-even</li><li>Deltona rents max out ~$1,800 for 2BR even with upgrades</li></ul></div></div><div class="verdict-banner v-skip">SKIP — At $185K this is deeply negative cash flow. Needs significant price reduction to $150K or below.</div><div class="card-footer"><a href="https://www.redfin.com/FL/Deltona/123-Oak-Ln/property/2" target="_blank">VIEW ↗</a></div></div>
-<div class="card"><div class="card-header"><div><div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div><div class="card-sub">Deltona · Single-Family Home</div></div><span class="badge bg-red">SKIP</span></div><div class="price-row"><span class="price-big">$145,000</span><span class="beds-baths">2BR / 1BA</span></div><div class="card-badges"><span class="badge bg-yellow">Score: 8</span><span class="badge bg-red">$-427/mo CF</span><span class="badge bg-yellow">CoC: -17.7%</span><span class="badge bg-muted">Poor / Needs Rehab</span></div><div class="score-bar"><div class="score-fill low" style="width:8%"></div></div><table class="cf-table"><tr><th colspan="2">Monthly Cash Flow</th></tr><tr><td>Rent</td><td class="cf-pos">+$0</td></tr><tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$772</td></tr><tr><td>Property Tax</td><td class="cf-neg">−$103</td></tr><tr><td>Insurance</td><td class="cf-neg">−$700</td></tr><tr><td>Maintenance (10%)</td><td class="cf-neg">−$140</td></tr><tr><td>Vacancy (8%)</td><td class="cf-neg">−$112</td></tr><tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-427/mo</td></tr></table><div class="breakdown-grid"><div><div class="breakdown-header cf-pos">✅ Positives</div><ul class="breakdown-list"><li>Purchase price $145K — lowest entry point in corridor</li><li>Large lot — potential for future value add</li><li>Updated electrical — major system already addressed</li><li>No HOA — predictable costs</li></ul></div><div><div class="breakdown-header cf-neg">⚠️ Negatives</div><ul class="breakdown-list"><li>Even at $145K: negative CF of $427/mo</li><li>Needs cosmetic rehab — timeline to rent + overage risk</li><li>FL insurance ($700/mo) is brutal regardless of purchase price</li><li>1BR/1BA limits tenant pool</li><li>Post-rehab rent ceiling ~$1,600 still doesn't cover costs at this price</li></ul></div></div><div class="verdict-banner v-skip">SKIP — Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or CF assumption change.</div><div class="card-footer"><a href="https://www.redfin.com/FL/Deltona/456-Pine-St/property/3" target="_blank">VIEW ↗</a></div></div></div></section>
-<section><h2>📋 Recent Analyses</h2><div class="cards"><div class="card"><div class="card-header"><div><div class="card-title">Sanford, FL — Two Homes One Lot</div><div class="card-sub">Sanford · Duplex / Two-Unit</div></div><span class="badge bg-yellow">CONDITIONAL</span></div><div class="price-row"><span class="price-big">$185,000</span><span class="beds-baths">4BR / 2BA</span></div><div class="card-badges"><span class="badge bg-yellow">Score: 45</span><span class="badge bg-red">$-55/mo CF</span><span class="badge bg-yellow">CoC: -1.8%</span><span class="badge bg-muted">Fair</span></div><div class="score-bar"><div class="score-fill low" style="width:45%"></div></div><table class="cf-table"><tr><th colspan="2">Monthly Cash Flow</th></tr><tr><td>Rent</td><td class="cf-pos">+$0</td></tr><tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr><tr><td>Property Tax</td><td class="cf-neg">−$110</td></tr><tr><td>Insurance</td><td class="cf-neg">−$700</td></tr><tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr><tr><td>Vacancy (8%)</td><td class="cf-neg">−$160</td></tr><tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-55/mo</td></tr></table><div class="breakdown-grid"><div><div class="breakdown-header cf-pos">✅ Positives</div><ul class="breakdown-list"><li>2 units on 1 lot — stacked rental income potential</li><li>No HOA — keeps costs predictable</li><li>Seminole County school district</li><li>At full market rent ($2,100/mo): +$373/mo CF possible</li><li>Purchase price $185K — workable for the FL corridor</li></ul></div><div><div class="breakdown-header cf-neg">⚠️ Negatives</div><ul class="breakdown-list"><li>Current rent estimate ($2,100 combined) may not be achievable</li><li>Legal/permit status of second unit unverified</li><li>Utilities may be shared</li><li>Financing complexity higher for two-units-one-lot</li></ul></div></div><div class="verdict-banner v-cond">CONDITIONAL — Two-units angle is the best path to 120%+ CF but legal/permit verification is critical before committing.</div><div class="card-footer"><a href="https://www.redfin.com/FL/Sanford/investor-special/property/1" target="_blank">VIEW ↗</a><span class="date">2026-04-03 00:00 UTC</span></div></div>
-<div class="card"><div class="card-header"><div><div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div><div class="card-sub">Deltona · Single-Family Home</div></div><span class="badge bg-red">SKIP</span></div><div class="price-row"><span class="price-big">$185,000</span><span class="beds-baths">2BR / 2BA</span></div><div class="card-badges"><span class="badge bg-yellow">Score: 10</span><span class="badge bg-red">$-504/mo CF</span><span class="badge bg-yellow">CoC: -16.4%</span><span class="badge bg-muted">Excellent</span></div><div class="score-bar"><div class="score-fill low" style="width:10%"></div></div><table class="cf-table"><tr><th colspan="2">Monthly Cash Flow</th></tr><tr><td>Rent</td><td class="cf-pos">+$0</td></tr><tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$985</td></tr><tr><td>Property Tax</td><td class="cf-neg">−$131</td></tr><tr><td>Insurance</td><td class="cf-neg">−$700</td></tr><tr><td>Maintenance (10%)</td><td class="cf-neg">−$160</td></tr><tr><td>Vacancy (8%)</td><td class="cf-neg">−$128</td></tr><tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-504/mo</td></tr></table><div class="breakdown-grid"><div><div class="breakdown-header cf-pos">✅ Positives</div><ul class="breakdown-list"><li>Move-in ready — no rehab costs, rents immediately</li><li>New roof, appliances, countertops — reduced near-term maintenance</li><li>Fenced yard + carport — desirable FL features</li><li>No HOA — no additional monthly fees</li></ul></div><div><div class="breakdown-header cf-neg">⚠️ Negatives</div><ul class="breakdown-list"><li>At $185K: deeply negative CF of $504/mo</li><li>Insurance ($700/mo) + Mortgage ($985/mo) = $1,685/mo before taxes</li><li>Needs ~$150K purchase price to hit break-even</li><li>Deltona rents max out ~$1,800 for 2BR even with upgrades</li></ul></div></div><div class="verdict-banner v-skip">SKIP — At $185K this is deeply negative cash flow. Needs significant price reduction to $150K or below.</div><div class="card-footer"><a href="https://www.redfin.com/FL/Deltona/123-Oak-Ln/property/2" target="_blank">VIEW ↗</a><span class="date">2026-04-03 00:00 UTC</span></div></div>
-<div class="card"><div class="card-header"><div><div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div><div class="card-sub">Deltona · Single-Family Home</div></div><span class="badge bg-red">SKIP</span></div><div class="price-row"><span class="price-big">$145,000</span><span class="beds-baths">2BR / 1BA</span></div><div class="card-badges"><span class="badge bg-yellow">Score: 8</span><span class="badge bg-red">$-427/mo CF</span><span class="badge bg-yellow">CoC: -17.7%</span><span class="badge bg-muted">Poor / Needs Rehab</span></div><div class="score-bar"><div class="score-fill low" style="width:8%"></div></div><table class="cf-table"><tr><th colspan="2">Monthly Cash Flow</th></tr><tr><td>Rent</td><td class="cf-pos">+$0</td></tr><tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$772</td></tr><tr><td>Property Tax</td><td class="cf-neg">−$103</td></tr><tr><td>Insurance</td><td class="cf-neg">−$700</td></tr><tr><td>Maintenance (10%)</td><td class="cf-neg">−$140</td></tr><tr><td>Vacancy (8%)</td><td class="cf-neg">−$112</td></tr><tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-427/mo</td></tr></table><div class="breakdown-grid"><div><div class="breakdown-header cf-pos">✅ Positives</div><ul class="breakdown-list"><li>Purchase price $145K — lowest entry point in corridor</li><li>Large lot — potential for future value add</li><li>Updated electrical — major system already addressed</li><li>No HOA — predictable costs</li></ul></div><div><div class="breakdown-header cf-neg">⚠️ Negatives</div><ul class="breakdown-list"><li>Even at $145K: negative CF of $427/mo</li><li>Needs cosmetic rehab — timeline to rent + overage risk</li><li>FL insurance ($700/mo) is brutal regardless of purchase price</li><li>1BR/1BA limits tenant pool</li><li>Post-rehab rent ceiling ~$1,600 still doesn't cover costs at this price</li></ul></div></div><div class="verdict-banner v-skip">SKIP — Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or CF assumption change.</div><div class="card-footer"><a href="https://www.redfin.com/FL/Deltona/456-Pine-St/property/3" target="_blank">VIEW ↗</a><span class="date">2026-04-03 00:00 UTC</span></div></div></div></section>
-<footer><p>⚡ Johnny5 &nbsp;|&nbsp; FL market estimates — verify independently &nbsp;|&nbsp; Not financial advice</p></footer>
+<header><h1>🏠 Rental Deal Analyzer</h1><span class="updated">Updated: 2026-04-05 09:43  &nbsp;|&nbsp; Auto-updated from email</span></header>
+<section><h2>⭐ Top Opportunities — Ranked by Cash Flow at $150K Down</h2>
+<div class="cards"><div class="card">
+  <div class="card-header">
+    <div><div class="card-title">Sanford, FL — Two Homes One Lot</div><div class="card-sub">Sanford · Duplex / Two-Unit</div></div>
+    <span class="badge bg-yellow">CONDITIONAL</span>
+  </div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">4BR / 2BA</span>
+  </div>
+  <div class="card-badges">
+    <span class="badge bg-yellow">Score: 50.4</span>
+    <span class="badge bg-green">$597/mo CF</span>
+    <span class="badge bg-yellow">CoC: 4.8%</span>
+    <span class="badge bg-muted">$150,000 down</span>
+    <span class="badge bg-muted">Fair</span>
+  </div>
+  <div class="score-bar"><div class="score-fill low" style="width:50.4%"></div></div>
+  <div class="cf-block">
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
+      <table class="cf-table">
+        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$110</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$160</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$597/mo</td></tr>
+      </table>
+    </div>
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
+      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $25,100 — you're covered at $150,000 down</span></div>
+      <table class="cf-table">
+        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,270</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,270/mo</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>4BR/$2,100/mo — strong family rental demand</li><li>No HOA — keeps monthly costs predictable</li><li>Seminole County school district</li><li>Positive CF of $597/mo at $150K down</li><li>Already above required DP ($150K vs $25K min)</li></ul></div>
+    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>Rent estimate ($2,100 combined) may not be achievable</li><li>Legal/permit status of second unit unverified</li><li>Financing complexity for two-units-one-lot</li></ul></div>
+  </div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Two-units is the path to CF — needs permit verification but math is more viable than single-family at $150K.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Sanford/property/1" target="_blank">VIEW &#x2197;</a>
+    
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div><div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div><div class="card-sub">Deltona · Single-Family Home</div></div>
+    <span class="badge bg-red">SKIP</span>
+  </div>
+  <div class="price-row">
+    <span class="price-big">$145,000</span>
+    <span class="beds-baths">2BR / 1BA</span>
+  </div>
+  <div class="card-badges">
+    <span class="badge bg-yellow">Score: 22.6</span>
+    <span class="badge bg-green">$245/mo CF</span>
+    <span class="badge bg-yellow">CoC: 2.0%</span>
+    <span class="badge bg-muted">$150,000 down</span>
+    <span class="badge bg-muted">Poor / Needs Rehab</span>
+  </div>
+  <div class="score-bar"><div class="score-fill low" style="width:22.6%"></div></div>
+  <div class="cf-block">
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
+      <table class="cf-table">
+        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$0</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$103</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$140</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$112</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$245/mo</td></tr>
+      </table>
+    </div>
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
+      <div class="reqdp-box"><span class="reqdp-na">&#x26F0; Not achievable — price too high for corridor</span></div>
+      <table class="cf-table">
+        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,155</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,160/mo</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>$145K purchase price — lowest entry in corridor</li><li>No mortgage at $150K down = more CF</li><li>Large lot — future value add potential</li><li>Updated electrical already addressed</li></ul></div>
+    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>20% CF target not achievable — price too high for rent ceiling</li><li>Needs cosmetic rehab — timeline to rent + overage risk</li><li>1BR/1BA limits tenant pool</li><li>Post-rehab rent ceiling ~$1,600 still thin</li></ul></div>
+  </div>
+  <div class="verdict-banner v-skip">SKIP — Positive CF only because $150K down eliminates mortgage. Still can't hit 20% CF target — price too high relative to achievable rents.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/property/3" target="_blank">VIEW &#x2197;</a>
+    
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div><div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div><div class="card-sub">Deltona · Single-Family Home</div></div>
+    <span class="badge bg-yellow">CONDITIONAL</span>
+  </div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">2BR / 2BA</span>
+  </div>
+  <div class="card-badges">
+    <span class="badge bg-yellow">Score: 29.3</span>
+    <span class="badge bg-green">$148/mo CF</span>
+    <span class="badge bg-yellow">CoC: 1.2%</span>
+    <span class="badge bg-muted">$150,000 down</span>
+    <span class="badge bg-muted">Excellent</span>
+  </div>
+  <div class="score-bar"><div class="score-fill low" style="width:29.3%"></div></div>
+  <div class="cf-block">
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
+      <table class="cf-table">
+        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$131</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$160</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$128</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$148/mo</td></tr>
+      </table>
+    </div>
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
+      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $107,900 — you're covered at $150,000 down</span></div>
+      <table class="cf-table">
+        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,219</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,220/mo</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>Move-in ready — no rehab costs, rents immediately</li><li>New roof, appliances, countertops — reduced near-term maintenance</li><li>Fenced yard + carport — desirable FL features</li><li>No HOA</li><li>Positive CF of $148/mo at $150K down</li></ul></div>
+    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>CoC return only 1.2% — very thin margin</li><li>Need ~$108K more to hit 20% CF target</li><li>Deltona rents max out ~$1,800 for 2BR even with upgrades</li><li>Insurance ($700/mo) is the biggest expense line</li></ul></div>
+  </div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Positive CF at $150K down but razor-thin. Needs price negotiation or additional income to be a real deal.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/property/2" target="_blank">VIEW &#x2197;</a>
+    
+  </div>
+</div></div></section>
+<section><h2>📋 Recent Analyses</h2>
+<div class="cards"><div class="card">
+  <div class="card-header">
+    <div><div class="card-title">Sanford, FL — Two Homes One Lot</div><div class="card-sub">Sanford · Duplex / Two-Unit</div></div>
+    <span class="badge bg-yellow">CONDITIONAL</span>
+  </div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">4BR / 2BA</span>
+  </div>
+  <div class="card-badges">
+    <span class="badge bg-yellow">Score: 50.4</span>
+    <span class="badge bg-green">$597/mo CF</span>
+    <span class="badge bg-yellow">CoC: 4.8%</span>
+    <span class="badge bg-muted">$150,000 down</span>
+    <span class="badge bg-muted">Fair</span>
+  </div>
+  <div class="score-bar"><div class="score-fill low" style="width:50.4%"></div></div>
+  <div class="cf-block">
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
+      <table class="cf-table">
+        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$110</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$160</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$597/mo</td></tr>
+      </table>
+    </div>
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
+      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $25,100 — you're covered at $150,000 down</span></div>
+      <table class="cf-table">
+        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,270</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,270/mo</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>4BR/$2,100/mo — strong family rental demand</li><li>No HOA — keeps monthly costs predictable</li><li>Seminole County school district</li><li>Positive CF of $597/mo at $150K down</li><li>Already above required DP ($150K vs $25K min)</li></ul></div>
+    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>Rent estimate ($2,100 combined) may not be achievable</li><li>Legal/permit status of second unit unverified</li><li>Financing complexity for two-units-one-lot</li></ul></div>
+  </div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Two-units is the path to CF — needs permit verification but math is more viable than single-family at $150K.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Sanford/property/1" target="_blank">VIEW &#x2197;</a>
+    <span class="date">2026-04-03 00:00 UTC</span>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div><div class="card-title">Deltona, FL — 2BR/2BA Move-In Ready</div><div class="card-sub">Deltona · Single-Family Home</div></div>
+    <span class="badge bg-yellow">CONDITIONAL</span>
+  </div>
+  <div class="price-row">
+    <span class="price-big">$185,000</span>
+    <span class="beds-baths">2BR / 2BA</span>
+  </div>
+  <div class="card-badges">
+    <span class="badge bg-yellow">Score: 29.3</span>
+    <span class="badge bg-green">$148/mo CF</span>
+    <span class="badge bg-yellow">CoC: 1.2%</span>
+    <span class="badge bg-muted">$150,000 down</span>
+    <span class="badge bg-muted">Excellent</span>
+  </div>
+  <div class="score-bar"><div class="score-fill low" style="width:29.3%"></div></div>
+  <div class="cf-block">
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
+      <table class="cf-table">
+        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$233</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$131</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$160</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$128</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$148/mo</td></tr>
+      </table>
+    </div>
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
+      <div class="reqdp-box"><span class="reqdp-ok">&#x2705; $107,900 — you're covered at $150,000 down</span></div>
+      <table class="cf-table">
+        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,219</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,220/mo</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>Move-in ready — no rehab costs, rents immediately</li><li>New roof, appliances, countertops — reduced near-term maintenance</li><li>Fenced yard + carport — desirable FL features</li><li>No HOA</li><li>Positive CF of $148/mo at $150K down</li></ul></div>
+    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>CoC return only 1.2% — very thin margin</li><li>Need ~$108K more to hit 20% CF target</li><li>Deltona rents max out ~$1,800 for 2BR even with upgrades</li><li>Insurance ($700/mo) is the biggest expense line</li></ul></div>
+  </div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Positive CF at $150K down but razor-thin. Needs price negotiation or additional income to be a real deal.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/property/2" target="_blank">VIEW &#x2197;</a>
+    <span class="date">2026-04-03 00:00 UTC</span>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    <div><div class="card-title">Deltona, FL — Blank Canvas Handyman Special</div><div class="card-sub">Deltona · Single-Family Home</div></div>
+    <span class="badge bg-red">SKIP</span>
+  </div>
+  <div class="price-row">
+    <span class="price-big">$145,000</span>
+    <span class="beds-baths">2BR / 1BA</span>
+  </div>
+  <div class="card-badges">
+    <span class="badge bg-yellow">Score: 22.6</span>
+    <span class="badge bg-green">$245/mo CF</span>
+    <span class="badge bg-yellow">CoC: 2.0%</span>
+    <span class="badge bg-muted">$150,000 down</span>
+    <span class="badge bg-muted">Poor / Needs Rehab</span>
+  </div>
+  <div class="score-bar"><div class="score-fill low" style="width:22.6%"></div></div>
+  <div class="cf-block">
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F4CA; At Your $150,000 Down</div>
+      <table class="cf-table">
+        <tr><td>Rent</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">&#8722;$0</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">&#8722;$103</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">&#8722;$700</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">&#8722;$140</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">&#8722;$112</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$245/mo</td></tr>
+      </table>
+    </div>
+    <div class="cf-col">
+      <div class="cf-col-header">&#x1F3AF; To Hit 20% Cash Flow</div>
+      <div class="reqdp-box"><span class="reqdp-na">&#x26F0; Not achievable — price too high for corridor</span></div>
+      <table class="cf-table">
+        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+$0</td></tr>
+        <tr><td>Monthly Non-Mortgage</td><td class="cf-neg">&#8722;$1,155</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowable</td><td class="cf-neg">$-1,160/mo</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="breakdown-grid">
+    <div><div class="breakdown-header cf-pos">&#x2705; Positives</div><ul class="breakdown-list"><li>$145K purchase price — lowest entry in corridor</li><li>No mortgage at $150K down = more CF</li><li>Large lot — future value add potential</li><li>Updated electrical already addressed</li></ul></div>
+    <div><div class="breakdown-header cf-neg">&#x26A0; Negatives</div><ul class="breakdown-list"><li>20% CF target not achievable — price too high for rent ceiling</li><li>Needs cosmetic rehab — timeline to rent + overage risk</li><li>1BR/1BA limits tenant pool</li><li>Post-rehab rent ceiling ~$1,600 still thin</li></ul></div>
+  </div>
+  <div class="verdict-banner v-skip">SKIP — Positive CF only because $150K down eliminates mortgage. Still can't hit 20% CF target — price too high relative to achievable rents.</div>
+  <div class="card-footer">
+    <a href="https://www.redfin.com/FL/Deltona/property/3" target="_blank">VIEW &#x2197;</a>
+    <span class="date">2026-04-03 00:00 UTC</span>
+  </div>
+</div></div></section>
+<footer><p>⚡ Johnny5 &nbsp;|&nbsp; Default: $150,000 down payment &nbsp;|&nbsp; Target: 20% cash flow over expenses &nbsp;|&nbsp; Not financial advice.</p></footer>
 </div></body></html>
