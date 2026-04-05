@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "last_updated": "2026-04-05T15:51:39.898939+00:00",
+  "version": 8,
+  "last_updated": "2026-04-05T16:40:11.115260+00:00",
   "properties": [
     {
       "id": 31311695,
@@ -615,6 +615,77 @@
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-04-05T15:51:39.898908+00:00",
+      "listing_status": "active",
+      "status": "active"
+    },
+    {
+      "id": 660177599,
+      "url": "https://www.zillow.com/homedetails/606-Iris-St-Altamonte-Springs-FL-32714/47666257_zpid/",
+      "source": "zillow",
+      "address": "Iris St Altamonte Springs Fl, FL",
+      "city": "Altamonte Springs",
+      "zip": "32714",
+      "price": 426790,
+      "beds": 3,
+      "baths": 2.0,
+      "sqft": 1707,
+      "lot_size": null,
+      "property_type": "Single-Family Home",
+      "year_built": 1978,
+      "condition": "Fair",
+      "features": [
+        "pool",
+        "garage",
+        "no hoa"
+      ],
+      "description": "606 Iris St, Altamonte Springs, FL 32714 |",
+      "mls": null,
+      "monthly_rent_estimate": 2250,
+      "down_payment_used": 125000,
+      "cash_flow": {
+        "price": 426790,
+        "down_payment": 125000,
+        "loan_amount": 301790,
+        "interest_rate": 6.5,
+        "loan_term_years": 30,
+        "mortgage_payment": 1907.52,
+        "monthly_tax": 300,
+        "annual_tax": 3600,
+        "annual_insurance": 6650,
+        "monthly_insurance": 554,
+        "monthly_maintenance": 200.0,
+        "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 2250,
+        "total_monthly_expenses": 3060.0,
+        "monthly_cash_flow": -810.0,
+        "cash_on_cash_return_pct": -7.8,
+        "required_down_payment_for_20pct_cf": 350000.0,
+        "breakdown": {
+          "positives": [
+            "3BR/$2250/mo \u2014 strong family rental demand",
+            "1,707 sqft \u2014 commands premium rent",
+            "No HOA \u2014 keeps monthly costs predictable",
+            "Garage/carport \u2014 desirable in FL heat",
+            "Altamonte Springs \u2014 strong rental market, good tenant pool"
+          ],
+          "negatives": [
+            "Purchase price $426,790 \u2014 expensive for cash flow math",
+            "Pool \u2014 adds insurance cost and maintenance burden",
+            "\u274c Negative CF of $810.0/mo at $125,000 down \u2014 $9720.0/yr drag",
+            "Need ~$350,000.0 down to hit 20% CF target (+$225,000.0 more)"
+          ]
+        }
+      },
+      "scores": {
+        "cash_flow_score": 61.0,
+        "deal_quality_score": 0,
+        "overall_score": 33.6
+      },
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "analyzed_at": "2026-04-05T16:40:07.500466+00:00",
       "listing_status": "active",
       "status": "active"
     }
