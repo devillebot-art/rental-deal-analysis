@@ -1,37 +1,59 @@
 {
-  "version": 1,
-  "last_updated": "2026-04-05T13:08:02.453732+00:00",
+  "version": 2,
+  "last_updated": "2026-04-05T13:27:39.707870+00:00",
   "properties": [
     {
       "id": 1,
       "url": "https://www.redfin.com/FL/Sanford/investor-special/property/1",
       "address": "Sanford, FL \u2014 Two Homes One Lot",
+      "city": "Sanford",
+      "zip": "32771",
       "price": 185000,
       "beds": 4,
       "baths": 2,
       "sqft": null,
-      "description": "Two separate 2BR/1BA homes on one lot \u2014 functional duplex. No HOA, Seminole County schools.",
-      "monthly_rent": 2100,
+      "property_type": "Duplex / Two-Unit",
+      "condition": "Fair",
+      "features": [
+        "no hoa"
+      ],
+      "monthly_rent_estimate": 2100,
       "cash_flow": {
         "down_payment": 37000,
         "loan_amount": 148000,
         "mortgage_payment": 985,
-        "property_tax": 110,
-        "insurance": 700,
-        "maintenance": 240,
-        "vacancy": 192,
-        "total_expenses": 2227,
-        "monthly_rent_estimate": 2100,
-        "monthly_cash_flow": -127,
-        "cash_on_cash_return_pct": -4.1
+        "monthly_tax": 110,
+        "annual_tax": 1320,
+        "monthly_insurance": 700,
+        "annual_insurance": 8400,
+        "monthly_maintenance": 200,
+        "monthly_vacancy": 160,
+        "total_monthly_expenses": 2155,
+        "monthly_cash_flow": -55,
+        "cash_on_cash_return_pct": -1.8,
+        "breakdown": {
+          "positives": [
+            "2 units on 1 lot \u2014 stacked rental income potential",
+            "No HOA \u2014 keeps costs predictable",
+            "Seminole County school district",
+            "At full market rent ($2,100/mo): +$373/mo CF possible",
+            "Purchase price $185K \u2014 workable for the FL corridor"
+          ],
+          "negatives": [
+            "Current rent estimate ($2,100 combined) may not be achievable",
+            "Legal/permit status of second unit unverified",
+            "Utilities may be shared",
+            "Financing complexity higher for two-units-one-lot"
+          ]
+        }
       },
       "scores": {
-        "cash_flow_score": 27,
-        "deal_quality_score": 72,
+        "cash_flow_score": 35,
+        "deal_quality_score": 68,
         "overall_score": 45
       },
       "verdict": "CONDITIONAL",
-      "verdict_reason": "Two-units angle is the best path to 120%+ cash flow in this corridor, but needs full legal/permit verification.",
+      "verdict_reason": "Two-units angle is the best path to 120%+ CF but legal/permit verification is critical before committing.",
       "analyzed_at": "2026-04-03T00:00:00Z",
       "status": "active"
     },
@@ -39,32 +61,55 @@
       "id": 2,
       "url": "https://www.redfin.com/FL/Deltona/123-Oak-Ln/property/2",
       "address": "Deltona, FL \u2014 2BR/2BA Move-In Ready",
+      "city": "Deltona",
+      "zip": "32725",
       "price": 185000,
       "beds": 2,
       "baths": 2,
       "sqft": null,
-      "description": "2BR/2BA, new roof, appliances, countertops, Central A/C, fenced yard, carport. No HOA.",
-      "monthly_rent": 1600,
+      "property_type": "Single-Family Home",
+      "condition": "Excellent",
+      "features": [
+        "garage",
+        "fenced yard",
+        "central ac"
+      ],
+      "monthly_rent_estimate": 1600,
       "cash_flow": {
         "down_payment": 37000,
         "loan_amount": 148000,
         "mortgage_payment": 985,
-        "property_tax": 131,
-        "insurance": 700,
-        "maintenance": 160,
-        "vacancy": 128,
-        "total_expenses": 2104,
-        "monthly_rent_estimate": 1600,
+        "monthly_tax": 131,
+        "annual_tax": 1573,
+        "monthly_insurance": 700,
+        "annual_insurance": 8400,
+        "monthly_maintenance": 160,
+        "monthly_vacancy": 128,
+        "total_monthly_expenses": 2104,
         "monthly_cash_flow": -504,
-        "cash_on_cash_return_pct": -16.4
+        "cash_on_cash_return_pct": -16.4,
+        "breakdown": {
+          "positives": [
+            "Move-in ready \u2014 no rehab costs, rents immediately",
+            "New roof, appliances, countertops \u2014 reduced near-term maintenance",
+            "Fenced yard + carport \u2014 desirable FL features",
+            "No HOA \u2014 no additional monthly fees"
+          ],
+          "negatives": [
+            "At $185K: deeply negative CF of $504/mo",
+            "Insurance ($700/mo) + Mortgage ($985/mo) = $1,685/mo before taxes",
+            "Needs ~$150K purchase price to hit break-even",
+            "Deltona rents max out ~$1,800 for 2BR even with upgrades"
+          ]
+        }
       },
       "scores": {
         "cash_flow_score": 0,
-        "deal_quality_score": 25,
+        "deal_quality_score": 40,
         "overall_score": 10
       },
       "verdict": "SKIP",
-      "verdict_reason": "At $185K this is deep negative cash flow. Needs ~$150K purchase price to be viable.",
+      "verdict_reason": "At $185K this is deeply negative cash flow. Needs significant price reduction to $150K or below.",
       "analyzed_at": "2026-04-03T00:00:00Z",
       "status": "active"
     },
@@ -72,32 +117,55 @@
       "id": 3,
       "url": "https://www.redfin.com/FL/Deltona/456-Pine-St/property/3",
       "address": "Deltona, FL \u2014 Blank Canvas Handyman Special",
+      "city": "Deltona",
+      "zip": "32725",
       "price": 145000,
       "beds": 2,
       "baths": 1,
       "sqft": null,
-      "description": "2BR/1BA, updated electrical, large lot, no HOA. Blank canvas \u2014 lower purchase price.",
-      "monthly_rent": 1600,
+      "property_type": "Single-Family Home",
+      "condition": "Poor / Needs Rehab",
+      "features": [
+        "no hoa",
+        "central ac"
+      ],
+      "monthly_rent_estimate": 1400,
       "cash_flow": {
         "down_payment": 29000,
         "loan_amount": 116000,
         "mortgage_payment": 772,
-        "property_tax": 103,
-        "insurance": 700,
-        "maintenance": 160,
-        "vacancy": 128,
-        "total_expenses": 1863,
-        "monthly_rent_estimate": 1600,
-        "monthly_cash_flow": -263,
-        "cash_on_cash_return_pct": -10.9
+        "monthly_tax": 103,
+        "annual_tax": 1233,
+        "monthly_insurance": 700,
+        "annual_insurance": 8400,
+        "monthly_maintenance": 140,
+        "monthly_vacancy": 112,
+        "total_monthly_expenses": 1827,
+        "monthly_cash_flow": -427,
+        "cash_on_cash_return_pct": -17.7,
+        "breakdown": {
+          "positives": [
+            "Purchase price $145K \u2014 lowest entry point in corridor",
+            "Large lot \u2014 potential for future value add",
+            "Updated electrical \u2014 major system already addressed",
+            "No HOA \u2014 predictable costs"
+          ],
+          "negatives": [
+            "Even at $145K: negative CF of $427/mo",
+            "Needs cosmetic rehab \u2014 timeline to rent + overage risk",
+            "FL insurance ($700/mo) is brutal regardless of purchase price",
+            "1BR/1BA limits tenant pool",
+            "Post-rehab rent ceiling ~$1,600 still doesn't cover costs at this price"
+          ]
+        }
       },
       "scores": {
         "cash_flow_score": 0,
-        "deal_quality_score": 20,
+        "deal_quality_score": 28,
         "overall_score": 8
       },
       "verdict": "SKIP",
-      "verdict_reason": "Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or lower.",
+      "verdict_reason": "Even at $145K, deeply negative cash flow due to FL insurance. Needs ~$120K or CF assumption change.",
       "analyzed_at": "2026-04-03T00:00:00Z",
       "status": "active"
     }
