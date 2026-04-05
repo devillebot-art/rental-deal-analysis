@@ -1,9 +1,9 @@
 {
-  "version": 5,
-  "last_updated": "2026-04-05T15:31:29.883483+00:00",
+  "version": 6,
+  "last_updated": "2026-04-05T15:38:16.122228+00:00",
   "properties": [
     {
-      "id": 555736600,
+      "id": 100631172,
       "url": "https://www.zillow.com/homedetails/932-N-Fairbairn-Dr-Deltona-FL-32725/47974129_zpid/",
       "source": "zillow",
       "address": "N Fairbairn Dr Deltona Fl, FL",
@@ -11,63 +11,68 @@
       "zip": "32725",
       "price": 279000,
       "beds": 3,
-      "baths": null,
-      "sqft": null,
+      "baths": 2.0,
+      "sqft": 1390,
       "lot_size": null,
       "property_type": "Single-Family Home",
-      "year_built": null,
+      "year_built": 1977,
       "condition": "Fair",
       "features": [
-        "no hoa"
+        "new roof",
+        "updated kitchen"
       ],
-      "description": "",
+      "description": "932 N Fairbairn Dr, Deltona, FL 32725 |",
       "mls": null,
-      "monthly_rent_estimate": 1750,
+      "monthly_rent_estimate": 1850,
       "down_payment_used": 150000,
       "cash_flow": {
         "price": 279000,
         "down_payment": 150000,
         "loan_amount": 129000,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 858.24,
+        "mortgage_payment": 815.37,
         "monthly_tax": 200,
         "annual_tax": 2400,
-        "annual_insurance": 3000,
-        "monthly_insurance": 250,
+        "annual_insurance": 3200,
+        "monthly_insurance": 267,
         "monthly_maintenance": 100.0,
         "monthly_vacancy": 100.0,
-        "monthly_rent_estimate": 1750,
-        "total_monthly_expenses": 1510.0,
-        "monthly_cash_flow": 240.0,
-        "cash_on_cash_return_pct": 1.9,
-        "required_down_payment_for_20pct_cf": 159000.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 1850,
+        "total_monthly_expenses": 1480.0,
+        "monthly_cash_flow": 370.0,
+        "cash_on_cash_return_pct": 3.0,
+        "required_down_payment_for_20pct_cf": 139000.0,
         "breakdown": {
           "positives": [
-            "3BR/$1750/mo \u2014 strong family rental demand",
-            "No HOA \u2014 keeps monthly costs predictable",
+            "3BR/$1850/mo \u2014 strong family rental demand",
+            "New roof \u2014 reduces insurance risk",
+            "Updated kitchen \u2014 justifies higher rent",
             "Deltona \u2014 lower entry price point, better CF math",
-            "Annual insurance ~$3,000 \u2014 better than typical FL",
-            "\u2705 Positive CF of $240.0/mo = $2880.0/yr at $150,000 down"
+            "Annual insurance ~$3,200 \u2014 better than typical FL",
+            "\u2705 Positive CF of $370.0/mo = $4440.0/yr at $150,000 down",
+            "\u2705 Already above required down payment ($150,000 vs $139,000.0 min)"
           ],
           "negatives": [
-            "Purchase price $279,000 \u2014 expensive for cash flow math",
-            "Need ~$159,000.0 down to hit 20% CF target (+$9,000.0 more)"
+            "Purchase price $279,000 \u2014 expensive for cash flow math"
           ]
         }
       },
       "scores": {
         "cash_flow_score": 100,
-        "deal_quality_score": 25,
-        "overall_score": 66.2
+        "deal_quality_score": 45,
+        "overall_score": 75.2
       },
-      "verdict": "CONDITIONAL",
-      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
-      "analyzed_at": "2026-04-05T15:31:24.542581+00:00",
+      "verdict": "BUY",
+      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "analyzed_at": "2026-04-05T15:38:03.412990+00:00",
+      "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 33280547,
+      "id": 184707382,
       "url": "https://www.zillow.com/homedetails/899-Lormann-Cir-Longwood-FL-32750/47718429_zpid/",
       "source": "zillow",
       "address": "Lormann Cir Longwood Fl, FL",
@@ -94,20 +99,22 @@
         "price": 299490,
         "down_payment": 150000,
         "loan_amount": 149490,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 994.56,
+        "mortgage_payment": 944.88,
         "monthly_tax": 208,
         "annual_tax": 2500,
         "annual_insurance": 3400,
         "monthly_insurance": 283,
         "monthly_maintenance": 200.0,
         "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
         "monthly_rent_estimate": 2100,
-        "total_monthly_expenses": 1790.0,
-        "monthly_cash_flow": 310.0,
-        "cash_on_cash_return_pct": 2.5,
-        "required_down_payment_for_20pct_cf": 157000.0,
+        "total_monthly_expenses": 1740.0,
+        "monthly_cash_flow": 360.0,
+        "cash_on_cash_return_pct": 2.9,
+        "required_down_payment_for_20pct_cf": 148000.0,
         "breakdown": {
           "positives": [
             "3BR/$2100/mo \u2014 strong family rental demand",
@@ -115,27 +122,28 @@
             "Garage/carport \u2014 desirable in FL heat",
             "New roof \u2014 reduces insurance risk",
             "Annual insurance ~$3,400 \u2014 better than typical FL",
-            "\u2705 Positive CF of $310.0/mo = $3720.0/yr at $150,000 down"
+            "\u2705 Positive CF of $360.0/mo = $4320.0/yr at $150,000 down",
+            "\u2705 Already above required down payment ($150,000 vs $148,000.0 min)"
           ],
           "negatives": [
             "Purchase price $299,490 \u2014 expensive for cash flow math",
-            "969 sqft \u2014 small, limits tenant pool",
-            "Need ~$157,000.0 down to hit 20% CF target (+$7,000.0 more)"
+            "969 sqft \u2014 small, limits tenant pool"
           ]
         }
       },
       "scores": {
         "cash_flow_score": 100,
-        "deal_quality_score": 30,
-        "overall_score": 68.5
+        "deal_quality_score": 50,
+        "overall_score": 77.5
       },
-      "verdict": "CONDITIONAL",
-      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
-      "analyzed_at": "2026-04-05T15:31:11.444845+00:00",
+      "verdict": "BUY",
+      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "analyzed_at": "2026-04-05T15:38:05.347558+00:00",
+      "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 529501118,
+      "id": 789121571,
       "url": "https://www.zillow.com/homedetails/365-W-Lansdowne-Ave-Orange-City-FL-32763/47947717_zpid/",
       "source": "zillow",
       "address": "W Lansdowne Ave Orange City Fl, FL",
@@ -158,26 +166,28 @@
         "price": 219900,
         "down_payment": 150000,
         "loan_amount": 69900,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 465.05,
+        "mortgage_payment": 441.82,
         "monthly_tax": 158,
         "annual_tax": 1900,
         "annual_insurance": 2650,
         "monthly_insurance": 221,
         "monthly_maintenance": 200.0,
         "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
         "monthly_rent_estimate": 2200,
-        "total_monthly_expenses": 1140.0,
-        "monthly_cash_flow": 1060.0,
-        "cash_on_cash_return_pct": 8.5,
-        "required_down_payment_for_20pct_cf": 26000.0,
+        "total_monthly_expenses": 1120.0,
+        "monthly_cash_flow": 1080.0,
+        "cash_on_cash_return_pct": 8.6,
+        "required_down_payment_for_20pct_cf": 14000.0,
         "breakdown": {
           "positives": [
             "4BR/$2200/mo \u2014 strong family rental demand",
             "Annual insurance ~$2,650 \u2014 better than typical FL",
-            "\u2705 Positive CF of $1060.0/mo = $12720.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $26,000.0 min)"
+            "\u2705 Positive CF of $1080.0/mo = $12960.0/yr at $150,000 down",
+            "\u2705 Already above required down payment ($150,000 vs $14,000.0 min)"
           ],
           "negatives": []
         }
@@ -189,11 +199,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-05T15:31:29.883396+00:00",
+      "analyzed_at": "2026-04-05T15:38:07.723752+00:00",
+      "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 290383588,
+      "id": 132220212,
       "url": "https://www.zillow.com/homedetails/701-Cherokee-Cir-Sanford-FL-32773/47658452_zpid/",
       "source": "zillow",
       "address": "Cherokee Cir Sanford Fl, FL",
@@ -221,20 +232,22 @@
         "price": 259000,
         "down_payment": 150000,
         "loan_amount": 109000,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 725.18,
+        "mortgage_payment": 688.95,
         "monthly_tax": 150,
         "annual_tax": 1800,
         "annual_insurance": 3350,
         "monthly_insurance": 279,
         "monthly_maintenance": 200.0,
         "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
         "monthly_rent_estimate": 1975,
-        "total_monthly_expenses": 1450.0,
-        "monthly_cash_flow": 525.0,
-        "cash_on_cash_return_pct": 4.2,
-        "required_down_payment_for_20pct_cf": 115000.0,
+        "total_monthly_expenses": 1420.0,
+        "monthly_cash_flow": 555.0,
+        "cash_on_cash_return_pct": 4.4,
+        "required_down_payment_for_20pct_cf": 106000.0,
         "breakdown": {
           "positives": [
             "3BR/$1975/mo \u2014 strong family rental demand",
@@ -242,8 +255,8 @@
             "Garage/carport \u2014 desirable in FL heat",
             "Central A/C \u2014 essential for FL rental",
             "Annual insurance ~$3,350 \u2014 better than typical FL",
-            "\u2705 Positive CF of $525.0/mo = $6300.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $115,000.0 min)"
+            "\u2705 Positive CF of $555.0/mo = $6660.0/yr at $150,000 down",
+            "\u2705 Already above required down payment ($150,000 vs $106,000.0 min)"
           ],
           "negatives": [
             "Purchase price $259,000 \u2014 expensive for cash flow math"
@@ -257,11 +270,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-05T15:31:13.380778+00:00",
+      "analyzed_at": "2026-04-05T15:38:08.944584+00:00",
+      "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 278529288,
+      "id": 507216547,
       "url": "https://www.zillow.com/homedetails/30-S-Edgemon-Ave-Winter-Springs-FL-32708/47630180_zpid/",
       "source": "zillow",
       "address": "S Edgemon Ave Winter Springs Fl, FL",
@@ -286,28 +300,30 @@
         "price": 250000,
         "down_payment": 150000,
         "loan_amount": 100000,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 665.3,
+        "mortgage_payment": 632.07,
         "monthly_tax": 175,
         "annual_tax": 2100,
         "annual_insurance": 3250,
         "monthly_insurance": 271,
         "monthly_maintenance": 100.0,
         "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
         "monthly_rent_estimate": 1850,
-        "total_monthly_expenses": 1310.0,
-        "monthly_cash_flow": 540.0,
-        "cash_on_cash_return_pct": 4.3,
-        "required_down_payment_for_20pct_cf": 108000.0,
+        "total_monthly_expenses": 1280.0,
+        "monthly_cash_flow": 570.0,
+        "cash_on_cash_return_pct": 4.6,
+        "required_down_payment_for_20pct_cf": 101000.0,
         "breakdown": {
           "positives": [
             "3BR/$1850/mo \u2014 strong family rental demand",
             "1,545 sqft \u2014 commands premium rent",
             "No HOA \u2014 keeps monthly costs predictable",
             "Annual insurance ~$3,250 \u2014 better than typical FL",
-            "\u2705 Positive CF of $540.0/mo = $6480.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $108,000.0 min)"
+            "\u2705 Positive CF of $570.0/mo = $6840.0/yr at $150,000 down",
+            "\u2705 Already above required down payment ($150,000 vs $101,000.0 min)"
           ],
           "negatives": [
             "Purchase price $250,000 \u2014 expensive for cash flow math"
@@ -321,11 +337,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-05T15:31:08.607620+00:00",
+      "analyzed_at": "2026-04-05T15:38:10.262070+00:00",
+      "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 147675512,
+      "id": 577623293,
       "url": "https://www.zillow.com/homedetails/935-Florida-Ave-Orange-City-FL-32763/47952718_zpid/",
       "source": "zillow",
       "address": "Florida Ave Orange City Fl, FL",
@@ -351,20 +368,22 @@
         "price": 275000,
         "down_payment": 150000,
         "loan_amount": 125000,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 831.63,
+        "mortgage_payment": 790.09,
         "monthly_tax": 192,
         "annual_tax": 2300,
         "annual_insurance": 2900,
         "monthly_insurance": 242,
         "monthly_maintenance": 200.0,
         "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
         "monthly_rent_estimate": 2075,
-        "total_monthly_expenses": 1570.0,
-        "monthly_cash_flow": 505.0,
-        "cash_on_cash_return_pct": 4.0,
-        "required_down_payment_for_20pct_cf": 120000.0,
+        "total_monthly_expenses": 1520.0,
+        "monthly_cash_flow": 555.0,
+        "cash_on_cash_return_pct": 4.4,
+        "required_down_payment_for_20pct_cf": 110000.0,
         "breakdown": {
           "positives": [
             "3BR/$2075/mo \u2014 strong family rental demand",
@@ -372,8 +391,8 @@
             "Garage/carport \u2014 desirable in FL heat",
             "New roof \u2014 reduces insurance risk",
             "Annual insurance ~$2,900 \u2014 better than typical FL",
-            "\u2705 Positive CF of $505.0/mo = $6060.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $120,000.0 min)"
+            "\u2705 Positive CF of $555.0/mo = $6660.0/yr at $150,000 down",
+            "\u2705 Already above required down payment ($150,000 vs $110,000.0 min)"
           ],
           "negatives": [
             "Purchase price $275,000 \u2014 expensive for cash flow math"
@@ -387,11 +406,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-05T15:31:27.715056+00:00",
+      "analyzed_at": "2026-04-05T15:38:11.548274+00:00",
+      "listing_status": "pending",
       "status": "active"
     },
     {
-      "id": 81455583,
+      "id": 976310693,
       "url": "https://www.zillow.com/homedetails/309-Riviera-Dr-Debary-FL-32713/47957321_zpid/",
       "source": "zillow",
       "address": "309 Riviera Dr Debary, Fl 32713",
@@ -417,20 +437,22 @@
         "price": 239000,
         "down_payment": 150000,
         "loan_amount": 89000,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 592.12,
+        "mortgage_payment": 562.54,
         "monthly_tax": 167,
         "annual_tax": 2000,
         "annual_insurance": 2750,
         "monthly_insurance": 229,
         "monthly_maintenance": 100.0,
         "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
         "monthly_rent_estimate": 1750,
-        "total_monthly_expenses": 1190.0,
-        "monthly_cash_flow": 560.0,
-        "cash_on_cash_return_pct": 4.5,
-        "required_down_payment_for_20pct_cf": 102000.0,
+        "total_monthly_expenses": 1160.0,
+        "monthly_cash_flow": 590.0,
+        "cash_on_cash_return_pct": 4.7,
+        "required_down_payment_for_20pct_cf": 93000.0,
         "breakdown": {
           "positives": [
             "3BR/$1750/mo \u2014 strong family rental demand",
@@ -438,8 +460,8 @@
             "Updated bath \u2014 reduces turnover risk",
             "DeBary \u2014 lower entry price point, better CF math",
             "Annual insurance ~$2,750 \u2014 better than typical FL",
-            "\u2705 Positive CF of $560.0/mo = $6720.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $102,000.0 min)"
+            "\u2705 Positive CF of $590.0/mo = $7080.0/yr at $150,000 down",
+            "\u2705 Already above required down payment ($150,000 vs $93,000.0 min)"
           ],
           "negatives": [
             "Purchase price $239,000 \u2014 expensive for cash flow math"
@@ -453,75 +475,80 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-05T15:31:22.819084+00:00",
+      "analyzed_at": "2026-04-05T15:38:13.789659+00:00",
+      "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 756538811,
+      "id": 588474279,
       "url": "https://www.zillow.com/homedetails/1068-Mayflower-Ave-Deltona-FL-32725/47970630_zpid/",
       "source": "zillow",
-      "address": "1068 Mayower Ave Deltona Fl 32725",
+      "address": "Mayflower Ave Deltona Fl, FL",
       "city": "Deltona",
       "zip": "32725",
       "price": 295400,
       "beds": 3,
-      "baths": null,
-      "sqft": null,
+      "baths": 2.0,
+      "sqft": 1298,
       "lot_size": null,
       "property_type": "Single-Family Home",
-      "year_built": null,
+      "year_built": 2017,
       "condition": "Fair",
       "features": [
-        "no hoa"
+        "garage",
+        "fenced yard"
       ],
-      "description": "",
+      "description": "1068 Mayflower Ave, Deltona, FL 32725 |",
       "mls": null,
-      "monthly_rent_estimate": 1750,
+      "monthly_rent_estimate": 1825,
       "down_payment_used": 150000,
       "cash_flow": {
         "price": 295400,
         "down_payment": 150000,
         "loan_amount": 145400,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 967.35,
+        "mortgage_payment": 919.03,
         "monthly_tax": 208,
         "annual_tax": 2500,
         "annual_insurance": 3200,
         "monthly_insurance": 267,
         "monthly_maintenance": 100.0,
         "monthly_vacancy": 100.0,
-        "monthly_rent_estimate": 1750,
-        "total_monthly_expenses": 1640.0,
-        "monthly_cash_flow": 110.0,
-        "cash_on_cash_return_pct": 0.9,
-        "required_down_payment_for_20pct_cf": 183000.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 1825,
+        "total_monthly_expenses": 1590.0,
+        "monthly_cash_flow": 235.0,
+        "cash_on_cash_return_pct": 1.9,
+        "required_down_payment_for_20pct_cf": 164000.0,
         "breakdown": {
           "positives": [
-            "3BR/$1750/mo \u2014 strong family rental demand",
-            "No HOA \u2014 keeps monthly costs predictable",
+            "3BR/$1825/mo \u2014 strong family rental demand",
+            "Garage/carport \u2014 desirable in FL heat",
             "Deltona \u2014 lower entry price point, better CF math",
             "Annual insurance ~$3,200 \u2014 better than typical FL",
-            "\u2705 Positive CF of $110.0/mo = $1320.0/yr at $150,000 down"
+            "\u2705 Positive CF of $235.0/mo = $2820.0/yr at $150,000 down"
           ],
           "negatives": [
             "Purchase price $295,400 \u2014 expensive for cash flow math",
-            "Need ~$183,000.0 down to hit 20% CF target (+$33,000.0 more)"
+            "Need ~$164,000.0 down to hit 20% CF target (+$14,000.0 more)"
           ]
         }
       },
       "scores": {
         "cash_flow_score": 100,
-        "deal_quality_score": 25,
-        "overall_score": 66.2
+        "deal_quality_score": 20,
+        "overall_score": 64.0
       },
       "verdict": "CONDITIONAL",
       "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
-      "analyzed_at": "2026-04-05T15:31:26.335246+00:00",
+      "analyzed_at": "2026-04-05T15:38:14.951306+00:00",
+      "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 731246697,
+      "id": 124242382,
       "url": "https://www.zillow.com/homedetails/112-Avocado-Ave-Sanford-FL-32771/47700209_zpid/",
       "source": "zillow",
       "address": "Avocado Ave Sanford Fl, FL",
@@ -548,44 +575,47 @@
         "price": 300000,
         "down_payment": 150000,
         "loan_amount": 150000,
-        "interest_rate": 7.000000000000001,
+        "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 997.95,
+        "mortgage_payment": 948.1,
         "monthly_tax": 175,
         "annual_tax": 2100,
         "annual_insurance": 3900,
         "monthly_insurance": 325,
         "monthly_maintenance": 100.0,
         "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
         "monthly_rent_estimate": 1675,
-        "total_monthly_expenses": 1700.0,
-        "monthly_cash_flow": -25.0,
-        "cash_on_cash_return_pct": -0.2,
-        "required_down_payment_for_20pct_cf": 205000.0,
+        "total_monthly_expenses": 1650.0,
+        "monthly_cash_flow": 25.0,
+        "cash_on_cash_return_pct": 0.2,
+        "required_down_payment_for_20pct_cf": 198000.0,
         "breakdown": {
           "positives": [
             "3BR/$1675/mo \u2014 strong family rental demand",
             "No HOA \u2014 keeps monthly costs predictable",
             "Updated kitchen \u2014 justifies higher rent",
             "Updated bath \u2014 reduces turnover risk",
-            "Annual insurance ~$3,900 \u2014 better than typical FL"
+            "Annual insurance ~$3,900 \u2014 better than typical FL",
+            "\u2705 Positive CF of $25.0/mo = $300.0/yr at $150,000 down"
           ],
           "negatives": [
             "Purchase price $300,000 \u2014 expensive for cash flow math",
             "Needs rehab \u2014 timeline to rent + potential overage costs",
-            "\u274c Negative CF of $25.0/mo at $150,000 down \u2014 $300.0/yr drag",
-            "Need ~$205,000.0 down to hit 20% CF target (+$55,000.0 more)"
+            "Need ~$198,000.0 down to hit 20% CF target (+$48,000.0 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 99.0,
-        "deal_quality_score": 13.8,
-        "overall_score": 60.6
+        "cash_flow_score": 100,
+        "deal_quality_score": 15,
+        "overall_score": 61.8
       },
       "verdict": "CONDITIONAL",
       "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
-      "analyzed_at": "2026-04-05T15:31:14.933697+00:00",
+      "analyzed_at": "2026-04-05T15:38:16.122067+00:00",
+      "listing_status": "active",
       "status": "active"
     }
   ]
