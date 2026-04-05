@@ -143,9 +143,9 @@ def make_card(p, show_date=False):
       <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box">{req_dp_html}</div>
       <table class="cf-table">
-        <tr><td>Target CF (20% of rent)</td><td class="cf-pos">+{fmt(round(mo_rent * 0.20, -1))}</td></tr>
-        <tr><td>Monthly Expenses</td><td class="cf-neg">−{fmt(tot_exp - mo_mort)}</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Payment</td><td class="cf-neg">{fmt(mo_rent * 1.20 - (tot_exp - mo_mort))}/mo</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+{fmt(round(tot_exp * 0.20, -1))}</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−{fmt(tot_exp - mo_mort)}</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">{fmt(mo_rent - 1.20 * (tot_exp - mo_mort))}/mo</td></tr>
       </table>
     </div>
   </div>
