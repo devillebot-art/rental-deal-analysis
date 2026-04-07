@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "last_updated": "2026-04-05T16:40:11.115260+00:00",
+  "version": 9,
+  "last_updated": "2026-04-07T01:40:31.373077+00:00",
   "properties": [
     {
       "id": 31311695,
@@ -686,6 +686,142 @@
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-04-05T16:40:07.500466+00:00",
+      "listing_status": "active",
+      "status": "active"
+    },
+    {
+      "id": 982124425,
+      "url": "https://www.zillow.com/homedetails/539-541-Land-Ave-Longwood-FL-32750/458032245_zpid/",
+      "source": "zillow",
+      "address": "Land Ave Longwood Fl, FL",
+      "city": "Longwood",
+      "zip": "32750",
+      "price": 395000,
+      "beds": 4,
+      "baths": 2.0,
+      "sqft": 1592,
+      "lot_size": null,
+      "property_type": "Duplex / Two-Unit",
+      "year_built": 1972,
+      "condition": "Fair",
+      "features": [
+        "no hoa"
+      ],
+      "description": "539-541 Land Ave, Longwood, FL 32750 |",
+      "mls": null,
+      "monthly_rent_estimate": 2425,
+      "down_payment_used": 125000,
+      "cash_flow": {
+        "price": 395000,
+        "down_payment": 125000,
+        "loan_amount": 270000,
+        "interest_rate": 6.5,
+        "loan_term_years": 30,
+        "mortgage_payment": 1706.58,
+        "monthly_tax": 283,
+        "annual_tax": 3400,
+        "annual_insurance": 5100,
+        "monthly_insurance": 425,
+        "monthly_maintenance": 200.0,
+        "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 2425,
+        "total_monthly_expenses": 2710.0,
+        "monthly_cash_flow": -285.0,
+        "cash_on_cash_return_pct": -2.7,
+        "required_down_payment_for_20pct_cf": 256000.0,
+        "breakdown": {
+          "positives": [
+            "4BR/$2425/mo \u2014 strong family rental demand",
+            "1,592 sqft \u2014 commands premium rent",
+            "No HOA \u2014 keeps monthly costs predictable",
+            "Annual insurance ~$5,100 \u2014 better than typical FL"
+          ],
+          "negatives": [
+            "Purchase price $395,000 \u2014 expensive for cash flow math",
+            "\u274c Negative CF of $285.0/mo at $125,000 down \u2014 $3420.0/yr drag",
+            "Need ~$256,000.0 down to hit 20% CF target (+$131,000.0 more)"
+          ]
+        }
+      },
+      "scores": {
+        "cash_flow_score": 86.5,
+        "deal_quality_score": 10.8,
+        "overall_score": 52.4
+      },
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "analyzed_at": "2026-04-07T01:40:23.283463+00:00",
+      "listing_status": "active",
+      "status": "active"
+    },
+    {
+      "id": 153125787,
+      "url": "https://www.zillow.com/homedetails/951-953-Beau-Ct-Orange-City-FL-32763/460825466_zpid/",
+      "source": "zillow",
+      "address": "Beau Ct Orange City Fl, FL",
+      "city": "Orlando",
+      "zip": "32763",
+      "price": 420000,
+      "beds": 4,
+      "baths": 4.0,
+      "sqft": 2178,
+      "lot_size": null,
+      "property_type": "Duplex / Two-Unit",
+      "year_built": 1987,
+      "condition": "Fair",
+      "features": [
+        "garage",
+        "new roof"
+      ],
+      "description": "951 &amp; 953 Beau Ct, Orange City, FL 32763 |",
+      "mls": null,
+      "monthly_rent_estimate": 2425,
+      "down_payment_used": 125000,
+      "cash_flow": {
+        "price": 420000,
+        "down_payment": 125000,
+        "loan_amount": 295000,
+        "interest_rate": 6.5,
+        "loan_term_years": 30,
+        "mortgage_payment": 1864.6,
+        "monthly_tax": 300,
+        "annual_tax": 3600,
+        "annual_insurance": 4050,
+        "monthly_insurance": 338,
+        "monthly_maintenance": 200.0,
+        "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 2425,
+        "total_monthly_expenses": 2800.0,
+        "monthly_cash_flow": -375.0,
+        "cash_on_cash_return_pct": -3.6,
+        "required_down_payment_for_20pct_cf": 273000.0,
+        "breakdown": {
+          "positives": [
+            "4BR/$2425/mo \u2014 strong family rental demand",
+            "2,178 sqft \u2014 commands premium rent",
+            "Garage/carport \u2014 desirable in FL heat",
+            "New roof \u2014 reduces insurance risk",
+            "Annual insurance ~$4,050 \u2014 better than typical FL"
+          ],
+          "negatives": [
+            "Purchase price $420,000 \u2014 expensive for cash flow math",
+            "\u274c Negative CF of $375.0/mo at $125,000 down \u2014 $4500.0/yr drag",
+            "Need ~$273,000.0 down to hit 20% CF target (+$148,000.0 more)"
+          ]
+        }
+      },
+      "scores": {
+        "cash_flow_score": 82.0,
+        "deal_quality_score": 6.2,
+        "overall_score": 47.9
+      },
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "analyzed_at": "2026-04-07T01:40:24.176189+00:00",
       "listing_status": "active",
       "status": "active"
     }
