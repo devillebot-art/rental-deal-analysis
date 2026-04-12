@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-04-12T02:50:00+00:00",
+  "last_updated": "2026-04-12T03:00:00+00:00",
   "properties": [
     {
       "id": 31311695,
@@ -27,11 +27,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 279000,
-        "down_payment": 150000,
-        "loan_amount": 129000,
+        "down_payment": 125000,
+        "loan_amount": 154000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 815.37,
+        "mortgage_payment": 973.38,
         "monthly_tax": 200,
         "annual_tax": 2400,
         "annual_insurance": 3200,
@@ -41,10 +41,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 1850,
-        "total_monthly_expenses": 1480.0,
-        "monthly_cash_flow": 370.0,
-        "cash_on_cash_return_pct": 3.0,
-        "required_down_payment_for_20pct_cf": 139000.0,
+        "total_monthly_expenses": 1640.0,
+        "monthly_cash_flow": 210.0,
+        "cash_on_cash_return_pct": 2.0,
+        "required_down_payment_for_20pct_cf": 144000.0,
         "breakdown": {
           "positives": [
             "3BR/$1850/mo \u2014 strong family rental demand",
@@ -52,21 +52,21 @@
             "Updated kitchen \u2014 justifies higher rent",
             "Deltona \u2014 lower entry price point, better CF math",
             "Annual insurance ~$3,200 \u2014 better than typical FL",
-            "\u2705 Positive CF of $370.0/mo = $4440.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $139,000.0 min)"
+            "\u2705 Positive CF of $210.0/mo = $2520.0/yr at $125,000 down"
           ],
           "negatives": [
-            "Purchase price $279,000 \u2014 expensive for cash flow math"
+            "Purchase price $279,000 \u2014 expensive for cash flow math",
+            "Need ~$144,000.0 down to hit 20% CF target (+$19,000.0 more)"
           ]
         }
       },
       "scores": {
         "cash_flow_score": 100,
-        "deal_quality_score": 45,
-        "overall_score": 75.2
+        "deal_quality_score": 25,
+        "overall_score": 66.2
       },
-      "verdict": "BUY",
-      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "verdict": "CONDITIONAL",
+      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
       "analyzed_at": "2026-04-05T15:51:27.375981+00:00",
       "listing_status": "active",
       "status": "active"
@@ -97,11 +97,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 299490,
-        "down_payment": 150000,
-        "loan_amount": 149490,
+        "down_payment": 125000,
+        "loan_amount": 174490,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 944.88,
+        "mortgage_payment": 1102.9,
         "monthly_tax": 208,
         "annual_tax": 2500,
         "annual_insurance": 3400,
@@ -111,10 +111,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 2100,
-        "total_monthly_expenses": 1740.0,
-        "monthly_cash_flow": 360.0,
-        "cash_on_cash_return_pct": 2.9,
-        "required_down_payment_for_20pct_cf": 148000.0,
+        "total_monthly_expenses": 1890.0,
+        "monthly_cash_flow": 210.0,
+        "cash_on_cash_return_pct": 2.0,
+        "required_down_payment_for_20pct_cf": 153000.0,
         "breakdown": {
           "positives": [
             "3BR/$2100/mo \u2014 strong family rental demand",
@@ -122,22 +122,22 @@
             "Garage/carport \u2014 desirable in FL heat",
             "New roof \u2014 reduces insurance risk",
             "Annual insurance ~$3,400 \u2014 better than typical FL",
-            "\u2705 Positive CF of $360.0/mo = $4320.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $148,000.0 min)"
+            "\u2705 Positive CF of $210.0/mo = $2520.0/yr at $125,000 down"
           ],
           "negatives": [
             "Purchase price $299,490 \u2014 expensive for cash flow math",
-            "969 sqft \u2014 small, limits tenant pool"
+            "969 sqft \u2014 small, limits tenant pool",
+            "Need ~$153,000.0 down to hit 20% CF target (+$28,000.0 more)"
           ]
         }
       },
       "scores": {
         "cash_flow_score": 100,
-        "deal_quality_score": 50,
-        "overall_score": 77.5
+        "deal_quality_score": 30,
+        "overall_score": 68.5
       },
-      "verdict": "BUY",
-      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "verdict": "CONDITIONAL",
+      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
       "analyzed_at": "2026-04-05T15:51:29.193018+00:00",
       "listing_status": "active",
       "status": "active"
@@ -164,11 +164,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 219900,
-        "down_payment": 150000,
-        "loan_amount": 69900,
+        "down_payment": 125000,
+        "loan_amount": 94900,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 441.82,
+        "mortgage_payment": 599.83,
         "monthly_tax": 158,
         "annual_tax": 1900,
         "annual_insurance": 2650,
@@ -178,16 +178,16 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 2200,
-        "total_monthly_expenses": 1120.0,
-        "monthly_cash_flow": 1080.0,
-        "cash_on_cash_return_pct": 8.6,
-        "required_down_payment_for_20pct_cf": 14000.0,
+        "total_monthly_expenses": 1280.0,
+        "monthly_cash_flow": 920.0,
+        "cash_on_cash_return_pct": 8.8,
+        "required_down_payment_for_20pct_cf": 20000.0,
         "breakdown": {
           "positives": [
             "4BR/$2200/mo \u2014 strong family rental demand",
             "Annual insurance ~$2,650 \u2014 better than typical FL",
-            "\u2705 Positive CF of $1080.0/mo = $12960.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $14,000.0 min)"
+            "\u2705 Positive CF of $920.0/mo = $11040.0/yr at $125,000 down",
+            "\u2705 Already above required down payment ($125,000 vs $20,000.0 min)"
           ],
           "negatives": []
         }
@@ -230,11 +230,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 259000,
-        "down_payment": 150000,
-        "loan_amount": 109000,
+        "down_payment": 125000,
+        "loan_amount": 134000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 688.95,
+        "mortgage_payment": 846.97,
         "monthly_tax": 150,
         "annual_tax": 1800,
         "annual_insurance": 3350,
@@ -244,10 +244,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 1975,
-        "total_monthly_expenses": 1420.0,
-        "monthly_cash_flow": 555.0,
-        "cash_on_cash_return_pct": 4.4,
-        "required_down_payment_for_20pct_cf": 106000.0,
+        "total_monthly_expenses": 1580.0,
+        "monthly_cash_flow": 395.0,
+        "cash_on_cash_return_pct": 3.8,
+        "required_down_payment_for_20pct_cf": 112000.0,
         "breakdown": {
           "positives": [
             "3BR/$1975/mo \u2014 strong family rental demand",
@@ -255,8 +255,8 @@
             "Garage/carport \u2014 desirable in FL heat",
             "Central A/C \u2014 essential for FL rental",
             "Annual insurance ~$3,350 \u2014 better than typical FL",
-            "\u2705 Positive CF of $555.0/mo = $6660.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $106,000.0 min)"
+            "\u2705 Positive CF of $395.0/mo = $4740.0/yr at $125,000 down",
+            "\u2705 Already above required down payment ($125,000 vs $112,000.0 min)"
           ],
           "negatives": [
             "Purchase price $259,000 \u2014 expensive for cash flow math"
@@ -298,11 +298,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 250000,
-        "down_payment": 150000,
-        "loan_amount": 100000,
+        "down_payment": 125000,
+        "loan_amount": 125000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 632.07,
+        "mortgage_payment": 790.09,
         "monthly_tax": 175,
         "annual_tax": 2100,
         "annual_insurance": 3250,
@@ -312,18 +312,18 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 1850,
-        "total_monthly_expenses": 1280.0,
-        "monthly_cash_flow": 570.0,
-        "cash_on_cash_return_pct": 4.6,
-        "required_down_payment_for_20pct_cf": 101000.0,
+        "total_monthly_expenses": 1440.0,
+        "monthly_cash_flow": 410.0,
+        "cash_on_cash_return_pct": 3.9,
+        "required_down_payment_for_20pct_cf": 105000.0,
         "breakdown": {
           "positives": [
             "3BR/$1850/mo \u2014 strong family rental demand",
             "1,545 sqft \u2014 commands premium rent",
             "No HOA \u2014 keeps monthly costs predictable",
             "Annual insurance ~$3,250 \u2014 better than typical FL",
-            "\u2705 Positive CF of $570.0/mo = $6840.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $101,000.0 min)"
+            "\u2705 Positive CF of $410.0/mo = $4920.0/yr at $125,000 down",
+            "\u2705 Already above required down payment ($125,000 vs $105,000.0 min)"
           ],
           "negatives": [
             "Purchase price $250,000 \u2014 expensive for cash flow math"
@@ -366,11 +366,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 275000,
-        "down_payment": 150000,
-        "loan_amount": 125000,
+        "down_payment": 125000,
+        "loan_amount": 150000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 790.09,
+        "mortgage_payment": 948.1,
         "monthly_tax": 192,
         "annual_tax": 2300,
         "annual_insurance": 2900,
@@ -380,10 +380,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 2075,
-        "total_monthly_expenses": 1520.0,
-        "monthly_cash_flow": 555.0,
-        "cash_on_cash_return_pct": 4.4,
-        "required_down_payment_for_20pct_cf": 110000.0,
+        "total_monthly_expenses": 1680.0,
+        "monthly_cash_flow": 395.0,
+        "cash_on_cash_return_pct": 3.8,
+        "required_down_payment_for_20pct_cf": 117000.0,
         "breakdown": {
           "positives": [
             "3BR/$2075/mo \u2014 strong family rental demand",
@@ -391,8 +391,8 @@
             "Garage/carport \u2014 desirable in FL heat",
             "New roof \u2014 reduces insurance risk",
             "Annual insurance ~$2,900 \u2014 better than typical FL",
-            "\u2705 Positive CF of $555.0/mo = $6660.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $110,000.0 min)"
+            "\u2705 Positive CF of $395.0/mo = $4740.0/yr at $125,000 down",
+            "\u2705 Already above required down payment ($125,000 vs $117,000.0 min)"
           ],
           "negatives": [
             "Purchase price $275,000 \u2014 expensive for cash flow math"
@@ -435,11 +435,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 239000,
-        "down_payment": 150000,
-        "loan_amount": 89000,
+        "down_payment": 125000,
+        "loan_amount": 114000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 562.54,
+        "mortgage_payment": 720.56,
         "monthly_tax": 167,
         "annual_tax": 2000,
         "annual_insurance": 2750,
@@ -449,10 +449,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 1750,
-        "total_monthly_expenses": 1160.0,
-        "monthly_cash_flow": 590.0,
-        "cash_on_cash_return_pct": 4.7,
-        "required_down_payment_for_20pct_cf": 93000.0,
+        "total_monthly_expenses": 1320.0,
+        "monthly_cash_flow": 430.0,
+        "cash_on_cash_return_pct": 4.1,
+        "required_down_payment_for_20pct_cf": 98000.0,
         "breakdown": {
           "positives": [
             "3BR/$1750/mo \u2014 strong family rental demand",
@@ -460,8 +460,8 @@
             "Updated bath \u2014 reduces turnover risk",
             "DeBary \u2014 lower entry price point, better CF math",
             "Annual insurance ~$2,750 \u2014 better than typical FL",
-            "\u2705 Positive CF of $590.0/mo = $7080.0/yr at $150,000 down",
-            "\u2705 Already above required down payment ($150,000 vs $93,000.0 min)"
+            "\u2705 Positive CF of $430.0/mo = $5160.0/yr at $125,000 down",
+            "\u2705 Already above required down payment ($125,000 vs $98,000.0 min)"
           ],
           "negatives": [
             "Purchase price $239,000 \u2014 expensive for cash flow math"
@@ -504,11 +504,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 295400,
-        "down_payment": 150000,
-        "loan_amount": 145400,
+        "down_payment": 125000,
+        "loan_amount": 170400,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 919.03,
+        "mortgage_payment": 1077.04,
         "monthly_tax": 208,
         "annual_tax": 2500,
         "annual_insurance": 3200,
@@ -518,21 +518,21 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 1825,
-        "total_monthly_expenses": 1590.0,
-        "monthly_cash_flow": 235.0,
-        "cash_on_cash_return_pct": 1.9,
-        "required_down_payment_for_20pct_cf": 164000.0,
+        "total_monthly_expenses": 1750.0,
+        "monthly_cash_flow": 75.0,
+        "cash_on_cash_return_pct": 0.7,
+        "required_down_payment_for_20pct_cf": 169000.0,
         "breakdown": {
           "positives": [
             "3BR/$1825/mo \u2014 strong family rental demand",
             "Garage/carport \u2014 desirable in FL heat",
             "Deltona \u2014 lower entry price point, better CF math",
             "Annual insurance ~$3,200 \u2014 better than typical FL",
-            "\u2705 Positive CF of $235.0/mo = $2820.0/yr at $150,000 down"
+            "\u2705 Positive CF of $75.0/mo = $900.0/yr at $125,000 down"
           ],
           "negatives": [
             "Purchase price $295,400 \u2014 expensive for cash flow math",
-            "Need ~$164,000.0 down to hit 20% CF target (+$14,000.0 more)"
+            "Need ~$169,000.0 down to hit 20% CF target (+$44,000.0 more)"
           ]
         }
       },
@@ -573,11 +573,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 300000,
-        "down_payment": 150000,
-        "loan_amount": 150000,
+        "down_payment": 125000,
+        "loan_amount": 175000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 948.1,
+        "mortgage_payment": 1106.12,
         "monthly_tax": 175,
         "annual_tax": 2100,
         "annual_insurance": 3900,
@@ -587,33 +587,33 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 1675,
-        "total_monthly_expenses": 1650.0,
-        "monthly_cash_flow": 25.0,
-        "cash_on_cash_return_pct": 0.2,
-        "required_down_payment_for_20pct_cf": 198000.0,
+        "total_monthly_expenses": 1810.0,
+        "monthly_cash_flow": -135.0,
+        "cash_on_cash_return_pct": -1.3,
+        "required_down_payment_for_20pct_cf": 203000.0,
         "breakdown": {
           "positives": [
             "3BR/$1675/mo \u2014 strong family rental demand",
             "No HOA \u2014 keeps monthly costs predictable",
             "Updated kitchen \u2014 justifies higher rent",
             "Updated bath \u2014 reduces turnover risk",
-            "Annual insurance ~$3,900 \u2014 better than typical FL",
-            "\u2705 Positive CF of $25.0/mo = $300.0/yr at $150,000 down"
+            "Annual insurance ~$3,900 \u2014 better than typical FL"
           ],
           "negatives": [
             "Purchase price $300,000 \u2014 expensive for cash flow math",
             "Needs rehab \u2014 timeline to rent + potential overage costs",
-            "Need ~$198,000.0 down to hit 20% CF target (+$48,000.0 more)"
+            "\u274c Negative CF of $135.0/mo at $125,000 down \u2014 $1620.0/yr drag",
+            "Need ~$203,000.0 down to hit 20% CF target (+$78,000.0 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 100,
-        "deal_quality_score": 15,
-        "overall_score": 61.8
+        "cash_flow_score": 93.5,
+        "deal_quality_score": 8.2,
+        "overall_score": 55.1
       },
-      "verdict": "CONDITIONAL",
-      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-04-05T15:51:39.898908+00:00",
       "listing_status": "active",
       "status": "active"
@@ -644,11 +644,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 426790,
-        "down_payment": 150000,
-        "loan_amount": 276790,
+        "down_payment": 125000,
+        "loan_amount": 301790,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 1749.5,
+        "mortgage_payment": 1907.52,
         "monthly_tax": 300,
         "annual_tax": 3600,
         "annual_insurance": 6650,
@@ -658,10 +658,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 2250,
-        "total_monthly_expenses": 2900.0,
-        "monthly_cash_flow": -650.0,
-        "cash_on_cash_return_pct": -5.2,
-        "required_down_payment_for_20pct_cf": 345000.0,
+        "total_monthly_expenses": 3060.0,
+        "monthly_cash_flow": -810.0,
+        "cash_on_cash_return_pct": -7.8,
+        "required_down_payment_for_20pct_cf": 350000.0,
         "breakdown": {
           "positives": [
             "3BR/$2250/mo \u2014 strong family rental demand",
@@ -673,15 +673,15 @@
           "negatives": [
             "Purchase price $426,790 \u2014 expensive for cash flow math",
             "Pool \u2014 adds insurance cost and maintenance burden",
-            "\u274c Negative CF of $650.0/mo at $150,000 down \u2014 $7800.0/yr drag",
-            "Need ~$345,000.0 down to hit 20% CF target (+$195,000.0 more)"
+            "\u274c Negative CF of $810.0/mo at $125,000 down \u2014 $9720.0/yr drag",
+            "Need ~$350,000.0 down to hit 20% CF target (+$225,000.0 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 74.0,
+        "cash_flow_score": 61.0,
         "deal_quality_score": 0,
-        "overall_score": 40.7
+        "overall_score": 33.6
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
@@ -713,11 +713,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 395000,
-        "down_payment": 150000,
-        "loan_amount": 245000,
+        "down_payment": 125000,
+        "loan_amount": 270000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 1548.57,
+        "mortgage_payment": 1706.58,
         "monthly_tax": 283,
         "annual_tax": 3400,
         "annual_insurance": 5100,
@@ -727,10 +727,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 2425,
-        "total_monthly_expenses": 2560.0,
-        "monthly_cash_flow": -135.0,
-        "cash_on_cash_return_pct": -1.1,
-        "required_down_payment_for_20pct_cf": 252000.0,
+        "total_monthly_expenses": 2710.0,
+        "monthly_cash_flow": -285.0,
+        "cash_on_cash_return_pct": -2.7,
+        "required_down_payment_for_20pct_cf": 256000.0,
         "breakdown": {
           "positives": [
             "4BR/$2425/mo \u2014 strong family rental demand",
@@ -740,15 +740,15 @@
           ],
           "negatives": [
             "Purchase price $395,000 \u2014 expensive for cash flow math",
-            "\u274c Negative CF of $135.0/mo at $150,000 down \u2014 $1620.0/yr drag",
-            "Need ~$252,000.0 down to hit 20% CF target (+$102,000.0 more)"
+            "\u274c Negative CF of $285.0/mo at $125,000 down \u2014 $3420.0/yr drag",
+            "Need ~$256,000.0 down to hit 20% CF target (+$131,000.0 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 94.5,
-        "deal_quality_score": 18.2,
-        "overall_score": 60.2
+        "cash_flow_score": 86.5,
+        "deal_quality_score": 10.8,
+        "overall_score": 52.4
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
@@ -781,11 +781,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 420000,
-        "down_payment": 150000,
-        "loan_amount": 270000,
+        "down_payment": 125000,
+        "loan_amount": 295000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 1706.58,
+        "mortgage_payment": 1864.6,
         "monthly_tax": 300,
         "annual_tax": 3600,
         "annual_insurance": 4050,
@@ -795,10 +795,10 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 2425,
-        "total_monthly_expenses": 2640.0,
-        "monthly_cash_flow": -215.0,
-        "cash_on_cash_return_pct": -1.7,
-        "required_down_payment_for_20pct_cf": 269000.0,
+        "total_monthly_expenses": 2800.0,
+        "monthly_cash_flow": -375.0,
+        "cash_on_cash_return_pct": -3.6,
+        "required_down_payment_for_20pct_cf": 273000.0,
         "breakdown": {
           "positives": [
             "4BR/$2425/mo \u2014 strong family rental demand",
@@ -809,15 +809,15 @@
           ],
           "negatives": [
             "Purchase price $420,000 \u2014 expensive for cash flow math",
-            "\u274c Negative CF of $215.0/mo at $150,000 down \u2014 $2580.0/yr drag",
-            "Need ~$269,000.0 down to hit 20% CF target (+$119,000.0 more)"
+            "\u274c Negative CF of $375.0/mo at $125,000 down \u2014 $4500.0/yr drag",
+            "Need ~$273,000.0 down to hit 20% CF target (+$148,000.0 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 91.5,
-        "deal_quality_score": 14.2,
-        "overall_score": 56.7
+        "cash_flow_score": 82.0,
+        "deal_quality_score": 6.2,
+        "overall_score": 47.9
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
@@ -849,11 +849,11 @@
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 419000,
-        "down_payment": 150000,
-        "loan_amount": 269000,
+        "down_payment": 125000,
+        "loan_amount": 294000,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 1700.26,
+        "mortgage_payment": 1858.28,
         "monthly_tax": 300,
         "annual_tax": 3600,
         "annual_insurance": 5450,
@@ -863,28 +863,28 @@
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
         "monthly_rent_estimate": 2850,
-        "total_monthly_expenses": 2750.0,
-        "monthly_cash_flow": 100.0,
-        "cash_on_cash_return_pct": 0.8,
-        "required_down_payment_for_20pct_cf": 222000.0,
+        "total_monthly_expenses": 2910.0,
+        "monthly_cash_flow": -60.0,
+        "cash_on_cash_return_pct": -0.6,
+        "required_down_payment_for_20pct_cf": 227000.0,
         "breakdown": {
           "positives": [
             "4BR/$2850/mo \u2014 strong family rental demand",
             "2,542 sqft \u2014 commands premium rent",
             "No HOA \u2014 keeps monthly costs predictable",
-            "Annual insurance ~$5,450 \u2014 better than typical FL",
-            "\u2705 Positive CF of $100.0/mo = $1200.0/yr at $150,000 down"
+            "Annual insurance ~$5,450 \u2014 better than typical FL"
           ],
           "negatives": [
             "Purchase price $419,000 \u2014 expensive for cash flow math",
-            "Need ~$222,000.0 down to hit 20% CF target (+$72,000.0 more)"
+            "\u274c Negative CF of $60.0/mo at $125,000 down \u2014 $720.0/yr drag",
+            "Need ~$227,000.0 down to hit 20% CF target (+$102,000.0 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 100,
-        "deal_quality_score": 25,
-        "overall_score": 66.2
+        "cash_flow_score": 97.0,
+        "deal_quality_score": 22.0,
+        "overall_score": 63.2
       },
       "verdict": "CONDITIONAL",
       "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
