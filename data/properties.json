@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "last_updated": "2026-04-12T03:00:00+00:00",
+  "version": 4,
+  "last_updated": "2026-04-14T03:20:15.185186+00:00",
   "properties": [
     {
       "id": 31311695,
@@ -889,6 +889,76 @@
       "verdict": "CONDITIONAL",
       "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
       "analyzed_at": "2026-04-11T02:10:08.584448+00:00",
+      "listing_status": "active",
+      "status": "active"
+    },
+    {
+      "id": 921326433,
+      "url": "https://www.zillow.com/homedetails/216-Juniper-Ridge-Ct-Sanford-FL-32771/66217813_zpid/",
+      "source": "zillow",
+      "address": "Juniper Ridge Ct Sanford Fl, FL",
+      "city": "Sanford",
+      "zip": "32771",
+      "price": 850000,
+      "beds": 6,
+      "baths": 4.0,
+      "sqft": 3686,
+      "lot_size": null,
+      "property_type": "Multi-Family",
+      "year_built": 2004,
+      "condition": "Fair",
+      "features": [
+        "pool",
+        "garage",
+        "hardwood floors"
+      ],
+      "description": "216 Juniper Ridge Ct, Sanford, FL 32771 |",
+      "mls": null,
+      "monthly_rent_estimate": 2125,
+      "down_payment_used": 125000,
+      "cash_flow": {
+        "price": 850000,
+        "down_payment": 125000,
+        "loan_amount": 725000,
+        "interest_rate": 6.5,
+        "loan_term_years": 30,
+        "mortgage_payment": 4582.49,
+        "monthly_tax": 500,
+        "annual_tax": 6000,
+        "annual_insurance": 11000,
+        "monthly_insurance": 917,
+        "monthly_maintenance": 200.0,
+        "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 2125,
+        "total_monthly_expenses": 6300.0,
+        "monthly_cash_flow": -4175.0,
+        "cash_on_cash_return_pct": -40.1,
+        "required_down_payment_for_20pct_cf": null,
+        "breakdown": {
+          "positives": [
+            "6BR/$2125/mo \u2014 strong family rental demand",
+            "3,686 sqft \u2014 commands premium rent",
+            "Garage/carport \u2014 desirable in FL heat"
+          ],
+          "negatives": [
+            "Purchase price $850,000 \u2014 expensive for cash flow math",
+            "Pool \u2014 adds insurance cost and maintenance burden",
+            "Annual insurance ~$11,000 \u2014 FL reality is brutal on this property",
+            "\u274c Negative CF of $4175.0/mo at $125,000 down \u2014 $50100.0/yr drag",
+            "20% CF target not achievable at any down payment \u2014 price likely too high"
+          ]
+        }
+      },
+      "scores": {
+        "cash_flow_score": 0,
+        "deal_quality_score": 0,
+        "overall_score": 0.0
+      },
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "analyzed_at": "2026-04-14T03:20:09.026364+00:00",
       "listing_status": "active",
       "status": "active"
     }
