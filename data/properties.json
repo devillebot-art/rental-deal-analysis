@@ -1,9 +1,9 @@
 {
-  "version": 5,
-  "last_updated": "2026-05-01T02:30:28.021340+00:00",
+  "version": 6,
+  "last_updated": "2026-05-01T13:00:19.860596+00:00",
   "properties": [
     {
-      "id": 55324369,
+      "id": 221996552,
       "url": "https://www.zillow.com/homedetails/216-Juniper-Ridge-Ct-Sanford-FL-32771/66217813_zpid/",
       "source": "zillow",
       "address": "Juniper Ridge Ct Sanford Fl, FL",
@@ -68,12 +68,12 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-04-14T12:21:39.697711+00:00",
+      "analyzed_at": "2026-05-01T13:00:03.141840+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 863230305,
+      "id": 12643870,
       "url": "https://www.zillow.com/homedetails/951-953-Beau-Ct-Orange-City-FL-32763/460825466_zpid/",
       "source": "zillow",
       "address": "Beau Ct Orange City Fl, FL",
@@ -91,7 +91,7 @@
         "garage",
         "new roof"
       ],
-      "description": "951 &amp; 953 Beau Ct, Orange City, FL 32763 |",
+      "description": ": Loading Get pre-qualified Duplex, Multi Family Built in 1987 -- sqft lot $-- Zestimate \u00ae $193/sqft $-- HOA What&#x27;s special Strong curb appeal Durable tile flooring throughout Freshly painted exterior Under contract-accepting backup offers. Opportunities like this are few and far between \u2014 a fully renovated, income-producing duplex in the heart of Orange City, positioned in one of the area\u2019s strongest and most desirable rental markets. This exceptional property is a true turnkey investment,...",
       "mls": null,
       "monthly_rent_estimate": 2425,
       "down_payment_used": 125000,
@@ -137,12 +137,12 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-04-14T12:21:41.837177+00:00",
+      "analyzed_at": "2026-05-01T13:00:04.127754+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 343530719,
+      "id": 491191538,
       "url": "https://www.zillow.com/homedetails/539-541-Land-Ave-Longwood-FL-32750/458032245_zpid/",
       "source": "zillow",
       "address": "Land Ave Longwood Fl, FL",
@@ -204,12 +204,12 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-04-14T12:21:45.319149+00:00",
+      "analyzed_at": "2026-05-01T13:00:05.431333+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 937590419,
+      "id": 986065587,
       "url": "https://www.zillow.com/homedetails/606-Iris-St-Altamonte-Springs-FL-32714/47666257_zpid/",
       "source": "zillow",
       "address": "Iris St Altamonte Springs Fl, FL",
@@ -275,12 +275,12 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-04-14T12:21:47.441855+00:00",
+      "analyzed_at": "2026-05-01T13:00:06.275341+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 2297951,
+      "id": 352193626,
       "url": "https://www.zillow.com/homedetails/935-Florida-Ave-Orange-City-FL-32763/47952718_zpid/",
       "source": "zillow",
       "address": "Florida Ave Orange City Fl, FL",
@@ -298,7 +298,7 @@
         "garage",
         "new roof"
       ],
-      "description": "935 Florida Ave, Orange City, FL 32763 |",
+      "description": ": Loading Get pre-qualified Single Family Residence Built in 1958 0.33 Acres Lot $-- Zestimate \u00ae $141/sqft $-- HOA What&#x27;s special One or more photo(s) has been virtually staged. Located on a spacious corner lot in the heart of Orange City, 935 Florida Ave offers versatility, functionality, and opportunity all in one. With a massive garage and workshop accessed from the side street, plus a loft space above, this property is a dream setup for anyone needing room to create, store, or run a hom...",
       "mls": null,
       "monthly_rent_estimate": 2075,
       "down_payment_used": 125000,
@@ -344,12 +344,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-14T12:22:04.694242+00:00",
+      "analyzed_at": "2026-05-01T13:00:07.180411+00:00",
       "listing_status": "pending",
-      "status": "sold"
+      "status": "active"
     },
     {
-      "id": 3826811,
+      "id": 733356757,
       "url": "https://www.zillow.com/homedetails/1068-Mayflower-Ave-Deltona-FL-32725/47970630_zpid/",
       "source": "zillow",
       "address": "Mayflower Ave Deltona Fl, FL",
@@ -361,15 +361,16 @@
       "sqft": 1298,
       "lot_size": null,
       "property_type": "Single-Family Home",
-      "year_built": 2017,
+      "year_built": 2016,
       "condition": "Fair",
       "features": [
         "garage",
-        "fenced yard"
+        "fenced yard",
+        "updated kitchen"
       ],
-      "description": "1068 Mayflower Ave, Deltona, FL 32725 |",
+      "description": ": Loading Get pre-qualified SingleFamily Built in 2016 0.26 Acres Lot $-- Zestimate \u00ae $228/sqft $-- HOA What&#x27;s special Modern flooring Attached two-car garage Large fenced backyard Spacious split-bedroom floor plan Private primary suite Luxurious ensuite bathroom Walk-in closet ?? Move-In Ready 3-Bedroom Home \u2013 Modern Comfort, Prime Location, Built 2016! Discover this beautifully maintained 2016-built home nestled in a quiet, well-established neighborhood\u2014a true move-in ready gem that combi...",
       "mls": null,
-      "monthly_rent_estimate": 1825,
+      "monthly_rent_estimate": 1925,
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 295400,
@@ -382,26 +383,27 @@
         "annual_tax": 2500,
         "annual_insurance": 3200,
         "monthly_insurance": 267,
-        "monthly_maintenance": 100.0,
+        "monthly_maintenance": 200.0,
         "monthly_vacancy": 100.0,
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
-        "monthly_rent_estimate": 1825,
-        "total_monthly_expenses": 1750.0,
+        "monthly_rent_estimate": 1925,
+        "total_monthly_expenses": 1850.0,
         "monthly_cash_flow": 75.0,
         "cash_on_cash_return_pct": 0.7,
-        "required_down_payment_for_20pct_cf": 169000.0,
+        "required_down_payment_for_20pct_cf": 172000.0,
         "breakdown": {
           "positives": [
-            "3BR/$1825/mo \u2014 strong family rental demand",
+            "3BR/$1925/mo \u2014 strong family rental demand",
             "Garage/carport \u2014 desirable in FL heat",
+            "Updated kitchen \u2014 justifies higher rent",
             "Deltona \u2014 lower entry price point, better CF math",
             "Annual insurance ~$3,200 \u2014 better than typical FL",
             "\u2705 Positive CF of $75.0/mo = $900.0/yr at $125,000 down"
           ],
           "negatives": [
             "Purchase price $295,400 \u2014 expensive for cash flow math",
-            "Need ~$169,000.0 down to hit 20% CF target (+$44,000.0 more)"
+            "Need ~$172,000.0 down to hit 20% CF target (+$47,000.0 more)"
           ]
         }
       },
@@ -412,12 +414,12 @@
       },
       "verdict": "CONDITIONAL",
       "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
-      "analyzed_at": "2026-04-14T12:22:06.313273+00:00",
+      "analyzed_at": "2026-05-01T13:00:08.141911+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 634932082,
+      "id": 621256283,
       "url": "https://www.zillow.com/homedetails/309-Riviera-Dr-Debary-FL-32713/47957321_zpid/",
       "source": "zillow",
       "address": "309 Riviera Dr Debary, Fl 32713",
@@ -435,7 +437,7 @@
         "new roof",
         "updated bath"
       ],
-      "description": ": Loading Get pre-qualified Single Family Residence Built in 1957 8,000 Square Feet Lot $227,500 Zestimate \u00ae $181/sqft $-- HOA What&#x27;s special Modern finishes Spacious bedrooms Three-bedroom two-bathroom home Freshly refurbished interior New flooring throughout Up",
+      "description": ": Loading Get pre-qualified Single Family Residence Built in 1957 8,000 Square Feet Lot $228,200 Zestimate \u00ae $181/sqft $-- HOA What&#x27;s special Modern finishes Spacious bedrooms Three-bedroom two-bathroom home Freshly refurbished interior New flooring throughout Up",
       "mls": null,
       "monthly_rent_estimate": 1750,
       "down_payment_used": 125000,
@@ -481,12 +483,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-14T12:22:09.063293+00:00",
+      "analyzed_at": "2026-05-01T13:00:10.125844+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 135682993,
+      "id": 429261887,
       "url": "https://www.zillow.com/homedetails/365-W-Lansdowne-Ave-Orange-City-FL-32763/47947717_zpid/",
       "source": "zillow",
       "address": "W Lansdowne Ave Orange City Fl, FL",
@@ -542,12 +544,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-14T12:22:14.461871+00:00",
+      "analyzed_at": "2026-05-01T13:00:12.143974+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 23663631,
+      "id": 397096728,
       "url": "https://www.zillow.com/homedetails/112-Avocado-Ave-Sanford-FL-32771/47700209_zpid/",
       "source": "zillow",
       "address": "Avocado Ave Sanford Fl, FL",
@@ -613,12 +615,12 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-04-14T12:22:21.452841+00:00",
+      "analyzed_at": "2026-05-01T13:00:13.053273+00:00",
       "listing_status": "pending",
-      "status": "sold"
+      "status": "active"
     },
     {
-      "id": 211875628,
+      "id": 14804855,
       "url": "https://www.zillow.com/homedetails/701-Cherokee-Cir-Sanford-FL-32773/47658452_zpid/",
       "source": "zillow",
       "address": "Cherokee Cir Sanford Fl, FL",
@@ -684,18 +686,18 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-14T12:22:23.139201+00:00",
+      "analyzed_at": "2026-05-01T13:00:13.952559+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 833945259,
+      "id": 278538700,
       "url": "https://www.zillow.com/homedetails/899-Lormann-Cir-Longwood-FL-32750/47718429_zpid/",
       "source": "zillow",
-      "address": "Lormann Cir Longwood Fl, FL",
+      "address": "32750 Houses For Sale In 32750",
       "city": "Longwood",
       "zip": "32750",
-      "price": 299490,
+      "price": 278500,
       "beds": 3,
       "baths": 2.0,
       "sqft": 969,
@@ -704,63 +706,59 @@
       "year_built": 1961,
       "condition": "Fair",
       "features": [
-        "garage",
-        "new roof",
         "no hoa"
       ],
-      "description": "899 Lormann Cir, Longwood, FL 32750 |",
+      "description": "899 Lormann Cir, Longwood, FL 32750 | Zillow Skip main navigation Sign in Sign in Join Homepage Buy Open Buy sub-menu Rent Open Rent sub-menu Sell Open Sell sub-menu Get a mortgage Open Get a mortgage sub-menu Find an agent Open Find an agent sub-menu Manage rentals Open Manage rentals sub-menu Advertise Get help Sign in Sign in Join Back to search Save Share More Sold for $278,500 $278,500 899 Lormann Cir, Longwood, FL 32750 3 beds 2 baths 969 sqft Loading Single Family Residence Built in 1961...",
       "mls": null,
-      "monthly_rent_estimate": 2100,
+      "monthly_rent_estimate": 2025,
       "down_payment_used": 125000,
       "cash_flow": {
-        "price": 299490,
+        "price": 278500,
         "down_payment": 125000,
-        "loan_amount": 174490,
+        "loan_amount": 153500,
         "interest_rate": 6.5,
         "loan_term_years": 30,
-        "mortgage_payment": 1102.9,
-        "monthly_tax": 208,
-        "annual_tax": 2500,
-        "annual_insurance": 3400,
-        "monthly_insurance": 283,
+        "mortgage_payment": 970.22,
+        "monthly_tax": 200,
+        "annual_tax": 2400,
+        "annual_insurance": 3600,
+        "monthly_insurance": 300,
         "monthly_maintenance": 200.0,
         "monthly_vacancy": 100.0,
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
-        "monthly_rent_estimate": 2100,
-        "total_monthly_expenses": 1890.0,
-        "monthly_cash_flow": 210.0,
-        "cash_on_cash_return_pct": 2.0,
-        "required_down_payment_for_20pct_cf": 153000.0,
+        "monthly_rent_estimate": 2025,
+        "total_monthly_expenses": 1770.0,
+        "monthly_cash_flow": 255.0,
+        "cash_on_cash_return_pct": 2.4,
+        "required_down_payment_for_20pct_cf": 140000.0,
         "breakdown": {
           "positives": [
-            "3BR/$2100/mo \u2014 strong family rental demand",
+            "3BR/$2025/mo \u2014 strong family rental demand",
             "No HOA \u2014 keeps monthly costs predictable",
-            "Garage/carport \u2014 desirable in FL heat",
-            "New roof \u2014 reduces insurance risk",
-            "Annual insurance ~$3,400 \u2014 better than typical FL",
-            "\u2705 Positive CF of $210.0/mo = $2520.0/yr at $125,000 down"
+            "Annual insurance ~$3,600 \u2014 better than typical FL",
+            "\u2705 Positive CF of $255.0/mo = $3060.0/yr at $125,000 down"
           ],
           "negatives": [
-            "Purchase price $299,490 \u2014 expensive for cash flow math",
+            "Purchase price $278,500 \u2014 expensive for cash flow math",
             "969 sqft \u2014 small, limits tenant pool",
-            "Need ~$153,000.0 down to hit 20% CF target (+$28,000.0 more)"
+            "Need ~$140,000.0 down to hit 20% CF target (+$15,000.0 more)"
           ]
         }
       },
       "scores": {
         "cash_flow_score": 100,
-        "deal_quality_score": 30,
-        "overall_score": 68.5
+        "deal_quality_score": 25,
+        "overall_score": 66.2
       },
       "verdict": "CONDITIONAL",
       "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
-      "analyzed_at": "2026-04-14T12:22:29.962842+00:00",
+      "analyzed_at": "2026-05-01T13:00:14.926392+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 301441801,
+      "id": 159050835,
       "url": "https://www.zillow.com/homedetails/30-S-Edgemon-Ave-Winter-Springs-FL-32708/47630180_zpid/",
       "source": "zillow",
       "address": "S Edgemon Ave Winter Springs Fl, FL",
@@ -777,7 +775,7 @@
       "features": [
         "no hoa"
       ],
-      "description": ": Loading Get pre-qualified Single Family Residence Built in 1960 8,048 Square Feet Lot $251,600 Zestimate \u00ae $162/sqft $-- HOA What&#x27;s special Family room Several sheds on property Screened porch Under contract-accepting backup offers. One owner Vintage home. 66 years old. VIEW SHORT VIRTUAL TOUR! So much potential. Needs full remodel but a nice piece of land with lots of living options. NO HOA with an amazing location. Multifamily Multi-generational potential. Was added onto many years ago....",
+      "description": ": Loading Get pre-qualified Single Family Residence Built in 1960 8,048 Square Feet Lot $247,300 Zestimate \u00ae $162/sqft $-- HOA What&#x27;s special Family room Several sheds on property Screened porch Under contract-accepting backup offers. One owner Vintage home. 66 years old. VIEW SHORT VIRTUAL TOUR! So much potential. Needs full remodel but a nice piece of land with lots of living options. NO HOA with an amazing location. Multifamily Multi-generational potential. Was added onto many years ago....",
       "mls": null,
       "monthly_rent_estimate": 1850,
       "down_payment_used": 125000,
@@ -822,12 +820,12 @@
       },
       "verdict": "BUY",
       "verdict_reason": "Strong overall score and positive cash flow at $150K down",
-      "analyzed_at": "2026-04-14T12:22:31.910177+00:00",
+      "analyzed_at": "2026-05-01T13:00:16.008113+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 277169244,
+      "id": 356114913,
       "url": "https://www.zillow.com/homedetails/932-N-Fairbairn-Dr-Deltona-FL-32725/47974129_zpid/",
       "source": "zillow",
       "address": "N Fairbairn Dr Deltona Fl, FL",
@@ -891,12 +889,12 @@
       },
       "verdict": "CONDITIONAL",
       "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
-      "analyzed_at": "2026-04-14T12:22:33.869968+00:00",
+      "analyzed_at": "2026-05-01T13:00:16.878368+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 187362418,
+      "id": 712511359,
       "url": "https://www.zillow.com/homedetails/31-Marigold-Ln-Debary-FL-32713/47953521_zpid/",
       "source": "zillow",
       "address": "Marigold Ln Debary Fl, FL",
@@ -960,12 +958,12 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-05-01T02:20:04.428751+00:00",
+      "analyzed_at": "2026-05-01T13:00:18.125459+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 174152034,
+      "id": 486994012,
       "url": "https://www.zillow.com/homedetails/31-Marigold-Ln-Debary-FL-32713/47953521_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare",
       "source": "zillow",
       "address": "Marigold Ln Debary Fl, FL",
@@ -1029,12 +1027,12 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-05-01T02:30:20.252273+00:00",
+      "analyzed_at": "2026-05-01T13:00:19.082109+00:00",
       "listing_status": "active",
       "status": "active"
     },
     {
-      "id": 806438372,
+      "id": 693358983,
       "url": "https://www.zillow.com/homedetails/737-E-Church-Ave-737-Longwood-FL-32750/458949156_zpid/",
       "source": "zillow",
       "address": "737 Other Longwood Topics Apartments For Rent In 32750",
@@ -1095,7 +1093,7 @@
       },
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-05-01T02:30:23.058691+00:00",
+      "analyzed_at": "2026-05-01T13:00:19.860298+00:00",
       "listing_status": "active",
       "status": "active"
     }
