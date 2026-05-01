@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "last_updated": "2026-05-01T02:20:04.734089+00:00",
+  "version": 5,
+  "last_updated": "2026-05-01T02:30:28.021340+00:00",
   "properties": [
     {
       "id": 55324369,
@@ -961,6 +961,141 @@
       "verdict": "SKIP",
       "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T02:20:04.428751+00:00",
+      "listing_status": "active",
+      "status": "active"
+    },
+    {
+      "id": 174152034,
+      "url": "https://www.zillow.com/homedetails/31-Marigold-Ln-Debary-FL-32713/47953521_zpid/?utm_campaign=zillowwebmessage&utm_medium=referral&utm_source=txtshare",
+      "source": "zillow",
+      "address": "Marigold Ln Debary Fl, FL",
+      "city": "DeBary",
+      "zip": "32713",
+      "price": 298000,
+      "beds": 2,
+      "baths": 2.0,
+      "sqft": 1444,
+      "lot_size": null,
+      "property_type": "Single-Family Home",
+      "year_built": 1970,
+      "condition": "Fair",
+      "features": [
+        "fenced yard",
+        "new roof"
+      ],
+      "description": "31 Marigold Ln, Debary, FL 32713 |",
+      "mls": null,
+      "monthly_rent_estimate": 1425,
+      "down_payment_used": 125000,
+      "cash_flow": {
+        "price": 298000,
+        "down_payment": 125000,
+        "loan_amount": 173000,
+        "interest_rate": 6.5,
+        "loan_term_years": 30,
+        "mortgage_payment": 1093.48,
+        "monthly_tax": 208,
+        "annual_tax": 2500,
+        "annual_insurance": 3400,
+        "monthly_insurance": 283,
+        "monthly_maintenance": 100.0,
+        "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 1425,
+        "total_monthly_expenses": 1780.0,
+        "monthly_cash_flow": -355.0,
+        "cash_on_cash_return_pct": -3.4,
+        "required_down_payment_for_20pct_cf": 239000.0,
+        "breakdown": {
+          "positives": [
+            "2BR at $1425/mo \u2014 market rate for area",
+            "1,444 sqft \u2014 commands premium rent",
+            "New roof \u2014 reduces insurance risk",
+            "DeBary \u2014 lower entry price point, better CF math",
+            "Annual insurance ~$3,400 \u2014 better than typical FL"
+          ],
+          "negatives": [
+            "Purchase price $298,000 \u2014 expensive for cash flow math",
+            "\u274c Negative CF of $355.0/mo at $125,000 down \u2014 $4260.0/yr drag",
+            "Need ~$239,000.0 down to hit 20% CF target (+$114,000.0 more)"
+          ]
+        }
+      },
+      "scores": {
+        "cash_flow_score": 83.0,
+        "deal_quality_score": 7.2,
+        "overall_score": 48.9
+      },
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "analyzed_at": "2026-05-01T02:30:20.252273+00:00",
+      "listing_status": "active",
+      "status": "active"
+    },
+    {
+      "id": 806438372,
+      "url": "https://www.zillow.com/homedetails/737-E-Church-Ave-737-Longwood-FL-32750/458949156_zpid/",
+      "source": "zillow",
+      "address": "737 Other Longwood Topics Apartments For Rent In 32750",
+      "city": "Longwood",
+      "zip": "32750",
+      "price": 400500,
+      "beds": null,
+      "baths": null,
+      "sqft": null,
+      "lot_size": null,
+      "property_type": "Condo",
+      "year_built": null,
+      "condition": "Fair",
+      "features": [
+        "no hoa"
+      ],
+      "description": "737 E Church Ave #737, Longwood, FL 32750 | Zillow Skip main navigation Sign in Sign in Join Homepage Buy Open Buy sub-menu Rent Open Rent sub-menu Sell Open Sell sub-menu Get a mortgage Open Get a mortgage sub-menu Find an agent Open Find an agent sub-menu Manage rentals Open Manage rentals sub-menu Advertise Get help Sign in Sign in Join Back to search Save Share More Off market Street View Zestimate \u00ae $400,500 737 E Church Ave #737, Longwood, FL 32750 -- beds -- baths -- sqft Loading Other Bu...",
+      "mls": null,
+      "monthly_rent_estimate": 1650,
+      "down_payment_used": 125000,
+      "cash_flow": {
+        "price": 400500,
+        "down_payment": 125000,
+        "loan_amount": 275500,
+        "interest_rate": 6.5,
+        "loan_term_years": 30,
+        "mortgage_payment": 1741.35,
+        "monthly_tax": 283,
+        "annual_tax": 3400,
+        "annual_insurance": 4350,
+        "monthly_insurance": 362,
+        "monthly_maintenance": 100.0,
+        "monthly_vacancy": 100.0,
+        "monthly_property_management": 0.0,
+        "property_management_rate": 0.0,
+        "monthly_rent_estimate": 1650,
+        "total_monthly_expenses": 2590.0,
+        "monthly_cash_flow": -940.0,
+        "cash_on_cash_return_pct": -9.0,
+        "required_down_payment_for_20pct_cf": 355000.0,
+        "breakdown": {
+          "positives": [
+            "2BR at $1650/mo \u2014 market rate for area",
+            "No HOA \u2014 keeps monthly costs predictable",
+            "Annual insurance ~$4,350 \u2014 better than typical FL"
+          ],
+          "negatives": [
+            "Purchase price $400,500 \u2014 expensive for cash flow math",
+            "\u274c Negative CF of $940.0/mo at $125,000 down \u2014 $11280.0/yr drag",
+            "Need ~$355,000.0 down to hit 20% CF target (+$230,000.0 more)"
+          ]
+        }
+      },
+      "scores": {
+        "cash_flow_score": 55.0,
+        "deal_quality_score": 0,
+        "overall_score": 30.3
+      },
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "analyzed_at": "2026-05-01T02:30:23.058691+00:00",
       "listing_status": "active",
       "status": "active"
     }
