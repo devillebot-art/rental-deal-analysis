@@ -12,7 +12,7 @@ REPO   = "devillebot-art/rental-deal-analysis"
 BRANCH = "main"
 DATA_PATH = "data/properties.json"
 HTML_PATH = "index.html"
-DEFAULT_DP = 150_000
+DEFAULT_DP = 125_000
 
 HEADERS = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
 

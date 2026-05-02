@@ -13,7 +13,7 @@ from html import escape
 from urllib.parse import urlparse
 
 # ─── CONSTANTS ────────────────────────────────────────────────────────────────
-DEFAULT_DOWN_PAYMENT = 150_000  # flat $150K, not percentage
+DEFAULT_DOWN_PAYMENT = 125_000  # flat $125K, not percentage
 INTEREST_RATE        = 0.07     # 7% annual
 LOAN_TERM_MONTHS    = 360       # 30-year
 VACANCY_RATE        = 0.08      # 8% vacancy allowance
@@ -588,9 +588,9 @@ def score_property(prop, cf):
     if "pool" in feats: dq -= 5
     # Down payment achievability
     if req_dp is not None and req_dp <= DEFAULT_DOWN_PAYMENT:
-        dq += 10  # bonus: achievable at our standard $150K
+        dq += 10  # bonus: achievable at our standard $125K
     elif req_dp is not None and req_dp > DEFAULT_DOWN_PAYMENT:
-        dq -= 10  # penalty: requires more than our $150K standard
+        dq -= 10  # penalty: requires more than our $125K standard
     if cfv < 0: dq = max(0, dq - abs(cfv) / 20)
     dq = max(0, min(100, dq))
 
@@ -608,16 +608,16 @@ def determine_verdict(prop, cf, scores):
     price   = prop.get("price", 999999)
 
     if overall >= 75 and cf_val > 0:
-        return "BUY", "Strong overall score and positive cash flow at $150K down"
+        return "BUY", "Strong overall score and positive cash flow at $125K down"
     if overall >= 60 and cf_val > -100:
-        return "CONDITIONAL", "Decent deal at $150K down — negotiate price down if possible"
+        return "CONDITIONAL", "Decent deal at $125K down — negotiate price down if possible"
     if overall >= 55 and coc >= 8:
-        return "CONDITIONAL", "Acceptable return at $150K down"
+        return "CONDITIONAL", "Acceptable return at $125K down"
     if req_dp is not None and req_dp <= DEFAULT_DOWN_PAYMENT and cf_val > 0:
-        return "CONDITIONAL", f"Can hit 20% CF target at ${req_dp:,} down — within our $150K standard"
+        return "CONDITIONAL", f"Can hit 20% CF target at ${req_dp:,} down — within our $125K standard"
     if overall >= 50 and price < 150000:
         return "CONDITIONAL", "Low entry price compensates for CF challenges"
-    return "SKIP", "Cash flow math doesn't work at $150K down — price too high for the corridor"
+    return "SKIP", "Cash flow math doesn't work at $125K down — price too high for the corridor"
 
 
 def analyze_property(url, down_payment=None):

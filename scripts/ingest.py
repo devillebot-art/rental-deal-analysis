@@ -180,7 +180,7 @@ def send_confirmation(to_email, properties):
       <div style="color:#3fb950;font-weight:700;font-size:1rem">{fmt(mo_rent)}/mo</div>
     </div>
     <div style="background:#0d1117;padding:0.6rem;border-radius:6px">
-      <div style="color:#8b949e;margin-bottom:0.2rem">Cash Flow (at $150K)</div>
+      <div style="color:#8b949e;margin-bottom:0.2rem">Cash Flow (at $125K)</div>
       <div style="color:{'#3fb950' if cfv>=0 else '#f85149'};font-weight:700;font-size:1rem">{fmt(cfv)}/mo</div>
     </div>
     <div style="background:#0d1117;padding:0.6rem;border-radius:6px">
@@ -237,7 +237,7 @@ View all properties: {SITE_URL}
         plain += f"""{'─'*50}
 {i}. {p.get("address","Unknown")}
    Price: {fmt(p.get("price"))} | Rent: {fmt(cf.get("monthly_rent_estimate",0))}/mo
-   Cash Flow (at $150K): {fmt(cfv)}/mo | Verdict: {p.get("verdict","?")}
+   Cash Flow (at $125K): {fmt(cfv)}/mo | Verdict: {p.get("verdict","?")}
    Listing: {p.get("url","#")}
 """
 

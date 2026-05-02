@@ -67,7 +67,7 @@
         "overall_score": 0.0
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:03.141840+00:00",
       "listing_status": "active",
       "status": "active"
@@ -136,7 +136,7 @@
         "overall_score": 47.9
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:04.127754+00:00",
       "listing_status": "active",
       "status": "active"
@@ -203,7 +203,7 @@
         "overall_score": 52.4
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:05.431333+00:00",
       "listing_status": "active",
       "status": "active"
@@ -274,7 +274,7 @@
         "overall_score": 33.6
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:06.275341+00:00",
       "listing_status": "active",
       "status": "active"
@@ -343,7 +343,7 @@
         "overall_score": 75.2
       },
       "verdict": "BUY",
-      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "verdict_reason": "Strong overall score and positive cash flow at $125K down",
       "analyzed_at": "2026-05-01T13:00:07.180411+00:00",
       "listing_status": "pending",
       "status": "active"
@@ -413,7 +413,7 @@
         "overall_score": 64.0
       },
       "verdict": "CONDITIONAL",
-      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
+      "verdict_reason": "Decent deal at $125K down \u2014 negotiate price down if possible",
       "analyzed_at": "2026-05-01T13:00:08.141911+00:00",
       "listing_status": "active",
       "status": "active"
@@ -482,7 +482,7 @@
         "overall_score": 84.2
       },
       "verdict": "BUY",
-      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "verdict_reason": "Strong overall score and positive cash flow at $125K down",
       "analyzed_at": "2026-05-01T13:00:10.125844+00:00",
       "listing_status": "active",
       "status": "active"
@@ -543,7 +543,7 @@
         "overall_score": 82.0
       },
       "verdict": "BUY",
-      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "verdict_reason": "Strong overall score and positive cash flow at $125K down",
       "analyzed_at": "2026-05-01T13:00:12.143974+00:00",
       "listing_status": "active",
       "status": "active"
@@ -614,7 +614,7 @@
         "overall_score": 55.1
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:13.053273+00:00",
       "listing_status": "pending",
       "status": "active"
@@ -685,7 +685,7 @@
         "overall_score": 75.2
       },
       "verdict": "BUY",
-      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "verdict_reason": "Strong overall score and positive cash flow at $125K down",
       "analyzed_at": "2026-05-01T13:00:13.952559+00:00",
       "listing_status": "active",
       "status": "active"
@@ -752,7 +752,7 @@
         "overall_score": 66.2
       },
       "verdict": "CONDITIONAL",
-      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
+      "verdict_reason": "Decent deal at $125K down \u2014 negotiate price down if possible",
       "analyzed_at": "2026-05-01T13:00:14.926392+00:00",
       "listing_status": "active",
       "status": "active"
@@ -819,7 +819,7 @@
         "overall_score": 84.2
       },
       "verdict": "BUY",
-      "verdict_reason": "Strong overall score and positive cash flow at $150K down",
+      "verdict_reason": "Strong overall score and positive cash flow at $125K down",
       "analyzed_at": "2026-05-01T13:00:16.008113+00:00",
       "listing_status": "active",
       "status": "active"
@@ -888,7 +888,7 @@
         "overall_score": 66.2
       },
       "verdict": "CONDITIONAL",
-      "verdict_reason": "Decent deal at $150K down \u2014 negotiate price down if possible",
+      "verdict_reason": "Decent deal at $125K down \u2014 negotiate price down if possible",
       "analyzed_at": "2026-05-01T13:00:16.878368+00:00",
       "listing_status": "active",
       "status": "active"
@@ -957,7 +957,7 @@
         "overall_score": 48.9
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:18.125459+00:00",
       "listing_status": "active",
       "status": "active"
@@ -1026,7 +1026,7 @@
         "overall_score": 48.9
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:19.082109+00:00",
       "listing_status": "active",
       "status": "active"
@@ -1092,7 +1092,7 @@
         "overall_score": 30.3
       },
       "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $150K down \u2014 price too high for the corridor",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:19.860298+00:00",
       "listing_status": "active",
       "status": "active"
