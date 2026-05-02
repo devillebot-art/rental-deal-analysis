@@ -74,14 +74,6 @@ h3{font-size:1rem;margin:1.5rem 0 0.8rem;color:var(--text)}
 .how-to p{color:var(--muted);font-size:0.88rem}
 .how-to code{background:var(--bg);padding:0.2rem 0.5rem;border-radius:4px;font-size:0.82rem;color:var(--accent)}
 footer{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--muted);font-size:0.78rem;text-align:center}
-.csv-btn{display:inline-block;background:#58a6ff;color:#0d1117;padding:0.4rem 0.9rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.82rem;white-space:nowrap}
-.csv-btn:hover{opacity:0.85}
-.assumptions{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.2rem;margin:2rem 0}
-.assumptions h3{color:var(--accent);font-size:1rem;margin:0 0 0.8rem}
-.assumptions-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0.7rem;margin-top:0.8rem}
-.assumptions-grid div{background:#0d1117;border-radius:6px;padding:0.6rem 0.8rem;font-size:0.8rem;line-height:1.6}
-.assumptions-grid span{color:var(--muted)}
-.assumptions-grid strong{color:var(--text)}
 footer p{margin-bottom:0.3rem}
 .notice{background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:0.8rem 1rem;font-size:0.82rem;color:var(--muted);margin-bottom:1.5rem}
 
@@ -103,16 +95,11 @@ footer p{margin-bottom:0.3rem}
 <div class="container">
 <header>
   <h1>🏠 Rental Deal Analyzer</h1>
-  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
-    <span class="updated">Updated: 2026-05-01 13:00 UTC</span>
-    <a href="data/properties.csv" download class="csv-btn" style="background:#58a6ff;color:#0d1117;padding:0.4rem 0.9rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.82rem">📥 Download CSV</a>
-  </div>
+  <span class="updated">Updated: 2026-05-02 19:50 UTC</span>
 </header>
 
 <div class="notice">
-  All dollar values shown are <strong>monthly</strong> estimates &nbsp;|&nbsp; Defaults to <strong>$125,000 down payment</strong> &nbsp;|&nbsp; Target: <strong>20% cash flow</strong> over monthly expenses &nbsp;|&nbsp; FL market — verify independently.
-  <br>
-  <strong>Current assumptions (Apr 2026):</strong> 30-yr fixed @ 6.5% (Freddie Mac) &nbsp;|&nbsp; Insurance: ~1% of value/yr (FL inland avg) &nbsp;|&nbsp; Vacancy: 5% &nbsp;|&nbsp; Maintenance: 8% of rent &nbsp;|&nbsp; Property tax: ~0.71–0.85% of assessed value &nbsp;|&nbsp; Self-managed (no property management fee)
+  Analysis defaults to <strong>$150,000 down payment</strong> &nbsp;|&nbsp; Target: <strong>20% cash flow</strong> over all monthly expenses &nbsp;|&nbsp; FL market estimates — verify independently.
 </div>
 
 <div class="tabs">
@@ -149,24 +136,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$2,200</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$600</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$158</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$221</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$920</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$2,200</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$600</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$158</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$221</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$920/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $20,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$260</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$680</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,384</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$260</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$680</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,384/mo</td></tr>
       </table>
     </div>
   </div>
@@ -182,11 +169,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/365-W-Lansdowne-Ave-Orange-City-FL-32763/47947717_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/365-W-Lansdowne-Ave-Orange-City-FL-32763/47947717_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     
   </div>
 </div>
@@ -217,24 +203,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,750</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$721</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$167</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$229</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$430</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,750</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$721</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$167</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$229</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$430/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $98,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$260</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$599</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,031</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$260</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$599</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,031/mo</td></tr>
       </table>
     </div>
   </div>
@@ -250,11 +236,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/309-Riviera-Dr-Debary-FL-32713/47957321_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/309-Riviera-Dr-Debary-FL-32713/47957321_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     
   </div>
 </div>
@@ -285,24 +270,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,850</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$790</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$175</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$271</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$410</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,850</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$790</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$175</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$271</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$410/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $105,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$290</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$650</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,070</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$290</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$650</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,070/mo</td></tr>
       </table>
     </div>
   </div>
@@ -318,11 +303,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/30-S-Edgemon-Ave-Winter-Springs-FL-32708/47630180_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/30-S-Edgemon-Ave-Winter-Springs-FL-32708/47630180_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     
   </div>
 </div>
@@ -353,24 +337,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$2,075</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$948</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$192</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$242</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$395</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$2,075</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$948</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$192</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$242</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$395/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $117,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$340</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$732</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,197</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$340</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$732</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,197/mo</td></tr>
       </table>
     </div>
   </div>
@@ -386,11 +370,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/935-Florida-Ave-Orange-City-FL-32763/47952718_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/935-Florida-Ave-Orange-City-FL-32763/47952718_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     
   </div>
 </div>
@@ -421,24 +404,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,975</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$847</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$150</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$279</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$395</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,975</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$847</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$150</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$279</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$395/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $112,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$320</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$733</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,095</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$320</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$733</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,095/mo</td></tr>
       </table>
     </div>
   </div>
@@ -454,11 +437,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/701-Cherokee-Cir-Sanford-FL-32773/47658452_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/701-Cherokee-Cir-Sanford-FL-32773/47658452_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     
   </div>
 </div></div>
@@ -496,24 +478,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,650</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$1,741</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$283</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$362</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-neg">$-940</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,650</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$1,741</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$283</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$362</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-940/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-gap">⛔ ~$355,000.0 needed (+$230,000.0 more)</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$520</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$849</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$632</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$520</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$849</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$632/mo</td></tr>
       </table>
     </div>
   </div>
@@ -529,11 +511,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $150K down — price too high for the corridor</div>
+  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $125K down — price too high for the corridor</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/737-E-Church-Ave-737-Longwood-FL-32750/458949156_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/737-E-Church-Ave-737-Longwood-FL-32750/458949156_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -564,24 +545,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,425</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$1,093</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$208</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$283</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-neg">$-355</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,425</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$1,093</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$208</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$283</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-355/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-gap">⛔ ~$239,000.0 needed (+$114,000.0 more)</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$360</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$687</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$601</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$360</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$687</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$601/mo</td></tr>
       </table>
     </div>
   </div>
@@ -597,11 +578,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $150K down — price too high for the corridor</div>
+  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $125K down — price too high for the corridor</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/31-Marigold-Ln-Debary-FL-32713/47953521_zpid/?utm_campaign=zillowwebmessage&amp;utm_medium=referral&amp;utm_source=txtshare" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/31-Marigold-Ln-Debary-FL-32713/47953521_zpid/?utm_campaign=zillowwebmessage&amp;utm_medium=referral&amp;utm_source=txtshare" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -632,24 +612,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,425</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$1,093</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$208</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$283</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-neg">$-355</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,425</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$1,093</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$208</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$283</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-355/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-gap">⛔ ~$239,000.0 needed (+$114,000.0 more)</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$360</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$687</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$601</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$360</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$687</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$601/mo</td></tr>
       </table>
     </div>
   </div>
@@ -665,11 +645,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $150K down — price too high for the corridor</div>
+  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $125K down — price too high for the corridor</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/31-Marigold-Ln-Debary-FL-32713/47953521_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/31-Marigold-Ln-Debary-FL-32713/47953521_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -700,24 +679,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,850</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$973</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$267</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$210</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,850</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$973</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$267</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$210/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-gap">⛔ ~$144,000.0 needed (+$19,000.0 more)</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$330</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$667</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,050</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$330</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$667</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,050/mo</td></tr>
       </table>
     </div>
   </div>
@@ -733,11 +712,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-cond">CONDITIONAL — Decent deal at $150K down — negotiate price down if possible</div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Decent deal at $125K down — negotiate price down if possible</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/932-N-Fairbairn-Dr-Deltona-FL-32725/47974129_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/932-N-Fairbairn-Dr-Deltona-FL-32725/47974129_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -768,24 +746,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,850</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$790</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$175</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$271</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$410</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,850</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$790</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$175</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$271</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$410/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $105,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$290</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$650</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,070</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$290</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$650</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,070/mo</td></tr>
       </table>
     </div>
   </div>
@@ -801,11 +779,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/30-S-Edgemon-Ave-Winter-Springs-FL-32708/47630180_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/30-S-Edgemon-Ave-Winter-Springs-FL-32708/47630180_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -836,24 +813,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$2,025</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$970</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$300</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$255</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$2,025</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$970</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$300</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$255/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-gap">⛔ ~$140,000.0 needed (+$15,000.0 more)</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$350</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$800</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,065</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$350</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$800</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,065/mo</td></tr>
       </table>
     </div>
   </div>
@@ -869,11 +846,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-cond">CONDITIONAL — Decent deal at $150K down — negotiate price down if possible</div>
+  <div class="verdict-banner v-cond">CONDITIONAL — Decent deal at $125K down — negotiate price down if possible</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/899-Lormann-Cir-Longwood-FL-32750/47718429_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/899-Lormann-Cir-Longwood-FL-32750/47718429_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -904,24 +880,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,975</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$847</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$150</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$279</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$395</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,975</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$847</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$150</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$279</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$395/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $112,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$320</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$733</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,095</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$320</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$733</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,095/mo</td></tr>
       </table>
     </div>
   </div>
@@ -937,11 +913,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/701-Cherokee-Cir-Sanford-FL-32773/47658452_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/701-Cherokee-Cir-Sanford-FL-32773/47658452_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -972,24 +947,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,675</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$1,106</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$175</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$325</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-neg">$-135</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,675</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$1,106</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$175</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$325</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-neg">$-135/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-gap">⛔ ~$203,000.0 needed (+$78,000.0 more)</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$360</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$704</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$830</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$360</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$704</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$830/mo</td></tr>
       </table>
     </div>
   </div>
@@ -1005,11 +980,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $150K down — price too high for the corridor</div>
+  <div class="verdict-banner v-skip">SKIP — Cash flow math doesn&#x27;t work at $125K down — price too high for the corridor</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/112-Avocado-Ave-Sanford-FL-32771/47700209_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/112-Avocado-Ave-Sanford-FL-32771/47700209_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -1040,24 +1014,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$2,200</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$600</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$158</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$221</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$200</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$920</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$2,200</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$600</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$158</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$221</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$200</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$920/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $20,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$260</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$680</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,384</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$260</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$680</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,384/mo</td></tr>
       </table>
     </div>
   </div>
@@ -1073,11 +1047,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/365-W-Lansdowne-Ave-Orange-City-FL-32763/47947717_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/365-W-Lansdowne-Ave-Orange-City-FL-32763/47947717_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div>
@@ -1108,24 +1081,24 @@ footer p{margin-bottom:0.3rem}
 
   <div class="cf-block">
     <div class="cf-col">
-      <div class="cf-col-header">📊 Monthly — At Your $125,000 Down</div>
+      <div class="cf-col-header">📊 At Your $125,000 Down</div>
       <table class="cf-table">
-        <tr><td>Rent (/mo)</td><td class="cf-pos">+$1,750</td></tr>
-        <tr><td>Mortgage P&amp;I (/mo @ 7%)</td><td class="cf-neg">−$721</td></tr>
-        <tr><td>Property Tax (/mo)</td><td class="cf-neg">−$167</td></tr>
-        <tr><td>Insurance (/mo)</td><td class="cf-neg">−$229</td></tr>
-        <tr><td>Maintenance (/mo @ 10%)</td><td class="cf-neg">−$100</td></tr>
-        <tr><td>Vacancy (/mo @ 8%)</td><td class="cf-neg">−$100</td></tr>
-        <tr class="cf-total"><td>Cash Flow (/mo)</td><td class="cf-pos">$430</td></tr>
+        <tr><td>Rent</td><td class="cf-pos">+$1,750</td></tr>
+        <tr><td>Mortgage (P&amp;I @ 7%)</td><td class="cf-neg">−$721</td></tr>
+        <tr><td>Property Tax</td><td class="cf-neg">−$167</td></tr>
+        <tr><td>Insurance</td><td class="cf-neg">−$229</td></tr>
+        <tr><td>Maintenance (10%)</td><td class="cf-neg">−$100</td></tr>
+        <tr><td>Vacancy (8%)</td><td class="cf-neg">−$100</td></tr>
+        <tr class="cf-total"><td>Cash Flow</td><td class="cf-pos">$430/mo</td></tr>
       </table>
     </div>
     <div class="cf-col">
-      <div class="cf-col-header">🎯 To Hit 20% Monthly CF</div>
+      <div class="cf-col-header">🎯 To Hit 20% Cash Flow</div>
       <div class="reqdp-box"><span class="reqdp-ok">✅ $98,000.0 — you're covered at $125,000 down</span></div>
       <table class="cf-table">
-        <tr><td>Target CF (/mo, 20% of expenses)</td><td class="cf-pos">+$260</td></tr>
-        <tr><td>Non-Mortgage Expenses (/mo)</td><td class="cf-neg">−$599</td></tr>
-        <tr class="cf-total"><td>Max Mortgage Allowed (/mo)</td><td class="cf-neg">$1,031</td></tr>
+        <tr><td>Target CF (20% of expenses)</td><td class="cf-pos">+$260</td></tr>
+        <tr><td>Non-Mortgage Expenses</td><td class="cf-neg">−$599</td></tr>
+        <tr class="cf-total"><td>Max Mortgage Allowed</td><td class="cf-neg">$1,031/mo</td></tr>
       </table>
     </div>
   </div>
@@ -1141,11 +1114,10 @@ footer p{margin-bottom:0.3rem}
     </div>
   </div>
 
-  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $150K down</div>
+  <div class="verdict-banner v-buy">BUY — Strong overall score and positive cash flow at $125K down</div>
 
   <div class="card-footer">
     <a href="https://www.zillow.com/homedetails/309-Riviera-Dr-Debary-FL-32713/47957321_zpid/" target="_blank">ZILLOW ↗</a>
-    <a href="https://www.zillow.com/homedetails/309-Riviera-Dr-Debary-FL-32713/47957321_zpid/" target="_blank" style="background:#bc8cff">🏠 Rent Est. on Zillow ↗</a>
     <span class="date">2026-05-01 13:00 UTC</span>
   </div>
 </div></div>
@@ -1158,24 +1130,6 @@ footer p{margin-bottom:0.3rem}
 <footer>
   <p>⚡ Powered by Johnny5 &nbsp;|&nbsp; Not financial advice — always verify independently.</p>
 </footer>
-
-<div class="assumptions">
-  <h3>📐 Calculation Assumptions</h3>
-  <div class="assumptions-grid">
-    <div><span>Down Payment</span><br><strong>$125,000 flat (default)</strong></div>
-    <div><span>Loan Term</span><br><strong>30-year fixed</strong></div>
-    <div><span>Interest Rate</span><br><strong>6.5% APR (Freddie Mac, Apr 2 2026)</strong></div>
-    <div><span>Mortgage Type</span><br><strong>Standard amortization (P&amp;I)</strong></div>
-    <div><span>Vacancy Allowance</span><br><strong>5% of monthly rent</strong></div>
-    <div><span>Maintenance</span><br><strong>8% of monthly rent</strong></div>
-    <div><span>Insurance</span><br><strong>~1% of property value/yr (FL inland avg)</strong></div>
-    <div><span>Property Tax</span><br><strong>~0.71–0.85% of assessed value (Seminole / Volusia counties)</strong></div>
-    <div><span>Property Management</span><br><strong>None (self-managed)</strong></div>
-    <div><span>Target Cash Flow</span><br><strong>20% above all monthly expenses (CoC = CF×12 ÷ Down Payment)</strong></div>
-    <div><span>Cash Flow Verdict</span><br><strong>BUY ≥$200/mo &nbsp;|&nbsp; CONDITIONAL $0–$199/mo &nbsp;|&nbsp; SKIP negative CF</strong></div>
-    <div><span>Rent Estimate Basis</span><br><strong>Beds + sqft + city ± condition/features (conservative, market-validated)</strong></div>
-  </div>
-</div>
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){
   var tabs=document.querySelectorAll('.tab-btn');
