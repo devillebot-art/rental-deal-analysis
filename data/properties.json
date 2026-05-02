@@ -1,6 +1,6 @@
 {
   "version": 6,
-  "last_updated": "2026-05-01T13:00:19.860596+00:00",
+  "last_updated": "2026-05-02T21:47:14.205398+00:00",
   "properties": [
     {
       "id": 221996552,
@@ -914,7 +914,7 @@
       ],
       "description": "31 Marigold Ln, Debary, FL 32713 |",
       "mls": null,
-      "monthly_rent_estimate": 1425,
+      "monthly_rent_estimate": 1855,
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 298000,
@@ -931,34 +931,35 @@
         "monthly_vacancy": 100.0,
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
-        "monthly_rent_estimate": 1425,
-        "total_monthly_expenses": 1780.0,
-        "monthly_cash_flow": -355.0,
-        "cash_on_cash_return_pct": -3.4,
-        "required_down_payment_for_20pct_cf": 239000.0,
+        "monthly_rent_estimate": 1855,
+        "total_monthly_expenses": 1784.48,
+        "monthly_cash_flow": 70.52,
+        "cash_on_cash_return_pct": 0.7,
+        "required_down_payment_for_20pct_cf": 163000,
         "breakdown": {
           "positives": [
-            "2BR at $1425/mo \u2014 market rate for area",
+            "2BR at $1,855/mo \u2014 strong rental demand for DeBary",
             "1,444 sqft \u2014 commands premium rent",
+            "Fenced yard \u2014 desirable for families",
             "New roof \u2014 reduces insurance risk",
             "DeBary \u2014 lower entry price point, better CF math",
-            "Annual insurance ~$3,400 \u2014 better than typical FL"
+            "Annual insurance ~$3,400 \u2014 better than typical FL",
+            "\u2705 Positive CF of $70.52/mo = $846.2/yr at $125,000 down"
           ],
           "negatives": [
             "Purchase price $298,000 \u2014 expensive for cash flow math",
-            "\u274c Negative CF of $355.0/mo at $125,000 down \u2014 $4260.0/yr drag",
-            "Need ~$239,000.0 down to hit 20% CF target (+$114,000.0 more)"
+            "Need ~$163,000 down to hit 20% CF target (+$38,000 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 83.0,
-        "deal_quality_score": 7.2,
-        "overall_score": 48.9
+        "cash_flow_score": 100,
+        "deal_quality_score": 30,
+        "overall_score": 68.0
       },
-      "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-05-01T13:00:18.125459+00:00",
+      "verdict": "CONDITIONAL",
+      "verdict_reason": "Decent deal at $125K down \u2014 negotiate price down if possible",
+      "analyzed_at": "2026-05-02T21:47:14.205253+00:00",
       "listing_status": "active",
       "status": "active"
     },
@@ -983,7 +984,7 @@
       ],
       "description": "31 Marigold Ln, Debary, FL 32713 |",
       "mls": null,
-      "monthly_rent_estimate": 1425,
+      "monthly_rent_estimate": 1855,
       "down_payment_used": 125000,
       "cash_flow": {
         "price": 298000,
@@ -1000,34 +1001,35 @@
         "monthly_vacancy": 100.0,
         "monthly_property_management": 0.0,
         "property_management_rate": 0.0,
-        "monthly_rent_estimate": 1425,
-        "total_monthly_expenses": 1780.0,
-        "monthly_cash_flow": -355.0,
-        "cash_on_cash_return_pct": -3.4,
-        "required_down_payment_for_20pct_cf": 239000.0,
+        "monthly_rent_estimate": 1855,
+        "total_monthly_expenses": 1784.48,
+        "monthly_cash_flow": 70.52,
+        "cash_on_cash_return_pct": 0.7,
+        "required_down_payment_for_20pct_cf": 163000,
         "breakdown": {
           "positives": [
-            "2BR at $1425/mo \u2014 market rate for area",
+            "2BR at $1,855/mo \u2014 strong rental demand for DeBary",
             "1,444 sqft \u2014 commands premium rent",
+            "Fenced yard \u2014 desirable for families",
             "New roof \u2014 reduces insurance risk",
             "DeBary \u2014 lower entry price point, better CF math",
-            "Annual insurance ~$3,400 \u2014 better than typical FL"
+            "Annual insurance ~$3,400 \u2014 better than typical FL",
+            "\u2705 Positive CF of $70.52/mo = $846.2/yr at $125,000 down"
           ],
           "negatives": [
             "Purchase price $298,000 \u2014 expensive for cash flow math",
-            "\u274c Negative CF of $355.0/mo at $125,000 down \u2014 $4260.0/yr drag",
-            "Need ~$239,000.0 down to hit 20% CF target (+$114,000.0 more)"
+            "Need ~$163,000 down to hit 20% CF target (+$38,000 more)"
           ]
         }
       },
       "scores": {
-        "cash_flow_score": 83.0,
-        "deal_quality_score": 7.2,
-        "overall_score": 48.9
+        "cash_flow_score": 100,
+        "deal_quality_score": 30,
+        "overall_score": 68.0
       },
-      "verdict": "SKIP",
-      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
-      "analyzed_at": "2026-05-01T13:00:19.082109+00:00",
+      "verdict": "CONDITIONAL",
+      "verdict_reason": "Decent deal at $125K down \u2014 negotiate price down if possible",
+      "analyzed_at": "2026-05-02T21:47:14.205372+00:00",
       "listing_status": "active",
       "status": "active"
     },
