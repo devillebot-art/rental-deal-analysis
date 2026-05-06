@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "last_updated": "2026-05-02T21:47:14.205398+00:00",
+  "version": 7,
+  "last_updated": "2026-05-06T00:22:41.668571+00:00",
   "properties": [
     {
       "id": 221996552,
@@ -1097,6 +1097,74 @@
       "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
       "analyzed_at": "2026-05-01T13:00:19.860298+00:00",
       "listing_status": "active",
+      "status": "active"
+    },
+    {
+      "id": 89040584,
+      "url": "https://www.zillow.com/homedetails/24-Lilac-Dr-Debary-FL-32713/47955138_zpid/",
+      "source": "zillow",
+      "address": "Lilac Dr Debary Fl, FL",
+      "city": "DeBary",
+      "zip": "32713",
+      "price": 319999,
+      "beds": 2,
+      "baths": 2.0,
+      "sqft": 1158,
+      "lot_size": null,
+      "property_type": "Single-Family Home",
+      "year_built": 1954,
+      "condition": "Fair",
+      "features": [
+        "pool",
+        "updated kitchen",
+        "no hoa"
+      ],
+      "description": "24 Lilac Dr, Debary, FL 32713 |",
+      "mls": null,
+      "monthly_rent_estimate": 1675,
+      "down_payment_used": 125000,
+      "cash_flow": {
+        "price": 319999,
+        "down_payment": 125000,
+        "loan_amount": 194999,
+        "interest_rate": 7.000000000000001,
+        "loan_term_years": 30,
+        "mortgage_payment": 1297.33,
+        "monthly_tax": 225,
+        "annual_tax": 2700,
+        "annual_insurance": 22100,
+        "monthly_insurance": 1842,
+        "monthly_maintenance": 200.0,
+        "monthly_vacancy": 100.0,
+        "monthly_rent_estimate": 1675,
+        "total_monthly_expenses": 3660.0,
+        "monthly_cash_flow": -1985.0,
+        "cash_on_cash_return_pct": -19.1,
+        "required_down_payment_for_20pct_cf": null,
+        "breakdown": {
+          "positives": [
+            "2BR at $1675/mo \u2014 market rate for area",
+            "No HOA \u2014 keeps monthly costs predictable",
+            "Updated kitchen \u2014 justifies higher rent",
+            "DeBary \u2014 lower entry price point, better CF math"
+          ],
+          "negatives": [
+            "Purchase price $319,999 \u2014 expensive for cash flow math",
+            "Pool \u2014 adds insurance cost and maintenance burden",
+            "Annual insurance ~$22,100 \u2014 FL reality is brutal on this property",
+            "\u274c Negative CF of $1985.0/mo at $125,000 down \u2014 $23820.0/yr drag",
+            "20% CF target not achievable at any down payment \u2014 price likely too high"
+          ]
+        }
+      },
+      "scores": {
+        "cash_flow_score": 4.5,
+        "deal_quality_score": 0,
+        "overall_score": 2.5
+      },
+      "verdict": "SKIP",
+      "verdict_reason": "Cash flow math doesn't work at $125K down \u2014 price too high for the corridor",
+      "analyzed_at": "2026-05-06T00:22:40.244222+00:00",
       "status": "active"
     }
   ]
